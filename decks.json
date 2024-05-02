@@ -1,0 +1,95 @@
+[
+  {
+    "deckName": "Deck1",
+    "cards": {
+      "cards": [
+        {
+          "question": "hello",
+          "answer": "chào",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "bye",
+          "answer": "tạm biệt",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "study",
+          "answer": "học",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        }
+      ]
+    },
+    "newCards": 3,
+    "learnedCards": 0,
+    "dueCards": 0
+  },
+  {
+    "deckName": "Deck2",
+    "cards": {
+      "cards": [
+        {
+          "question": "sleep",
+          "answer": "ngủ",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        }
+      ]
+    },
+    "newCards": 2,
+    "learnedCards": 0,
+    "dueCards": 0
+  },
+  {
+    "deckName": "Deck3",
+    "cards": {
+      "cards": [
+        {
+          "question": "sleep",
+          "answer": "ngủ",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        }
+      ]
+    },
+    "newCards": 2,
+    "learnedCards": 0,
+    "dueCards": 0
+  }
+]

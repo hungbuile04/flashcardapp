@@ -1,0 +1,130 @@
+package project.flashcardapp.Model;
+
+import java.util.Date;
+
+/**
+ * Category model for keeping name and cards
+ *
+ * @author Bartlomiej Gladys
+ * @Date 01/11/2018
+ * @version 1.0
+ */
+
+public class Deck {
+    /**
+     * Category's name
+     */
+    private String deckName;
+
+    /**
+     * Category's cards
+     */
+    private CardList cards = new CardList();
+    private int newCards=0;
+    private int learnedCards=0;
+    private int dueCards=0;
+
+    public Deck(String name, CardList cards) {
+        this.deckName = name;
+        this.cards = cards;
+    }
+
+    /**
+     * Category's name getter
+     *
+     * @return category's name
+     */
+    public String getDeckName() {
+        return deckName;
+    }
+
+    /**
+     * Category's name setter
+     *
+     * @param name passed by user
+     * @return name if passed correctly
+     * @throws //NameFormatException if incorrect data
+     */
+    public Deck setDeckName(String name) throws Exception {
+        if (name == null) {
+            Exception e = new Exception("Category's name can't be blank") {
+                // Khối khởi tạo của anonymous class
+                {
+                    System.out.println("Exception: " + getMessage());
+                }
+            };
+            e.printStackTrace();
+            throw e;
+        }
+        if (name.length() > 15) {
+            Exception e = new Exception("Category's name has to be up to 15 characters") {
+                // Khối khởi tạo của anonymous class
+                {
+                    System.out.println("Exception: " + getMessage());
+                }
+            };
+            e.printStackTrace();
+            throw e;
+        }
+        if (name.length() < 2) {
+            Exception e = new Exception("Category's name has to have at least 2 characters") {
+                // Khối khởi tạo của anonymous class
+                {
+                    System.out.println("Exception: " + getMessage());
+                }
+            };
+        }
+        this.deckName = name;
+        return this;
+    }
+
+    public int getNewCards() {
+        return newCards;
+    }
+
+    public int getLearnedCards() {
+        return learnedCards;
+    }
+
+    public int getDueCards() {
+        return dueCards;
+    }
+
+    public void setNewCards(int newCards) {
+        this.newCards = newCards;
+    }
+
+    public void setLearnedCards(int learnedCards) {
+        this.learnedCards = learnedCards;
+    }
+
+    public void setDueCards(int dueCards) {
+        this.dueCards = dueCards;
+    }
+
+    /**
+     * Category's getter
+     *
+     * @return Category's cards
+     */
+    public CardList getCards() {
+        return cards;
+    }
+    public void counting(){
+        Date now = new Date();
+        this.dueCards=0;
+        this.learnedCards=0;
+        this.newCards=0;
+        for(int i=0; i<cards.getAll().size(); i++){
+            if(cards.getAll().get(i).getSelector().getUpdatedAt().compareTo(now)<0 && cards.getAll().get(i).getSelector().getCycle()!=0){
+                this.dueCards++;
+            }
+            if(cards.getAll().get(i).getSelector().getCycle()==0){
+                this.newCards++;
+            }
+            if(cards.getAll().get(i).getSelector().getUpdatedAt().compareTo(now)>0 && cards.getAll().get(i).getSelector().getCycle()!=0){
+                this.learnedCards++;
+            }
+        }
+    }
+}
