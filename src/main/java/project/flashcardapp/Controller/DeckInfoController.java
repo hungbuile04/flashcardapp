@@ -22,11 +22,6 @@ public class DeckInfoController implements Initializable {
     public Button selectTestModeButton;
     private Deck deck;
 
-//    //Phương thức để nhận đối tượng Deck từ MainWindowController
-//    public void initData(Deck deck) {
-//        this.deck = deck;
-//    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         deck = DeckData.deck;

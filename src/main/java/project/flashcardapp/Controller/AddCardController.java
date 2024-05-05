@@ -45,7 +45,7 @@ public class AddCardController implements Initializable {
 //                super.updateItem(deck, empty);
 //                setText(empty ? null : deck.getDeckName());
 //            }
-//        }); Dùng để hCó phương thức toString trong Deck rồi nên thôi:D
+//        }); Dùng để tuỳ chỉnh cách hiển thị các thanh chọn. Có phương thức toString để thể hiện name trong Deck rồi nên thôi.
         chooseDeck.setButtonCell(new ListCell<Deck>() {
             @Override
             protected void updateItem(Deck deck, boolean empty) {
@@ -61,15 +61,6 @@ public class AddCardController implements Initializable {
             if (newVal != null) {
                 deck = newVal;
                 cardTable.setItems(FXCollections.observableArrayList(newVal.getCards().getAll()));
-//                cardTable.getSelectionModel().selectedItemProperty().addListener((obs1, oldSelection, newSelection) -> {
-//                    if (newSelection != null) {
-//                        questionField.setText(newSelection.getQuestion());
-//                        answerField.setText(newSelection.getAnswer());
-//                    } else {
-//                        questionField.clear();
-//                        answerField.clear();
-//                    }
-//                });
             }
         });
     }
@@ -107,10 +98,8 @@ public class AddCardController implements Initializable {
             alert.setTitle("Xác nhận Xóa");
             alert.setHeaderText("Bạn có chắc chắn muốn xóa card này?");
             alert.setContentText("Hành động này không thể hoàn tác!");
-
             // Hiển thị Alert và chờ phản hồi người dùng
             Optional<ButtonType> response = alert.showAndWait();
-
             // Kiểm tra xem người dùng có nhấn OK không
             if (response.isPresent() && response.get() == ButtonType.OK) {
                 deck.getCards().remove(selectedCard);
