@@ -21,7 +21,7 @@
             </MenuButton>
          </children>
         </HBox>
-        <TableView fx:id="tableDeckView" layoutX="8.0" layoutY="145.0" prefHeight="199.0" prefWidth="580.0">
+        <TableView fx:id="tableDeckView" layoutX="8.0" layoutY="143.0" prefHeight="199.0" prefWidth="580.0">
             <columns>
                 <TableColumn fx:id="deckName" prefWidth="238.0" text="Name" />
                 <TableColumn fx:id="newCards" prefWidth="98.0" text="New" />
@@ -31,7 +31,7 @@
         </TableView>
         <Label layoutX="213.0" layoutY="363.0" text="Today Stats 20 Cards Studied" />
         <Label layoutX="269.0" layoutY="111.0" prefHeight="17.0" prefWidth="51.0" text="Deck List" />
-          <Button fx:id="addCardButton" layoutX="298.0" layoutY="66.0" mnemonicParsing="false" text="+ New Card" />
+          <Button fx:id="addCardButton" layoutX="298.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#addCard" text="+ New Card" />
           <Button layoutX="230.0" layoutY="66.0" mnemonicParsing="false" text="Favourite" />
    </children>
 </AnchorPane>

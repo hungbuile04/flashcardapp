@@ -127,4 +127,9 @@ public class Deck {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return deckName;
+    }
 }

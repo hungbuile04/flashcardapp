@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
@@ -72,6 +73,17 @@ public class MainWindowController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    //Sự kiện add card
+    @FXML
+    void addCard(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/add_card.fxml"));
+        Parent addCardSceneRoot = loader.load();
+        Scene addCardScene = new Scene(addCardSceneRoot);
+        Stage stage = new Stage();
+        stage.setTitle("Add Card");
+        stage.setScene(addCardScene);
+        stage.show();
     }
 
 }
