@@ -1,15 +1,22 @@
 package project.flashcardapp.Controller;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import project.flashcardapp.Model.Card;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -19,7 +26,7 @@ public class AddCardController implements Initializable {
     private ComboBox<Deck> chooseDeck;
 
     @FXML
-    private TableView<Card> cardTable;
+    private TableView<Card> cardTable = new TableView<>();
 
     @FXML
     private TableColumn<Card, String> back;
@@ -34,6 +41,8 @@ public class AddCardController implements Initializable {
     private TextArea questionField;
 
     private Deck deck;
+    public static Card selectedCard;
+    public ObservableList<Card> cards;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -60,7 +69,8 @@ public class AddCardController implements Initializable {
         chooseDeck.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 deck = newVal;
-                cardTable.setItems(FXCollections.observableArrayList(newVal.getCards().getAll()));
+                cards = FXCollections.observableArrayList(newVal.getCards().getAll());
+                cardTable.setItems(cards);
             }
         });
     }
@@ -108,7 +118,22 @@ public class AddCardController implements Initializable {
         }
     }
 
-    public void detailCard(MouseEvent mouseEvent) {
+    public void detailCard(MouseEvent actionEvent) throws IOException {
+        selectedCard = cardTable.getSelectionModel().getSelectedItem();
+        if (selectedCard != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/details_card.fxml"));
+            Parent detailsCardSceneRoot = loader.load();
+            Scene detailsCardScene = new Scene(detailsCardSceneRoot);
+            Stage stage = new Stage();
+            stage.setTitle("Details");
+            stage.setScene(detailsCardScene);
+            DetailsCardController detailsCardController = loader.getController();
+            detailsCardController.setAddCardController(this);// gán thể hiện hiện tại của addcardcontroller cho detailscardcontroller
+            stage.show();
+        }
+    }
+    public void refreshCard(){
+        cardTable.refresh(); //cập nhật lại tablecard khi thẻ có sự thay đổi
     }
 }
 

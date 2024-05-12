@@ -29,10 +29,19 @@
             "answerType": "MEDIUM",
             "cycle": 0
           }
+        },
+        {
+          "question": "1235678",
+          "answer": "2345689",
+          "selector": {
+            "updatedAt": "May 6, 2024, 2:16:47 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
         }
       ]
     },
-    "newCards": 3,
+    "newCards": 4,
     "learnedCards": 0,
     "dueCards": 0
   },

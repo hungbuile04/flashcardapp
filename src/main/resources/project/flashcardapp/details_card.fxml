@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DetailsCardController">
+   <children>
+      <Label layoutX="144.0" layoutY="126.0" prefHeight="17.0" prefWidth="37.0" text="Front" />
+      <Label layoutX="144.0" layoutY="192.0" prefHeight="17.0" prefWidth="37.0" text="Back" />
+      <Label layoutX="144.0" layoutY="252.0" text="Label" />
+      <TextField fx:id="questionTextFeild" layoutX="203.0" layoutY="122.0" />
+      <TextField fx:id="answerTextField" layoutX="203.0" layoutY="188.0" />
+      <TextField layoutX="203.0" layoutY="248.0" />
+      <Button layoutX="147.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#saveChanges" text="Save" />
+      <Button layoutX="300.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#cancelChanges" text="Cancel" />
+   </children>
+</AnchorPane>

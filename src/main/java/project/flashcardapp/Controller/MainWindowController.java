@@ -85,5 +85,4 @@ public class MainWindowController implements Initializable {
         stage.setScene(addCardScene);
         stage.show();
     }
-
 }

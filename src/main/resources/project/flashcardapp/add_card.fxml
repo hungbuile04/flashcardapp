@@ -22,6 +22,6 @@
       <Button layoutX="454.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" text="Add" />
       <Button layoutX="121.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
       <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="35.0" prefWidth="150.0" />
-      <Label layoutX="432.0" layoutY="53.0" prefHeight="9.0" prefWidth="85.0" text="Thêm thẻ mới" />
+      <Label layoutX="432.0" layoutY="53.0" prefHeight="9.0" prefWidth="85.0" text="Add new card" />
    </children>
 </AnchorPane>

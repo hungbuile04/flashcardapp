@@ -13,7 +13,7 @@
       <Label fx:id="completedCards" layoutX="341.0" layoutY="168.0" text="Label" />
       <Label layoutX="270.0" layoutY="214.0" text="Label" />
       <Label fx:id="dueCards" layoutX="341.0" layoutY="214.0" text="Label" />
-      <Button fx:id="selectReviewModeButton" layoutX="159.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#selectReview" text="Ôn tập" />
-      <Button fx:id="selectTestModeButton" layoutX="418.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#selectTest" text="Kiểm tra" />
+      <Button fx:id="selectReviewModeButton" layoutX="159.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#selectReview" text="Review mode" />
+      <Button fx:id="selectTestModeButton" layoutX="418.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#selectTest" text="Test mode" />
    </children>
 </AnchorPane>
