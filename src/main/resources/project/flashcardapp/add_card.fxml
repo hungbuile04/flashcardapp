@@ -8,9 +8,9 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.AddCardController">
+<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.AddCardController">
    <children>
-      <TableView fx:id="cardTable" layoutX="46.0" layoutY="100.0" prefHeight="200.0" prefWidth="290.0">
+      <TableView fx:id="cardTable" layoutX="46.0" layoutY="100.0" prefHeight="200.0" prefWidth="293.0">
         <columns>
           <TableColumn fx:id="front" prefWidth="75.0" text="Front" />
           <TableColumn fx:id="back" prefWidth="75.0" text="Back" />
@@ -23,5 +23,6 @@
       <Button layoutX="121.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
       <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="35.0" prefWidth="150.0" />
       <Label layoutX="432.0" layoutY="53.0" prefHeight="9.0" prefWidth="85.0" text="Add new card" />
+      <Button layoutX="228.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
    </children>
 </AnchorPane>

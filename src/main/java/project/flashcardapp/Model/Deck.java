@@ -24,6 +24,10 @@ public class Deck {
     private int learnedCards=0;
     private int dueCards=0;
 
+    public Deck(String deckName) {
+        this.deckName = deckName;
+    }
+
     public Deck(String name, CardList cards) {
         this.deckName = name;
         this.cards = cards;

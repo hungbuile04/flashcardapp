@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Card;
 import project.flashcardapp.Model.Deck;
@@ -22,6 +23,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class AddCardController implements Initializable {
+    public AnchorPane addCardPane;
     @FXML
     private ComboBox<Deck> chooseDeck;
 
@@ -47,6 +49,7 @@ public class AddCardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("ready:"+DeckData.decks.size());
+        chooseDeck.setPromptText("Choose a deck");
         chooseDeck.setItems(DeckData.decks);
 //        chooseDeck.setCellFactory(lv -> new ListCell<Deck>() {
 //            @Override
@@ -75,6 +78,29 @@ public class AddCardController implements Initializable {
         });
     }
 
+    public void createNewDeck(MouseEvent mouseEvent) {
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.initOwner(addCardPane.getScene().getWindow());
+        dialog.setTitle("Add new TodoItem");
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/project/flashcardapp/add_deck.fxml")); //fxmlLoader.setLocation(): Phương thức này được sử dụng để đặt vị trí tệp FXML cho FXMLLoader. Khi bạn gọi phương thức load(), nó sẽ sử dụng vị trí này để tải tệp FXML.
+        try{
+            dialog.getDialogPane().setContent(fxmlLoader.load());
+        }catch(IOException e){
+            System.out.println("Couldn't load the dialog");
+            e.printStackTrace();
+            return;
+        }
+       dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+       dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+       Optional<ButtonType> result = dialog.showAndWait();
+       if(result.isPresent() && result.get() == ButtonType.OK){
+
+       }else {
+            System.out.println("Cancel pressed");
+       }
+    }
+
     public void saveNewCard(MouseEvent mouseEvent) {
         String frontContent = questionField.getText().trim();
         String backContent = answerField.getText().trim();
@@ -89,7 +115,7 @@ public class AddCardController implements Initializable {
             answerField.clear();
         } else {
             // Hiển thị thông báo nếu không có nội dung đầy đủ
-            showAlert("Thông tin không đầy đủ", "Vui lòng nhập đầy đủ mặt trước và mặt sau của card.");
+            showAlert("Infomation is not enough.", "Please try again.");
         }
     }
     private void showAlert(String header, String content) {
@@ -105,9 +131,9 @@ public class AddCardController implements Initializable {
         if (selectedCard != null) {
             // Tạo và cấu hình Alert
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Xác nhận Xóa");
-            alert.setHeaderText("Bạn có chắc chắn muốn xóa card này?");
-            alert.setContentText("Hành động này không thể hoàn tác!");
+            alert.setTitle("Confirm delete");
+            alert.setHeaderText("Are you sure to delete this card?");
+            alert.setContentText("This action couldn't be undone!");
             // Hiển thị Alert và chờ phản hồi người dùng
             Optional<ButtonType> response = alert.showAndWait();
             // Kiểm tra xem người dùng có nhấn OK không

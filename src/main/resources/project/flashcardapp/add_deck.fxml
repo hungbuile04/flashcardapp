@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DeckOptionController">
+    <headerText>
+        Create new deck
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id = "nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Label:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id = "labelField"  GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true"/>
+        </GridPane>
+    </content>
+</DialogPane>
