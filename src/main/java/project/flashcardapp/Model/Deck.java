@@ -15,6 +15,7 @@ public class Deck {
      * Category's name
      */
     private String deckName;
+    private String labelDesciption;
 
     /**
      * Category's cards
@@ -23,6 +24,7 @@ public class Deck {
     private int newCards=0;
     private int learnedCards=0;
     private int dueCards=0;
+
 
     public Deck(String deckName) {
         this.deckName = deckName;
@@ -33,6 +35,10 @@ public class Deck {
         this.cards = cards;
     }
 
+    public Deck(String deckName, String labelDesciption) {
+        this.deckName = deckName;
+        this.labelDesciption = labelDesciption;
+    }
     /**
      * Category's name getter
      *

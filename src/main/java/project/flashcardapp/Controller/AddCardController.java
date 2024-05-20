@@ -78,10 +78,11 @@ public class AddCardController implements Initializable {
         });
     }
 
+    //Mở cửa sổ dialog thêm bộ thẻ mới
     public void createNewDeck(MouseEvent mouseEvent) {
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.initOwner(addCardPane.getScene().getWindow());
-        dialog.setTitle("Add new TodoItem");
+        dialog.setTitle("Add new deck");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/project/flashcardapp/add_deck.fxml")); //fxmlLoader.setLocation(): Phương thức này được sử dụng để đặt vị trí tệp FXML cho FXMLLoader. Khi bạn gọi phương thức load(), nó sẽ sử dụng vị trí này để tải tệp FXML.
         try{
@@ -95,7 +96,10 @@ public class AddCardController implements Initializable {
        dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
        Optional<ButtonType> result = dialog.showAndWait();
        if(result.isPresent() && result.get() == ButtonType.OK){
-
+           AddDeckController controller = fxmlLoader.getController();
+           Deck newDeck = controller.processResults();
+           chooseDeck.setItems(FXCollections.observableArrayList(DeckData.getInstance().getDecks()));
+           chooseDeck.getSelectionModel().select(newDeck);
        }else {
             System.out.println("Cancel pressed");
        }

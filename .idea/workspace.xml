@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new(12/5)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckOptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/AddCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/AddCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckOptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/AddDeckController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/deckinfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/deckinfo.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -56,7 +61,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/buihung/Library/Mobile Documents/com~apple~CloudDocs/java/flash-cardApp/src/main/resources/project/flashcardapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/builehuy/Downloads/TechByBLH/git learn/flashcardapp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,7 +70,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -101,6 +106,8 @@
       <workItem from="1715010333631" duration="1267000" />
       <workItem from="1715012600871" duration="28647000" />
       <workItem from="1715480463727" duration="26031000" />
+      <workItem from="1715936025800" duration="19445000" />
+      <workItem from="1716038599841" duration="6671000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
