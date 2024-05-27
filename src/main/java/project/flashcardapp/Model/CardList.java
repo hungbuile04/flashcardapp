@@ -30,6 +30,10 @@ public class CardList {
         return cards;
     }
 
+    public Card getCard(int index){
+        return cards.get(index);
+    }
+
     public void add(Card card) {
         cards.add(card);
     }
