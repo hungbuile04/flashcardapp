@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,12 +11,7 @@
    <children>
         <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <MenuButton fx:id="settings" mnemonicParsing="false" text="Settings">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </MenuButton>
+            <Button fx:id="setting_button" mnemonicParsing="false" text="Button" />
          </children>
         </HBox>
         <TableView fx:id="tableDeckView" layoutX="8.0" layoutY="143.0" prefHeight="199.0" prefWidth="580.0">
@@ -30,9 +23,9 @@
             </columns>
         </TableView>
         <Label layoutX="213.0" layoutY="363.0" text="Today Stats 20 Cards Studied" />
-        <Label layoutX="269.0" layoutY="111.0" prefHeight="17.0" prefWidth="51.0" text="Deck List" />
+        <Label fx:id="deck_list" layoutX="-1.0" layoutY="111.0" prefHeight="17.0" prefWidth="590.0" text="Deck List" />
           <Button fx:id="addCardButton" layoutX="320.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="89.0" text="+ New Card" />
-          <Button layoutX="180.0" layoutY="60.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Favourite" />
-      <Label fx:id="text_label" layoutX="272.0" layoutY="21.0" text="EngHust" />
+          <Button fx:id="fav_button" layoutX="180.0" layoutY="60.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Favourite" />
+      <Label fx:id="text_label" layoutY="21.0" prefHeight="23.0" prefWidth="590.0" text="EngHust" />
    </children>
 </AnchorPane>

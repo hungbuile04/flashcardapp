@@ -1,10 +1,41 @@
+.button {
+    -fx-background-color: #44BC91;
+    -fx-background-radius: 10px;
+    -fx-font-family: "DVN-Poppins";
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 15, 0.5, 0.5, 0)
+    dropshadow(gaussian, rgba(255, 255, 255, 0.5), 15, -0.5, -0.5, 0);
+}
+
+.label {
+    -fx-font-family: DVN-Poppins;
+}
+
 #text_label {
-    -fx-font-size: 20;
-    border: none;
-    -fx-font-family: Arial Black;
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 20px;
     -fx-text-fill: #44BC91;
     -fx-text-alignment: center;
     -fx-alignment: center;
-    -fx-font-weight: bold;
 
+}
+
+#deck_list {
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 15px;
+    -fx-alignment: center;
+}
+
+#fav_button {
+    -fx-border-color: #44BC91;
+    -fx-background-color: none;
+    -fx-text-fill: #44BC91;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+}
+
+#setting_button {
+    -fx-background-color: transperant;
+    -fx-graphic: url(icon.svg);
+    -fx-padding: 10px;
 }

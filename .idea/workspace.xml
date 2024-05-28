@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" afterDir="false" />
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Test Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "frontEnd",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/buihung/Library/Mobile Documents/com~apple~CloudDocs/java/flash-cardApp/src/main/resources/project/flashcardapp",
+    "last_opened_file_path": "D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet" />
       <recent name="$PROJECT_DIR$/src/main/resources/project/flashcardapp" />
       <recent name="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller" />
       <recent name="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model" />
@@ -106,6 +108,7 @@
       <workItem from="1715012600871" duration="28647000" />
       <workItem from="1715480463727" duration="26031000" />
       <workItem from="1716883999630" duration="1004000" />
+      <workItem from="1716888680436" duration="2271000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -154,6 +157,37 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="frontEnd" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -161,10 +195,10 @@
             <State>
               <option name="FILTERS">
                 <map>
-                  <entry key="branch">
+                  <entry key="user">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="*" />
                       </list>
                     </value>
                   </entry>
