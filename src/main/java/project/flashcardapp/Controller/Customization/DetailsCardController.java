@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller;
+package project.flashcardapp.Controller.Customization;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;

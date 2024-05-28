@@ -1,8 +1,7 @@
-package project.flashcardapp.Controller;
+package project.flashcardapp.Controller.Customization;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<?import javafx.scene.control.Label?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.ReviewModeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.ReviewModeController">
    <children>
-      <StackPane fx:id="CardPane" layoutX="172.0" layoutY="94.0" prefHeight="150.0" prefWidth="266.0" >
+      <StackPane fx:id="CardPane" layoutX="172.0" layoutY="94.0" onMouseClicked="#flipCard" prefHeight="150.0" prefWidth="266.0">
          <Label fx:id="questionLabel" text="Question will appear here" />
-         <Label fx:id="answerLabel" text="Answer will appear here" visible="false"/>
+         <Label fx:id="answerLabel" text="Answer will appear here" visible="false" />
       </StackPane>
       <Button fx:id="previousCard" layoutX="26.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="150.0" prefWidth="33.0" text="Button" />
       <Button fx:id="nextCard" layoutX="534.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="150.0" prefWidth="33.0" text="Button" />
-      <Button layoutX="145.0" layoutY="323.0" mnemonicParsing="false" text="Hard" />
-      <Button layoutX="273.0" layoutY="323.0" mnemonicParsing="false" text="Medium" />
-      <Button layoutX="400.0" layoutY="323.0" mnemonicParsing="false" text="Easy" />
+      <Button layoutX="145.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isHard" text="Hard" />
+      <Button layoutX="273.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isMedium" text="Medium" />
+      <Button layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isEasy" text="Easy" />
    </children>
 </AnchorPane>

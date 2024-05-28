@@ -66,8 +66,12 @@ public class DeckInfoController implements Initializable {
 
     //Chọn chế đo kiem tra
     @FXML
-    void selectTest(MouseEvent event) {
-        System.out.println("Test mode selected");
+    void selectTest(MouseEvent event) throws IOException {
+        Stage stage = (Stage) selectReviewModeButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/test_mode.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void customizeDeck(MouseEvent mouseEvent) {

@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new(12/5)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/ReviewModeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/TestModeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml" afterDir="false" />
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new(27/5)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/AddCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/AddDeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddDeckController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DetailsCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/DetailsCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/ReviewModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/TestModeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/CardList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/CardList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/details_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/details_card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715485366961</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new(27/5)">
+      <option name="closed" value="true" />
+      <created>1716814321385</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716814321385</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +186,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="new(5/5)" />
     <MESSAGE value="new(12/5)" />
-    <option name="LAST_COMMIT_MESSAGE" value="new(12/5)" />
+    <MESSAGE value="new(27/5)" />
+    <option name="LAST_COMMIT_MESSAGE" value="new(27/5)" />
   </component>
 </project>

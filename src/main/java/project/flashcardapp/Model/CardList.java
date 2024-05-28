@@ -41,4 +41,8 @@ public class CardList {
     public void remove(Card card) {
         cards.remove(card);
     }
+
+    public int getSize() {
+        return cards.size();
+    }
 }

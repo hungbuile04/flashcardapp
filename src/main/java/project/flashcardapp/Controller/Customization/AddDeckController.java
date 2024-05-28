@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller;
+package project.flashcardapp.Controller.Customization;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;

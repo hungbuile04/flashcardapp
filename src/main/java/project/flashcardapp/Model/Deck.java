@@ -15,7 +15,7 @@ public class Deck {
      * Category's name
      */
     private String deckName;
-    private String labelDesciption;
+    private String labelDescription;
 
     /**
      * Category's cards
@@ -37,7 +37,7 @@ public class Deck {
 
     public Deck(String deckName, String labelDesciption) {
         this.deckName = deckName;
-        this.labelDesciption = labelDesciption;
+        this.labelDescription = labelDesciption;
     }
     /**
      * Category's name getter

@@ -5,12 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.TestModeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.TestModeController">
    <children>
-      <Label alignment="CENTER" layoutX="121.0" layoutY="81.0" prefHeight="154.0" prefWidth="362.0" text="Label" />
-      <TextField layoutX="204.0" layoutY="315.0" prefHeight="47.0" prefWidth="195.0" />
+      <Label fx:id="questionLabel" alignment="CENTER" layoutX="121.0" layoutY="81.0" prefHeight="154.0" prefWidth="362.0" text="Label" />
+      <TextField fx:id="answerField" layoutX="204.0" layoutY="315.0" prefHeight="47.0" prefWidth="195.0" />
       <Label layoutX="278.0" layoutY="273.0" prefHeight="17.0" prefWidth="44.0" text="Answer:" />
-      <Button layoutX="26.0" layoutY="188.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" text="Button" />
-      <Button layoutX="529.0" layoutY="188.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="44.0" text="Button" />
+      <Button fx:id="previousCard" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="26.0" prefWidth="44.0" text="Button" />
+      <Button fx:id="nextCard" layoutX="529.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="26.0" prefWidth="44.0" text="Button" />
    </children>
 </AnchorPane>
