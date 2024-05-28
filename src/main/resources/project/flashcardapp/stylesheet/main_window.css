@@ -1,0 +1,10 @@
+#text_label {
+    -fx-font-size: 20;
+    border: none;
+    -fx-font-family: Arial Black;
+    -fx-text-fill: #44BC91;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+
+}

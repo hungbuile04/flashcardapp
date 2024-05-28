@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="408.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.MainWindowController">
+<AnchorPane prefHeight="408.0" prefWidth="590.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.MainWindowController">
    <children>
         <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -31,7 +31,8 @@
         </TableView>
         <Label layoutX="213.0" layoutY="363.0" text="Today Stats 20 Cards Studied" />
         <Label layoutX="269.0" layoutY="111.0" prefHeight="17.0" prefWidth="51.0" text="Deck List" />
-          <Button fx:id="addCardButton" layoutX="298.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#addCard" text="+ New Card" />
-          <Button layoutX="230.0" layoutY="66.0" mnemonicParsing="false" text="Favourite" />
+          <Button fx:id="addCardButton" layoutX="320.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="89.0" text="+ New Card" />
+          <Button layoutX="180.0" layoutY="60.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Favourite" />
+      <Label fx:id="text_label" layoutX="272.0" layoutY="21.0" text="EngHust" />
    </children>
 </AnchorPane>
