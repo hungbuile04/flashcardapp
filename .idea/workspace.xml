@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Test Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/icon.png" afterDir="false" />
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,7 @@
       <workItem from="1715012600871" duration="28647000" />
       <workItem from="1715480463727" duration="26031000" />
       <workItem from="1716883999630" duration="1004000" />
-      <workItem from="1716888680436" duration="2271000" />
+      <workItem from="1716888680436" duration="2893000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -150,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716884101644</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Main Window Style">
+      <option name="closed" value="true" />
+      <created>1716891139108</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716891139108</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +221,7 @@
     <MESSAGE value="new(5/5)" />
     <MESSAGE value="new(12/5)" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Main Window Style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main Window Style" />
   </component>
 </project>
