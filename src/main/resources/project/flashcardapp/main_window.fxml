@@ -25,8 +25,8 @@
             <columns>
                 <TableColumn fx:id="deckName" prefWidth="238.0" text="Name" />
                 <TableColumn fx:id="newCards" prefWidth="98.0" text="New" />
-            <TableColumn fx:id="learnedCards" minWidth="0.0" prefWidth="132.0" text="Learned" />
-            <TableColumn fx:id="dueCards" prefWidth="131.0" text="Due" />
+                <TableColumn fx:id="learnedCards" minWidth="0.0" prefWidth="132.0" text="Learned" />
+                <TableColumn fx:id="dueCards" prefWidth="131.0" text="Due" />
             </columns>
         </TableView>
         <Label layoutX="213.0" layoutY="363.0" text="Today Stats 20 Cards Studied" />

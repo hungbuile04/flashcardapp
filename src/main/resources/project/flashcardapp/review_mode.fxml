@@ -11,8 +11,8 @@
          <Label fx:id="questionLabel" text="Question will appear here" />
          <Label fx:id="answerLabel" text="Answer will appear here" visible="false" />
       </StackPane>
-      <Button fx:id="previousCard" layoutX="26.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="150.0" prefWidth="33.0" text="Button" />
-      <Button fx:id="nextCard" layoutX="534.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="150.0" prefWidth="33.0" text="Button" />
+      <Button layoutX="26.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="150.0" prefWidth="33.0" text="Button" />
+      <Button layoutX="534.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="150.0" prefWidth="33.0" text="Button" />
       <Button layoutX="145.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isHard" text="Hard" />
       <Button layoutX="273.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isMedium" text="Medium" />
       <Button layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isEasy" text="Easy" />

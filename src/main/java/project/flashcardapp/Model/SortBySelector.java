@@ -5,10 +5,6 @@ import java.util.Date;
 
 /**
  * Comparator class for sorting cards
- *
- * @author Bartlomiej Gladys
- * @Date 04/11/2018
- * @version 1.0
  */
 
 public class SortBySelector implements Comparator<Card> {
@@ -34,7 +30,7 @@ public class SortBySelector implements Comparator<Card> {
      * @param second Selector
      * @return number indicating comparing result
      */
-    // trả về theo độ ưu tiên: mức độ hiểu lớn hơn -> số lần học ít hơn -> thời gian tạo mới hơn
+    // trả về theo độ ưu tiên: mức độ hiểu lớn hơn -> số lần học ít hơn -> deadline đến sớm hơn
     private int compareSelectors(Selector first, Selector second) {
         int isFirstWeaker = checkAnswerType(first.getAnswerType(), second.getAnswerType());
         if (isFirstWeaker != 0) {
@@ -46,7 +42,7 @@ public class SortBySelector implements Comparator<Card> {
             return hasFirstLessCycles;
         }
 
-        return checkUpdateDate(first.getUpdatedAt(), second.getUpdatedAt());
+        return checkUpdateDate(first.getDeadlineAt(), second.getDeadlineAt());
     }
 
     /**
@@ -69,7 +65,7 @@ public class SortBySelector implements Comparator<Card> {
      * @return date's comparison result
      */
     private int checkUpdateDate(Date first, Date second) {
-        return first.compareTo(second);
+        return second.compareTo(first);
     }
 
     /**

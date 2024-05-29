@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 
+//Tạo bộ thẻ mới
 public class AddDeckController {
     @FXML
     public TextField nameField;

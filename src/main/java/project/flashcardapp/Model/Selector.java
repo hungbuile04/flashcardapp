@@ -1,13 +1,11 @@
 package project.flashcardapp.Model;
 
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * Selector model for keeping data related to card's order
- *
- * @author Bartlomiej Gladys
- * @Date 01/11/2018
- * @version 1.0
  */
 
 public class Selector {
@@ -21,7 +19,7 @@ public class Selector {
     /**
      * date of recent object's update
      */
-    private Date updatedAt = new Date();
+    private Date deadlineAt = new Date();
 
     /**
      * default answerType for Selector
@@ -38,18 +36,13 @@ public class Selector {
      *
      * @return recent object's update
      */
-    public Date getUpdatedAt() {
-        return updatedAt;
+    public Date getDeadlineAt() {
+        return deadlineAt;
     }
 
-    /**
-     * updateAt setter
-     *
-     * @param updatedAt recent object's update
-     * @return Selector object
-     */
-    public Selector setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
+
+    public Selector setDeadlineAt(Date deadlineAt) {
+        this.deadlineAt = deadlineAt;
         return this;
     }
 
@@ -98,9 +91,27 @@ public class Selector {
      *
      * @param type chosen by user
      */
-    public void update(AnswerType type) {
+    //cài đặt hạn cho các thẻ
+    public void update(AnswerType type, int easyCard, int mediumCard, int hardCard) {
         setAnswerType(type);
-        setUpdatedAt(new Date());
+        if(type == AnswerType.CORRECT) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+            calendar.add(Calendar.DAY_OF_YEAR, easyCard);
+            setDeadlineAt(calendar.getTime());
+        }
+        if(type == AnswerType.MEDIUM) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+            calendar.add(Calendar.DAY_OF_YEAR, mediumCard);
+            setDeadlineAt(calendar.getTime());
+        }
+        if(type == AnswerType.FAILURE) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(new Date());
+            calendar.add(Calendar.DAY_OF_YEAR, hardCard);
+            setDeadlineAt(calendar.getTime());
+        }
         cycle++;
     }
 

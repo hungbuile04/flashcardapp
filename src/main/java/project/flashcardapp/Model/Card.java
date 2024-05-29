@@ -2,10 +2,6 @@ package project.flashcardapp.Model;
 
 /**
  * Card model for keeping information about question and answers
- *
- * @author Bartlomiej Gladys
- * @Date 01/11/2018
- * @version 1.0
  */
 
 public class Card {

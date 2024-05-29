@@ -21,6 +21,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+//Cửa sổ thêm nội dung gồm các chức năng thêm thẻ, tạo bộ thẻ mới, mở cửa sổ chi tiết thẻ
 public class AddCardController implements Initializable {
     public AnchorPane addCardPane;
     @FXML

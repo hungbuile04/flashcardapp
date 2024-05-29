@@ -3,6 +3,7 @@ package project.flashcardapp.Controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -41,6 +42,7 @@ public class DeckInfoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         deck = DeckData.deck;
+        deck.getCards().getAll();
         updateDeckInfo();
     }
     //Hiện thông tin số thẻ đã hoàn thành, chưa hoàn thành, mới
@@ -67,14 +69,19 @@ public class DeckInfoController implements Initializable {
     //Chọn chế đo kiem tra
     @FXML
     void selectTest(MouseEvent event) throws IOException {
-        Stage stage = (Stage) selectReviewModeButton.getScene().getWindow();
+        Stage stage = (Stage) selectTestModeButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/test_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
     }
 
-    public void customizeDeck(MouseEvent mouseEvent) {
+    public void customizeDeck(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/customize_deck.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 
     // Xoá deck

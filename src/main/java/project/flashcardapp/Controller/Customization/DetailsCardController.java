@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+//Chi tiết nội dung card+ chức năng chỉnh sửa thẻ
 public class DetailsCardController implements Initializable {
     public TextField questionTextFeild;
     public TextField answerTextField;

@@ -12,6 +12,7 @@ import project.flashcardapp.Model.Deck;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//Chức năng kiểm tra
 public class TestModeController implements Initializable {
     private int currentIndex = 0;
     private Deck deck;
@@ -38,12 +39,16 @@ public class TestModeController implements Initializable {
 
     @FXML
     void showNextCard(MouseEvent event) {
-
+        if (currentIndex < deck.getCards().getSize() - 1) {
+            currentIndex++;
+        }
     }
 
     @FXML
     void showPreviousCard(MouseEvent event) {
-
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
     }
 
 }

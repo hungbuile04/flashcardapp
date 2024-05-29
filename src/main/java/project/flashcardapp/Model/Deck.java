@@ -24,6 +24,9 @@ public class Deck {
     private int newCards=0;
     private int learnedCards=0;
     private int dueCards=0;
+    private int easyCard=3;
+    private int mediumCard=2;
+    private int hardCard=1;
 
 
     public Deck(String deckName) {
@@ -88,6 +91,14 @@ public class Deck {
         return this;
     }
 
+    public String getLabelDescription() {
+        return labelDescription;
+    }
+
+    public void setLabelDescription(String labelDescription) {
+        this.labelDescription = labelDescription;
+    }
+
     public int getNewCards() {
         return newCards;
     }
@@ -112,6 +123,30 @@ public class Deck {
         this.dueCards = dueCards;
     }
 
+    public int getEasyCard() {
+        return easyCard;
+    }
+
+    public void setEasyCard(int easyCard) {
+        this.easyCard = easyCard;
+    }
+
+    public int getMediumCard() {
+        return mediumCard;
+    }
+
+    public void setMediumCard(int mediumCard) {
+        this.mediumCard = mediumCard;
+    }
+
+    public int getHardCard() {
+        return hardCard;
+    }
+
+    public void setHardCard(int hardCard) {
+        this.hardCard = hardCard;
+    }
+
     /**
      * Category's getter
      *
@@ -126,13 +161,13 @@ public class Deck {
         this.learnedCards=0;
         this.newCards=0;
         for(int i=0; i<cards.getAll().size(); i++){
-            if(cards.getAll().get(i).getSelector().getUpdatedAt().compareTo(now)<0 && cards.getAll().get(i).getSelector().getCycle()!=0){
+            if(cards.getAll().get(i).getSelector().getDeadlineAt().compareTo(now)<=0 && cards.getAll().get(i).getSelector().getCycle()!=0){
                 this.dueCards++;
             }
             if(cards.getAll().get(i).getSelector().getCycle()==0){
                 this.newCards++;
             }
-            if(cards.getAll().get(i).getSelector().getUpdatedAt().compareTo(now)>0 && cards.getAll().get(i).getSelector().getCycle()!=0){
+            if(cards.getAll().get(i).getSelector().getDeadlineAt().compareTo(now)>0 && cards.getAll().get(i).getSelector().getCycle()!=0){
                 this.learnedCards++;
             }
         }

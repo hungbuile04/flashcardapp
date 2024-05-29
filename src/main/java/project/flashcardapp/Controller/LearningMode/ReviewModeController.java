@@ -15,6 +15,7 @@ import project.flashcardapp.Model.Selector;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//Chức năng ôn tập
 public class ReviewModeController implements Initializable {
     @FXML
     private Label questionLabel;
@@ -30,12 +31,6 @@ public class ReviewModeController implements Initializable {
 
     @FXML
     private StackPane CardPane;
-
-    @FXML
-    private Button nextCard;
-
-    @FXML
-    private Button previousCard;
 
     StackPane front;
     StackPane back;
@@ -111,16 +106,28 @@ public class ReviewModeController implements Initializable {
 
     @FXML
     void isEasy(MouseEvent event) {
-        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.CORRECT);
+        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.CORRECT,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());
+        if (currentIndex < deck.getCards().getSize() - 1) {
+            currentIndex++;
+            updateCard();
+        }
     }
 
     @FXML
     void isHard(MouseEvent event) {
-        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.FAILURE);
+        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.FAILURE,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());
+        if (currentIndex < deck.getCards().getSize() - 1) {
+            currentIndex++;
+            updateCard();
+        }
     }
 
     @FXML
     void isMedium(MouseEvent event) {
-        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.MEDIUM);
+        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.MEDIUM,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());
+        if (currentIndex < deck.getCards().getSize() - 1) {
+            currentIndex++;
+            updateCard();
+        }
     }
 }
