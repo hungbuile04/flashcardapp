@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button" />
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/arrowBack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +35,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "assignee": "hungbuile04"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;hungbuile04&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hungbuile04"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hungbuile04&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -59,13 +66,16 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2fofyo5MJF94LmjCA8QSnwoCXsa" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.HelloApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
@@ -74,7 +84,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "frontEnd",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet",
     "list.type.of.created.stylesheet": "CSS",
@@ -127,6 +137,7 @@
       <workItem from="1716888680436" duration="2893000" />
       <workItem from="1716911114539" duration="1907000" />
       <workItem from="1716947985348" duration="632000" />
+      <workItem from="1716992793947" duration="2614000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -237,6 +248,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="new(5/5)" />
     <MESSAGE value="new(12/5)" />
