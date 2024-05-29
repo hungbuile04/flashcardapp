@@ -1,0 +1,41 @@
+Index: src/main/resources/project/flashcardapp/add_card.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.control.TextArea?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n<AnchorPane fx:id=\"addCardPane\" prefHeight=\"400.0\" prefWidth=\"600.0\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"project.flashcardapp.Controller.AddCardController\">\r\n   <children>\r\n      <TableView fx:id=\"cardTable\" layoutX=\"46.0\" layoutY=\"100.0\" prefHeight=\"200.0\" prefWidth=\"293.0\">\r\n        <columns>\r\n          <TableColumn fx:id=\"front\" prefWidth=\"75.0\" text=\"Front\" />\r\n          <TableColumn fx:id=\"back\" prefWidth=\"75.0\" text=\"Back\" />\r\n        </columns>\r\n      </TableView>\r\n      <TextArea fx:id=\"questionField\" layoutX=\"376.0\" layoutY=\"88.0\" prefHeight=\"98.0\" prefWidth=\"195.0\" />\r\n      <TextArea fx:id=\"answerField\" layoutX=\"376.0\" layoutY=\"200.0\" prefHeight=\"98.0\" prefWidth=\"195.0\" />\r\n      <Button layoutX=\"211.0\" layoutY=\"327.0\" mnemonicParsing=\"false\" onMouseClicked=\"#deleteCard\" text=\"Delete\" />\r\n      <Button layoutX=\"454.0\" layoutY=\"327.0\" mnemonicParsing=\"false\" onMouseClicked=\"#saveNewCard\" text=\"Add\" />\r\n      <Button layoutX=\"121.0\" layoutY=\"327.0\" mnemonicParsing=\"false\" onMouseClicked=\"#detailCard\" text=\"Details\" />\r\n      <ComboBox fx:id=\"chooseDeck\" layoutX=\"46.0\" layoutY=\"35.0\" prefWidth=\"150.0\" />\r\n      <Label layoutX=\"432.0\" layoutY=\"53.0\" prefHeight=\"9.0\" prefWidth=\"85.0\" text=\"Add new card\" />\r\n      <Button layoutX=\"228.0\" layoutY=\"36.0\" mnemonicParsing=\"false\" onMouseClicked=\"#createNewDeck\" prefHeight=\"26.0\" prefWidth=\"109.0\" text=\"Create new deck\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/project/flashcardapp/add_card.fxml b/src/main/resources/project/flashcardapp/add_card.fxml
+--- a/src/main/resources/project/flashcardapp/add_card.fxml	(revision 1008bf3987edb788c1cd4b14454bfa39c46d56cd)
++++ b/src/main/resources/project/flashcardapp/add_card.fxml	(date 1716955565451)
+@@ -8,12 +8,13 @@
+ <?import javafx.scene.control.TextArea?>
+ <?import javafx.scene.layout.AnchorPane?>
+ 
+-<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.AddCardController">
++<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/add_card.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.AddCardController">
+    <children>
+       <TableView fx:id="cardTable" layoutX="46.0" layoutY="100.0" prefHeight="200.0" prefWidth="293.0">
+         <columns>
+-          <TableColumn fx:id="front" prefWidth="75.0" text="Front" />
+-          <TableColumn fx:id="back" prefWidth="75.0" text="Back" />
++          <TableColumn fx:id="front" prefWidth="35.5" text="STT" />
++          <TableColumn fx:id="back" minWidth="0.0" prefWidth="129.0" text="Front" />
++            <TableColumn fx:id="back1" prefWidth="127.5" text="Back" />
+         </columns>
+       </TableView>
+       <TextArea fx:id="questionField" layoutX="376.0" layoutY="88.0" prefHeight="98.0" prefWidth="195.0" />
+@@ -21,8 +22,9 @@
+       <Button layoutX="211.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#deleteCard" text="Delete" />
+       <Button layoutX="454.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" text="Add" />
+       <Button layoutX="121.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
+-      <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="35.0" prefWidth="150.0" />
++      <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="62.0" prefHeight="25.0" prefWidth="166.0" />
+       <Label layoutX="432.0" layoutY="53.0" prefHeight="9.0" prefWidth="85.0" text="Add new card" />
+-      <Button layoutX="228.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
++      <Button layoutX="228.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
++      <Label layoutY="21.0" prefHeight="17.0" prefWidth="600.0" text="Add New Card" />
+    </children>
+ </AnchorPane>
+diff --git a/src/main/resources/project/flashcardapp/stylesheet/add_card.css b/src/main/resources/project/flashcardapp/stylesheet/add_card.css
+new file mode 100644
