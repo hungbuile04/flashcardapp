@@ -3,18 +3,25 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DeckInfoController">
+<AnchorPane fx:id="custo" onDragDetected="#custom" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/deck_info.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DeckInfoController">
    <children>
-      <Label layoutX="270.0" layoutY="124.0" text="Label" />
-      <Label fx:id="newCards" layoutX="341.0" layoutY="124.0" text="Label" />
-      <Label layoutX="270.0" layoutY="168.0" text="Label" />
-      <Label fx:id="completedCards" layoutX="341.0" layoutY="168.0" text="Label" />
-      <Label layoutX="270.0" layoutY="214.0" text="Label" />
-      <Label fx:id="dueCards" layoutX="341.0" layoutY="214.0" text="Label" />
-      <Button fx:id="selectReviewModeButton" layoutX="124.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#selectReview" text="Review mode" />
-      <Button fx:id="selectTestModeButton" layoutX="360.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#selectTest" text="Test mode" />
-      <Button layoutX="142.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#customizeDeck" text="Customize" />
-      <Button layoutX="371.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#deleteDeck" text="Delete deck" />
+      <Button fx:id="customizeBtn" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#customizeDeck" text="Customize" />
+      <Pane fx:id="paneInfo" layoutX="201.0" layoutY="86.0" prefHeight="173.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="26.0" layoutY="39.0" text="Total Card :" />
+            <Label layoutX="25.0" layoutY="78.0" text="Learn :" />
+            <Label layoutX="26.0" layoutY="117.0" text="Due :" />
+            <Label fx:id="totalCardLabel" layoutX="160.0" layoutY="39.0" text="25" />
+            <Label fx:id="learnLabel" layoutX="160.0" layoutY="78.0" text="20" />
+            <Label fx:id="dueLabel" layoutX="163.0" layoutY="117.0" text="5" />
+         </children>
+      </Pane>
+      <Button fx:id="reviewModeBtn" layoutX="201.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#selectReview" prefHeight="30.0" prefWidth="70.0" text="Review" />
+      <Button fx:id="testModeButton" layoutX="331.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#selectTest" prefHeight="30.0" prefWidth="70.0" text="Test " />
+      <Button fx:id="deleteDeckBtn" layoutX="497.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#deleteDeck" text="Delete deck" />
+      <Button fx:id="backBtn" layoutX="-6.0" layoutY="4.0" mnemonicParsing="false" />
+      <Label fx:id="deckName" layoutX="-1.0" layoutY="26.0" prefHeight="27.0" prefWidth="600.0" text="IELTS: Intermediate" />
    </children>
 </AnchorPane>
