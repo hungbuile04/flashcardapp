@@ -19,16 +19,12 @@ public class TestModeController implements Initializable {
     public void setDeck(Deck deck) {
         this.deck = deck;
     }
-
     @FXML
     private TextField answerField;
-
     @FXML
     private Button nextCard;
-
     @FXML
     private Button previousCard;
-
     @FXML
     private Label questionLabel;
 
@@ -37,10 +33,21 @@ public class TestModeController implements Initializable {
         this.deck = DeckInfoController.deck;
     }
 
+    private void updateCard() {
+        if (deck.getCards().getSize() == 0) {
+            System.out.println("Card list is empty!");
+            return;
+        }
+    }
+
     @FXML
     void showNextCard(MouseEvent event) {
         if (currentIndex < deck.getCards().getSize() - 1) {
             currentIndex++;
+<<<<<<< Updated upstream
+=======
+            updateCard();
+>>>>>>> Stashed changes
         }
     }
 

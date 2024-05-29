@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new(28/5)">
       <change afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/CustomizeDeckController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -18,6 +19,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/SortBySelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/SortBySelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml" afterDir="false" />
+=======
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new(27/5)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/DeckData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model/DeckData.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +70,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+<<<<<<< Updated upstream
     &quot;last_opened_file_path&quot;: &quot;/Users/buihung/Library/Mobile Documents/com~apple~CloudDocs/java/flash-cardApp/src/main/resources/project/flashcardapp&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;/Users/builehuy/Downloads/TechByBLH/git learn/flashcardapp&quot;,
+>>>>>>> Stashed changes
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,7 +119,14 @@
       <workItem from="1715010333631" duration="1267000" />
       <workItem from="1715012600871" duration="28647000" />
       <workItem from="1715480463727" duration="26031000" />
+<<<<<<< Updated upstream
       <workItem from="1716884896197" duration="22538000" />
+=======
+      <workItem from="1716885895353" duration="20000" />
+      <workItem from="1716885917498" duration="3816000" />
+      <workItem from="1716910755551" duration="24148000" />
+      <workItem from="1716997770992" duration="941000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />

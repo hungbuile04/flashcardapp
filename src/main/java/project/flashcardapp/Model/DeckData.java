@@ -19,17 +19,20 @@ import java.util.List;
  * @version 1.0
  */
 
+//Đây là singleton class
 public class DeckData {
 
+    //2 dòng code đầu là khai báo thực thể và lấy ra
        public static DeckData instance = new DeckData();
        public static DeckData getInstance() {return instance;}
-       public static ObservableList<Deck> decks = FXCollections.observableArrayList();;
+       public static ObservableList<Deck> decks = FXCollections.observableArrayList();
+
        public static Deck deck;
+
+       //Getter & setter cho desks
        public static void setDecks(ObservableList<Deck> decks) {
               DeckData.decks = decks;
        }
-
-
        public ObservableList<Deck> getDecks() {return decks;}
 
 //       Card card1 = new Card("hello","chào");
@@ -47,7 +50,7 @@ public class DeckData {
 
        //nạp dữ liệu khi bật chương trình
        public void loadDeck() {
-           Gson gson = new Gson();
+           Gson gson = new GsonBuilder().setPrettyPrinting().create();
            try (FileReader reader = new FileReader("decks.json")) {
                Type listType = new TypeToken<List<Deck>>() {}.getType();
                List<Deck> list = gson.fromJson(reader, listType); // Deserialize

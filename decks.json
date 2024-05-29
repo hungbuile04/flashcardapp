@@ -102,9 +102,15 @@
           "question": "hello",
           "answer": "chào",
           "selector": {
+<<<<<<< Updated upstream
             "deadlineAt": "May 29, 2024, 11:03:19 AM",
             "answerType": "MEDIUM",
             "cycle": 3
+=======
+            "updatedAt": "May 29, 2024, 10:43:16 PM",
+            "answerType": "CORRECT",
+            "cycle": 24
+>>>>>>> Stashed changes
           }
         },
         {
@@ -124,14 +130,29 @@
             "answerType": "MEDIUM",
             "cycle": 6
           }
+        },
+        {
+          "question": "abc",
+          "answer": "123",
+          "selector": {
+            "updatedAt": "May 29, 2024, 9:14:32 AM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
         }
       ]
     },
+<<<<<<< Updated upstream
     "newCards": 0,
     "learnedCards": 1,
     "dueCards": 3,
     "easyCard": 0,
     "mediumCard": 0,
     "hardCard": 0
+=======
+    "newCards": 5,
+    "learnedCards": 0,
+    "dueCards": 0
+>>>>>>> Stashed changes
   }
 ]
