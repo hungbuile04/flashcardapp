@@ -8,21 +8,25 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Customization.AddCardController">
+<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/add_card.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Customization.AddCardController">
    <children>
-      <TableView fx:id="cardTable" layoutX="46.0" layoutY="100.0" prefHeight="200.0" prefWidth="293.0">
+      <TableView fx:id="cardTable" layoutX="46.0" layoutY="114.0" prefHeight="200.0" prefWidth="293.0">
         <columns>
-          <TableColumn fx:id="front" prefWidth="75.0" text="Front" />
-          <TableColumn fx:id="back" prefWidth="75.0" text="Back" />
+          <TableColumn fx:id="front" prefWidth="35.5" text="STT" />
+          <TableColumn fx:id="back" minWidth="0.0" prefWidth="129.0" text="Front" />
+            <TableColumn fx:id="back1" prefWidth="127.5" text="Back" />
         </columns>
       </TableView>
-      <TextArea fx:id="questionField" layoutX="376.0" layoutY="88.0" prefHeight="98.0" prefWidth="195.0" />
-      <TextArea fx:id="answerField" layoutX="376.0" layoutY="200.0" prefHeight="98.0" prefWidth="195.0" />
-      <Button layoutX="211.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#deleteCard" text="Delete" />
-      <Button layoutX="454.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" text="Add" />
-      <Button layoutX="121.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
-      <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="35.0" prefWidth="150.0" />
-      <Label layoutX="432.0" layoutY="53.0" prefHeight="9.0" prefWidth="85.0" text="Add new card" />
-      <Button layoutX="228.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
+      <TextArea fx:id="frontField" layoutX="376.0" layoutY="102.0" prefHeight="91.0" prefWidth="195.0" />
+      <TextArea fx:id="backField" layoutX="376.0" layoutY="216.0" prefHeight="98.0" prefWidth="195.0" />
+      <Button fx:id="deleteBtn" layoutX="404.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#deleteCard" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+      <Button fx:id="addBtn" layoutX="486.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" prefHeight="25.0" prefWidth="60.0" text="Add" />
+      <Button fx:id="detailBtn" layoutX="155.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
+      <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="76.0" prefHeight="25.0" prefWidth="166.0" />
+      <Label fx:id="frontLabel" layoutX="376.0" layoutY="80.0" prefHeight="9.0" prefWidth="85.0" text="Front" />
+      <Button fx:id="createNewDeck" layoutX="228.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
+      <Label fx:id="addNewCard" layoutY="21.0" prefHeight="17.0" prefWidth="600.0" text="Add New Card" />
+      <Label fx:id="backLabel" layoutX="376.0" layoutY="197.0" prefHeight="9.0" prefWidth="85.0" text="Back" />
+      <Button fx:id="turnBack" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" />
    </children>
 </AnchorPane>

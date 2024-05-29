@@ -108,21 +108,21 @@
           }
         },
         {
-          "question": "bye",
-          "answer": "tạm biệt",
-          "selector": {
-            "deadlineAt": "May 29, 2024, 10:51:16 PM",
-            "answerType": "CORRECT",
-            "cycle": 4
-          }
-        },
-        {
           "question": "12356789",
           "answer": "23456891",
           "selector": {
             "deadlineAt": "May 29, 2024, 10:32:07 PM",
             "answerType": "MEDIUM",
             "cycle": 6
+          }
+        },
+        {
+          "question": "bye",
+          "answer": "tạm biệt",
+          "selector": {
+            "deadlineAt": "May 29, 2024, 10:51:16 PM",
+            "answerType": "CORRECT",
+            "cycle": 4
           }
         }
       ]
