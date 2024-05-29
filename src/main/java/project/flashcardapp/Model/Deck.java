@@ -1,6 +1,8 @@
 package project.flashcardapp.Model;
 
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Category model for keeping name and cards
@@ -29,7 +31,7 @@ public class Deck {
     private int hardCard=1;
 
 
-    public Deck(String deckName) {
+    public Deck() {
         this.deckName = deckName;
     }
 
@@ -171,6 +173,10 @@ public class Deck {
                 this.learnedCards++;
             }
         }
+    }
+
+    public void randomCard(CardList cards){
+        Collections.shuffle(cards.getAll());
     }
 
     @Override

@@ -2,14 +2,20 @@ package project.flashcardapp.Controller.LearningMode;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import project.flashcardapp.Controller.DeckInfoController;
+import project.flashcardapp.HelloApplication;
 import project.flashcardapp.Model.Deck;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -48,7 +54,8 @@ public class TestModeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
-        updateCard();
+        deck.randomCard(deck.getCards());
+       updateCard();
     }
 
     private void updateCard() {
@@ -65,10 +72,25 @@ public class TestModeController implements Initializable {
     }
 
     @FXML
-    void showNextCard(MouseEvent event) {
-        if (currentIndex < deck.getCards().getSize() - 1) {
+    void showNextCard(MouseEvent event) throws IOException {
+        if (currentIndex <= deck.getCards().getSize() - 1) {
             currentIndex++;
-            updateCard();
+            if(currentIndex <= deck.getCards().getSize() - 1){
+                updateCard();
+            }
+        }
+        if (currentIndex == deck.getCards().getSize() -1) {
+            nextCard.setText("Show Result Deck");
+
+        }
+        if(currentIndex == deck.getCards().getSize()){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_deck.fxml"));
+            Parent addCardSceneRoot = loader.load();
+            Scene addCardScene = new Scene(addCardSceneRoot);
+            Stage stage = new Stage();
+            //stage.setTitle("RESULT DECK");
+            stage.setScene(addCardScene);
+            stage.show();
         }
     }
 
@@ -93,6 +115,8 @@ public class TestModeController implements Initializable {
     public void showAnswer(MouseEvent event){
         showAnswer.setText(deck.getCards().getCard(currentIndex).getAnswer());
     }
+
+
 
 
 }

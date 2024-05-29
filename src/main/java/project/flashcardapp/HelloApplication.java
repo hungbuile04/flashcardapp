@@ -3,6 +3,7 @@ package project.flashcardapp;
 import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.DeckData;
@@ -18,6 +19,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
 
     @Override
     public void init() throws Exception {
