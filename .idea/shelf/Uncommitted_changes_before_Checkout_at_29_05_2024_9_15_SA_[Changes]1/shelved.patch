@@ -1,0 +1,21 @@
+Index: src/main/resources/project/flashcardapp/main_window.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n<AnchorPane prefHeight=\"408.0\" prefWidth=\"590.0\" stylesheets=\"@stylesheet/main_window.css\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"project.flashcardapp.Controller.MainWindowController\">\r\n   <children>\r\n        <TableView fx:id=\"tableDeckView\" editable=\"true\" layoutX=\"8.0\" layoutY=\"152.0\" prefHeight=\"199.0\" prefWidth=\"580.0\">\r\n            <columns>\r\n                <TableColumn fx:id=\"deckName\" prefWidth=\"238.0\" text=\"Name\" />\r\n                <TableColumn fx:id=\"newCards\" prefWidth=\"98.0\" text=\"New\" />\r\n                <TableColumn fx:id=\"learnedCards\" minWidth=\"0.0\" prefWidth=\"132.0\" text=\"Learned\" />\r\n                <TableColumn fx:id=\"dueCards\" prefWidth=\"131.0\" text=\"Due\" />\r\n            </columns>\r\n         <columnResizePolicy>\r\n            <TableView fx:constant=\"CONSTRAINED_RESIZE_POLICY\" />\r\n         </columnResizePolicy>\r\n        </TableView>\r\n        <Label fx:id=\"stats_label\" layoutX=\"1.0\" layoutY=\"371.0\" prefHeight=\"20.0\" prefWidth=\"590.0\" text=\"Today stats 20 cards studied\" />\r\n        <Label fx:id=\"deck_list\" layoutX=\"-1.0\" layoutY=\"111.0\" prefHeight=\"17.0\" prefWidth=\"590.0\" text=\"Deck List\" />\r\n          <Button fx:id=\"addCardButton\" layoutX=\"320.0\" layoutY=\"55.0\" mnemonicParsing=\"false\" onMouseClicked=\"#addCard\" prefHeight=\"38.0\" prefWidth=\"89.0\" text=\"+ New Card\" />\r\n          <Button fx:id=\"fav_button\" layoutX=\"180.0\" layoutY=\"55.0\" mnemonicParsing=\"false\" prefHeight=\"38.0\" prefWidth=\"89.0\" text=\"Favourite\" />\r\n      <Label fx:id=\"text_label\" layoutY=\"14.0\" prefHeight=\"23.0\" prefWidth=\"590.0\" text=\"EngHust\" />\r\n      <Button fx:id=\"setting_button\" layoutX=\"-1.0\" layoutY=\"4.0\" mnemonicParsing=\"false\" prefHeight=\"46.0\" prefWidth=\"43.0\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/project/flashcardapp/main_window.fxml b/src/main/resources/project/flashcardapp/main_window.fxml
+--- a/src/main/resources/project/flashcardapp/main_window.fxml	
++++ b/src/main/resources/project/flashcardapp/main_window.fxml	
+@@ -21,8 +21,8 @@
+         </TableView>
+         <Label fx:id="stats_label" layoutX="1.0" layoutY="371.0" prefHeight="20.0" prefWidth="590.0" text="Today stats 20 cards studied" />
+         <Label fx:id="deck_list" layoutX="-1.0" layoutY="111.0" prefHeight="17.0" prefWidth="590.0" text="Deck List" />
+-          <Button fx:id="addCardButton" layoutX="320.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="89.0" text="+ New Card" />
+-          <Button fx:id="fav_button" layoutX="180.0" layoutY="55.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Favourite" />
++          <Button fx:id="addCardButton" layoutX="327.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="97.0" text="+ New Card" />
++          <Button fx:id="fav_button" layoutX="165.0" layoutY="55.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="97.0" text="Favourite" />
+       <Label fx:id="text_label" layoutY="14.0" prefHeight="23.0" prefWidth="590.0" text="EngHust" />
+       <Button fx:id="setting_button" layoutX="-1.0" layoutY="4.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="43.0" />
+    </children>
