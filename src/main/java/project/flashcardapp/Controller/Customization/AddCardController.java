@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -157,6 +158,17 @@ public class AddCardController implements Initializable {
     }
     public void refreshCard(){
         cardTable.refresh(); //cập nhật lại tablecard khi thẻ có sự thay đổi
+    }
+
+    public void backToMainWindow(MouseEvent mouseEvent) throws IOException {
+        DeckData.getInstance().storeDeck();
+        DeckData.getInstance().loadDeck();
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("Hello!");
+        stage.show();
     }
 }
 

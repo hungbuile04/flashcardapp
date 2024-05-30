@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" stylesheets="@stylesheet/details_card.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DetailsCardController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" stylesheets="@stylesheet/details_card.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Customization.DetailsCardController">
    <children>
       <Button fx:id="saveBtn" layoutX="268.0" layoutY="227.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="25.0" prefWidth="58.0" text="Save" />
       <Button fx:id="cancelBtn" layoutX="167.0" layoutY="227.0" mnemonicParsing="false" onMouseClicked="#cancelChanges" prefHeight="25.0" prefWidth="58.0" text="Cancel" />

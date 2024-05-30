@@ -27,6 +27,6 @@
       <Button fx:id="createNewDeck" layoutX="228.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
       <Label fx:id="addNewCard" layoutY="21.0" prefHeight="17.0" prefWidth="600.0" text="Add New Card" />
       <Label fx:id="backLabel" layoutX="376.0" layoutY="197.0" prefHeight="9.0" prefWidth="85.0" text="Back" />
-      <Button fx:id="turnBack" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" />
+      <Button fx:id="turnBack" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow"/>
    </children>
 </AnchorPane>

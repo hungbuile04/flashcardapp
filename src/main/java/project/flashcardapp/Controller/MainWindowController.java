@@ -80,7 +80,7 @@ public class MainWindowController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/add_card.fxml"));
         Parent addCardSceneRoot = loader.load();
         Scene addCardScene = new Scene(addCardSceneRoot);
-        Stage stage = new Stage();
+        Stage stage = (Stage) tableDeckView.getScene().getWindow();
         stage.setTitle("Add Card");
         stage.setScene(addCardScene);
         stage.show();

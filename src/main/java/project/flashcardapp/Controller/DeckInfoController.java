@@ -24,12 +24,13 @@ import java.util.Scanner;
 
 // Điều khiển cửa sổ của chi tiết bộ thẻ
 public class DeckInfoController implements Initializable {
-    public Label newCards;
-    public Label completedCards;
-    public Label dueCards;
-    public Button selectReviewModeButton;
-    public Button selectTestModeButton;
+    public Label newLabel;
+    public Label learnedLabel;
+    public Label dueLabel;
+    public Button reviewModeBtn;
+    public Button testModeBtn;
     public static Deck deck;
+    public Label deckName;
 
     public Deck getDeck() {
         return deck;
@@ -47,9 +48,10 @@ public class DeckInfoController implements Initializable {
     }
     //Hiện thông tin số thẻ đã hoàn thành, chưa hoàn thành, mới
     private void updateDeckInfo() {
-        completedCards.setText(toString(deck.getLearnedCards()));
-        dueCards.setText(toString(deck.getDueCards()));
-        newCards.setText(toString(deck.getNewCards()));
+        deckName.setText(deck.getDeckName());
+        learnedLabel.setText(toString(deck.getLearnedCards()));
+        dueLabel.setText(toString(deck.getDueCards()));
+        newLabel.setText(toString(deck.getNewCards()));
     }
 
     private String toString(int a) {
@@ -59,7 +61,7 @@ public class DeckInfoController implements Initializable {
     //Chọn chế độ ôn tap
     @FXML
     void selectReview(MouseEvent event) throws IOException {
-        Stage stage = (Stage) selectReviewModeButton.getScene().getWindow();
+        Stage stage = (Stage) reviewModeBtn.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/review_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());//hàm load cần gọi trước để xác định đc controller
         stage.setScene(scene);
@@ -69,7 +71,7 @@ public class DeckInfoController implements Initializable {
     //Chọn chế đo kiem tra
     @FXML
     void selectTest(MouseEvent event) throws IOException {
-        Stage stage = (Stage) selectTestModeButton.getScene().getWindow();
+        Stage stage = (Stage) testModeBtn.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/test_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
@@ -94,12 +96,14 @@ public class DeckInfoController implements Initializable {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
             DeckData.getInstance().getDecks().remove(deck);
-            ((Stage) newCards.getScene().getWindow()).close();
+            ((Stage) reviewModeBtn.getScene().getWindow()).close();
         }
 
     }
 
     public void backToMainWindow(MouseEvent mouseEvent) throws IOException {
+        DeckData.getInstance().storeDeck();
+        DeckData.getInstance().loadDeck();
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

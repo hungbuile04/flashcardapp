@@ -1,23 +1,27 @@
 [
   {
     "deckName": "deck5",
-    "labelDesciption": "",
     "cards": {
       "cards": []
     },
     "newCards": 0,
     "learnedCards": 0,
-    "dueCards": 0
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
   },
   {
     "deckName": "Deck4",
-    "labelDesciption": "Đây là deck 4",
     "cards": {
       "cards": []
     },
     "newCards": 0,
     "learnedCards": 0,
-    "dueCards": 0
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
   },
   {
     "deckName": "Deck3",
@@ -27,7 +31,7 @@
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "deadlineAt": "May 30, 2024, 4:07:15 PM",
             "answerType": "MEDIUM",
             "cycle": 0
           }
@@ -36,7 +40,7 @@
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "deadlineAt": "May 30, 2024, 4:07:15 PM",
             "answerType": "MEDIUM",
             "cycle": 0
           }
@@ -45,7 +49,10 @@
     },
     "newCards": 2,
     "learnedCards": 0,
-    "dueCards": 0
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
   },
   {
     "deckName": "Deck2",
@@ -55,16 +62,97 @@
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "deadlineAt": "Jun 1, 2024, 6:03:58 PM",
             "answerType": "MEDIUM",
-            "cycle": 0
+            "cycle": 1
           }
         },
         {
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
+            "deadlineAt": "Jun 1, 2024, 6:03:57 PM",
+            "answerType": "MEDIUM",
+            "cycle": 1
+          }
+        }
+      ]
+    },
+    "newCards": 0,
+    "learnedCards": 2,
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
+  },
+  {
+    "deckName": "Deck1",
+    "cards": {
+      "cards": [
+        {
+          "question": "12356789",
+          "answer": "23456891",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 4:54:31 PM",
+            "answerType": "CORRECT",
+            "cycle": 1
+          }
+        },
+        {
+          "question": "study",
+          "answer": "học",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 4:54:30 PM",
+            "answerType": "CORRECT",
+            "cycle": 1
+          }
+        },
+        {
+          "question": "bye",
+          "answer": "tạm biệt",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 4:54:30 PM",
+            "answerType": "CORRECT",
+            "cycle": 1
+          }
+        },
+        {
+          "question": "hello",
+          "answer": "chào",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 4:54:29 PM",
+            "answerType": "CORRECT",
+            "cycle": 1
+          }
+        }
+      ]
+    },
+    "newCards": 0,
+    "learnedCards": 4,
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
+  },
+  {
+    "deckName": "Deck11",
+    "labelDescription": "",
+    "cards": {
+      "cards": [
+        {
+          "question": "bread",
+          "answer": "bánh mì",
+          "selector": {
+            "deadlineAt": "May 30, 2024, 6:09:07 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "confidential",
+          "answer": "Bí mật",
+          "selector": {
+            "deadlineAt": "May 30, 2024, 6:04:46 PM",
             "answerType": "MEDIUM",
             "cycle": 0
           }
@@ -73,52 +161,9 @@
     },
     "newCards": 2,
     "learnedCards": 0,
-    "dueCards": 0
-  },
-  {
-    "deckName": "Deck1",
-    "cards": {
-      "cards": [
-        {
-          "question": "hello",
-          "answer": "chào",
-          "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
-          "question": "bye",
-          "answer": "tạm biệt",
-          "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
-          "question": "study",
-          "answer": "học",
-          "selector": {
-            "updatedAt": "May 1, 2024, 9:13:58 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
-          "question": "12356789",
-          "answer": "23456891",
-          "selector": {
-            "updatedAt": "May 6, 2024, 2:16:47 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        }
-      ]
-    },
-    "newCards": 4,
-    "learnedCards": 0,
-    "dueCards": 0
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
   }
 ]
