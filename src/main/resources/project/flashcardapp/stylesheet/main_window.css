@@ -37,7 +37,7 @@
     -fx-text-fill: #44BC91;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
-    -fx-effect: false;
+    -fx-effect: null;
 }
 
 #addCardButton {
