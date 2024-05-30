@@ -2,16 +2,21 @@ package project.flashcardapp.Controller.LearningMode;
 
 import javafx.animation.*;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import project.flashcardapp.Controller.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.Selector;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -21,7 +26,7 @@ public class ReviewModeController implements Initializable {
     private Label questionLabel;
     @FXML
     private Label answerLabel;
-    private int currentIndex = 0;
+    private  int currentIndex = 0;
     private boolean showingQuestion = true;
 
     private Deck deck;
@@ -74,8 +79,8 @@ public class ReviewModeController implements Initializable {
         Timeline timeline = new Timeline();
 
         // Nửa đầu của lật: quay tới 90 độ
-        KeyFrame kf1 = new KeyFrame(Duration.seconds(0.25),
-                new KeyValue(CardPane.rotateProperty(), 90));
+//        KeyFrame kf1 = new KeyFrame(Duration.seconds(0.25),
+//                new KeyValue(CardPane.rotateProperty(), 90));
 
         // Tạo một khoảng dừng để thay đổi nội dung thẻ
         PauseTransition pause = new PauseTransition(Duration.seconds(0.25));
@@ -90,26 +95,30 @@ public class ReviewModeController implements Initializable {
         });
 
         // Nửa sau của lật: quay từ 90 đến 180 độ
-        KeyFrame kf2 = new KeyFrame(Duration.seconds(0.5),
-                new KeyValue(CardPane.rotateProperty(), 180));
-
-        timeline.getKeyFrames().addAll(kf1, kf2);
-
-        timeline.setOnFinished(event -> {
-            CardPane.setRotate(0);
-            showingQuestion = !showingQuestion;
-        });
+//        KeyFrame kf2 = new KeyFrame(Duration.seconds(0.5),
+//                new KeyValue(CardPane.rotateProperty(), 180));
+//
+//        timeline.getKeyFrames().addAll(kf1, kf2);
+//
+//        timeline.setOnFinished(event -> {
+//            CardPane.setRotate(0);
+//            showingQuestion = !showingQuestion;
+//        });
 
         timeline.play();
         pause.playFromStart();
+
     }
 
     @FXML
-    void isEasy(MouseEvent event) {
+    void isEasy(MouseEvent event) throws IOException {
         deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.CORRECT,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());
         if (currentIndex < deck.getCards().getSize() - 1) {
             currentIndex++;
             updateCard();
+        }
+        if(currentIndex == deck.getCards().getSize() - 1){
+            showCompleteReview (deck);
         }
     }
 
@@ -120,6 +129,9 @@ public class ReviewModeController implements Initializable {
             currentIndex++;
             updateCard();
         }
+        if(currentIndex == deck.getCards().getSize() - 1){
+            showCompleteReview (deck);
+        }
     }
 
     @FXML
@@ -129,5 +141,27 @@ public class ReviewModeController implements Initializable {
             currentIndex++;
             updateCard();
         }
+        if(currentIndex == deck.getCards().getSize() - 1){
+            showCompleteReview (deck);
+        }
     }
+
+    public void showCompleteReview (Deck deck) {
+        try {
+            // Tải FXML cho scene chi tiết
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/complete_review_mode.fxml"));
+            Parent scene = loader.load();
+            Scene detailScene = new Scene(scene);
+            Stage stage = new Stage();
+            stage.setTitle("Congratulations!");
+            stage.setScene(detailScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
+
+
+

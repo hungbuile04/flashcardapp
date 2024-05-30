@@ -61,3 +61,4 @@ public class DetailsCardController implements Initializable {
         answerTextField.setText(current.getAnswer());
     }
 }
+
