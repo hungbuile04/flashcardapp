@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new(29/5) testmode" />
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Add resource directory">
+      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_deck.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/details_card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/resource/DesignerVN-Poppins-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/resource/DesignerVN-Poppins-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/resource/arrowBack1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/resource/arrowForward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/resource/favIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/details_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/details_card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/main_window.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,16 +28,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="frontEnd" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,16 +55,18 @@
     &quot;assignee&quot;: &quot;hungbuile04&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/hungbuile04/flashcardapp.git&quot;,
-    &quot;accountId&quot;: &quot;83a2cc5d-1c3a-43b0-9777-61c25d7c1a99&quot;
-  }
-}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="126f97a1-6e61-4e5e-bea6-c9590048c9d1" />
+        <option name="url" value="https://github.com/hungbuile04/flashcardapp.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="mavenHome" value="Use Maven wrapper" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -75,9 +92,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontEnd&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/84972/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet/resource&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -93,10 +110,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet\resource" />
       <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet" />
       <recent name="$PROJECT_DIR$/src/main/resources/project/flashcardapp" />
       <recent name="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller" />
       <recent name="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet\resource" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="project.flashcardapp.Controller" />
@@ -106,8 +127,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -128,10 +149,9 @@
       <workItem from="1716888680436" duration="2893000" />
       <workItem from="1716911114539" duration="1907000" />
       <workItem from="1716947985348" duration="632000" />
-      <workItem from="1716992793947" duration="2614000" />
-      <workItem from="1717012207515" duration="3962000" />
-      <workItem from="1717016212109" duration="6000" />
-      <workItem from="1717016324672" duration="3022000" />
+      <workItem from="1716992793947" duration="7578000" />
+      <workItem from="1717036964587" duration="980000" />
+      <workItem from="1717047802048" duration="2815000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -181,15 +201,39 @@
       <option name="project" value="LOCAL" />
       <updated>1716891139108</updated>
     </task>
-    <task id="LOCAL-00007" summary="new(29/5) testmode">
+    <task id="LOCAL-00007" summary="Add Card Window style">
       <option name="closed" value="true" />
-      <created>1717012816230</created>
+      <created>1716995788574</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1717012816230</updated>
+      <updated>1716995788574</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modify Add Card Window style">
+      <option name="closed" value="true" />
+      <created>1716996754631</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716996754631</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Deck Info Window Style">
+      <option name="closed" value="true" />
+      <created>1717004041531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717004041531</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add resource directory">
+      <option name="closed" value="true" />
+      <created>1717037564908</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717037564908</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,8 +300,10 @@
     <MESSAGE value="new(12/5)" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Main Window Style" />
-    <MESSAGE value="new(29/5)" />
-    <MESSAGE value="new(29/5) testmode" />
-    <option name="LAST_COMMIT_MESSAGE" value="new(29/5) testmode" />
+    <MESSAGE value="Add Card Window style" />
+    <MESSAGE value="modify Add Card Window style" />
+    <MESSAGE value="Deck Info Window Style" />
+    <MESSAGE value="Add resource directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add resource directory" />
   </component>
 </project>

@@ -1,0 +1,8 @@
+.label {
+    -fx-font-family: "DVN-Poppins";
+}
+
+.dialog-pane .header-panel .label .text {
+    -fx-font-family: "DVN-Poppins ExtBd";
+}
+
