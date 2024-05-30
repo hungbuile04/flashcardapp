@@ -37,10 +37,10 @@ public class AddCardController implements Initializable {
     private TableColumn<Card, String> front;
 
     @FXML
-    private TextArea answerField;
+    private TextArea frontField;
 
     @FXML
-    private TextArea questionField;
+    private TextArea backField;
 
     private Deck deck;
     public static Card selectedCard;
@@ -51,13 +51,6 @@ public class AddCardController implements Initializable {
         System.out.println("ready:"+DeckData.decks.size());
         chooseDeck.setPromptText("Choose a deck");
         chooseDeck.setItems(DeckData.decks);
-//        chooseDeck.setCellFactory(lv -> new ListCell<Deck>() {
-//            @Override
-//            protected void updateItem(Deck deck, boolean empty) {
-//                super.updateItem(deck, empty);
-//                setText(empty ? null : deck.getDeckName());
-//            }
-//        }); Dùng để tuỳ chỉnh cách hiển thị các thanh chọn. Có phương thức toString để thể hiện name trong Deck rồi nên thôi.
         chooseDeck.setButtonCell(new ListCell<Deck>() {
             @Override
             protected void updateItem(Deck deck, boolean empty) {
@@ -106,8 +99,8 @@ public class AddCardController implements Initializable {
     }
 
     public void saveNewCard(MouseEvent mouseEvent) {
-        String frontContent = questionField.getText().trim();
-        String backContent = answerField.getText().trim();
+        String frontContent = frontField.getText().trim();
+        String backContent = backField.getText().trim();
         // Kiểm tra để đảm bảo nội dung không trống
         if (!frontContent.isEmpty() && !backContent.isEmpty()) {
             Card newCard = new Card(frontContent, backContent);
@@ -115,8 +108,8 @@ public class AddCardController implements Initializable {
             cardTable.getItems().add(newCard); // Thêm card mới vào TableView
             cardTable.getSelectionModel().select(newCard); // Tùy chọn: Chọn card mới thêm
             // Làm sạch TextArea sau khi lưu
-            questionField.clear();
-            answerField.clear();
+            frontField.clear();
+            backField.clear();
         } else {
             // Hiển thị thông báo nếu không có nội dung đầy đủ
             showAlert("Infomation is not enough.", "Please try again.");

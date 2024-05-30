@@ -6,15 +6,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DeckInfoController">
    <children>
-      <Label layoutX="270.0" layoutY="124.0" text="Label" />
+      <Label layoutX="270.0" layoutY="124.0" text="New:" />
       <Label fx:id="newCards" layoutX="341.0" layoutY="124.0" text="Label" />
-      <Label layoutX="270.0" layoutY="168.0" text="Label" />
+      <Label layoutX="270.0" layoutY="168.0" text="Learned:" />
       <Label fx:id="completedCards" layoutX="341.0" layoutY="168.0" text="Label" />
-      <Label layoutX="270.0" layoutY="214.0" text="Label" />
+      <Label layoutX="270.0" layoutY="214.0" text="Due:" />
       <Label fx:id="dueCards" layoutX="341.0" layoutY="214.0" text="Label" />
       <Button fx:id="selectReviewModeButton" layoutX="124.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#selectReview" text="Review mode" />
       <Button fx:id="selectTestModeButton" layoutX="360.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#selectTest" text="Test mode" />
       <Button layoutX="142.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#customizeDeck" text="Customize" />
       <Button layoutX="371.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#deleteDeck" text="Delete deck" />
+      <Button layoutX="80.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow" text="Back" />
    </children>
 </AnchorPane>

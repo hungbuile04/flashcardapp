@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 //Chức năng kiểm tra
-public class TestModeController implements Initializable {
+public class  TestModeController implements Initializable {
     private int currentIndex = 0;
     private Deck deck;
     public void setDeck(Deck deck) {

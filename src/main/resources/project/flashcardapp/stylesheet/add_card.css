@@ -24,13 +24,13 @@
 }
 
 .table-view {
-    -fx-background-color: white;
+    -fx-background-color: transparent;
     -fx-border-color: black;
     -fx-border-radius: 2px;
 }
 
 .table-view .table-column {
-    -fx-background-color: white;
+    -fx-background-color: transparent;
 }
 
 #addNewCard {

@@ -66,7 +66,7 @@ public class MainWindowController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
             Parent detailSceneRoot = loader.load();
             Scene detailScene = new Scene(detailSceneRoot);
-            Stage stage = new Stage();
+            Stage stage = (Stage)tableDeckView.getScene().getWindow();
             stage.setTitle(deck.getDeckName());
             stage.setScene(detailScene);
             stage.show();

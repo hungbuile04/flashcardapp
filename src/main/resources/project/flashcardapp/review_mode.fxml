@@ -16,5 +16,6 @@
       <Button layoutX="145.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isHard" text="Hard" />
       <Button layoutX="273.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isMedium" text="Medium" />
       <Button layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isEasy" text="Easy" />
+      <Button layoutX="59.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" text="Back" />
    </children>
 </AnchorPane>

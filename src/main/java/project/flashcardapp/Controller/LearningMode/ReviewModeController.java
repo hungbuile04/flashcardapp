@@ -2,16 +2,21 @@ package project.flashcardapp.Controller.LearningMode;
 
 import javafx.animation.*;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import project.flashcardapp.Controller.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.Selector;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -128,6 +133,21 @@ public class ReviewModeController implements Initializable {
         if (currentIndex < deck.getCards().getSize() - 1) {
             currentIndex++;
             updateCard();
+        }
+    }
+
+    public void backToDeckInfoWindow(MouseEvent mouseEvent) {
+        try {
+            // Tải FXML cho scene chi tiết
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
+            Parent detailSceneRoot = loader.load();
+            Scene detailScene = new Scene(detailSceneRoot);
+            Stage stage = (Stage)CardPane.getScene().getWindow();
+            stage.setTitle(deck.getDeckName());
+            stage.setScene(detailScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

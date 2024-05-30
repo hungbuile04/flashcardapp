@@ -98,6 +98,15 @@ public class DeckInfoController implements Initializable {
         }
 
     }
+
+    public void backToMainWindow(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("Hello!");
+        stage.show();
+    }
 }
 
 

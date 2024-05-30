@@ -71,7 +71,7 @@ public class Deck {
             e.printStackTrace();
             throw e;
         }
-        if (name.length() > 15) {
+        if (name.length() > 20) {
             Exception e = new Exception("Category's name has to be up to 15 characters") {
                 // Khối khởi tạo của anonymous class
                 {
