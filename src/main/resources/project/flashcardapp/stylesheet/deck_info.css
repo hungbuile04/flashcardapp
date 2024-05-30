@@ -37,7 +37,7 @@
 }
 
 #backBtn {
-    -fx-graphic: url(arrowBack.png);
+    -fx-graphic: url(resource/arrowBack.png);
     -fx-background-color: transparent;
     -fx-scale-x: 0.5;
     -fx-scale-y: 0.5

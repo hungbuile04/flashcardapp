@@ -47,7 +47,7 @@
 
 #setting_button {
     -fx-background-color: transparent;
-    -fx-graphic: url(icon.png);
+    -fx-graphic: url(resource/icon.png);
     -fx-padding: 10px;
     -fx-scale-x: 0.5;
     -fx-scale-y: 0.5;

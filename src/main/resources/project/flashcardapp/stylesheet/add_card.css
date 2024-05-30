@@ -42,7 +42,7 @@
 
 #turnBack {
     -fx-background-color: transparent;
-    -fx-graphic: url(arrowBack.png);
+    -fx-graphic: url(resource/arrowBack.png);
     -fx-scale-x: 0.5;
     -fx-scale-y: 0.5
 }
