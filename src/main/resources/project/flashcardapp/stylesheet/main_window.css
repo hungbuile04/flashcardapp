@@ -37,8 +37,7 @@
     -fx-text-fill: #44BC91;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 15, 0.5, 0.5, 0)
-    dropshadow(gaussian, rgba(255, 255, 255, 0.5), 15, -0.5, -0.5, 0);
+    -fx-effect: false;
 }
 
 #addCardButton {
