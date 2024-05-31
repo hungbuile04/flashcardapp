@@ -28,10 +28,10 @@
     "cards": {
       "cards": [
         {
-          "question": "sleep",
-          "answer": "ngủ",
+          "question": "go",
+          "answer": "di",
           "selector": {
-            "deadlineAt": "May 30, 2024, 4:07:15 PM",
+            "deadlineAt": "May 30, 2024, 7:19:59 PM",
             "answerType": "MEDIUM",
             "cycle": 0
           }
@@ -44,10 +44,19 @@
             "answerType": "MEDIUM",
             "cycle": 0
           }
+        },
+        {
+          "question": "sleep",
+          "answer": "ngủ",
+          "selector": {
+            "deadlineAt": "May 30, 2024, 4:07:15 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
         }
       ]
     },
-    "newCards": 2,
+    "newCards": 3,
     "learnedCards": 0,
     "dueCards": 0,
     "easyCard": 3,
@@ -80,6 +89,38 @@
     },
     "newCards": 0,
     "learnedCards": 2,
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
+  },
+  {
+    "deckName": "Deck11",
+    "labelDescription": "",
+    "cards": {
+      "cards": [
+        {
+          "question": "bread",
+          "answer": "bánh mì",
+          "selector": {
+            "deadlineAt": "May 30, 2024, 6:09:07 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "confidential",
+          "answer": "Bí mật",
+          "selector": {
+            "deadlineAt": "May 30, 2024, 6:04:46 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        }
+      ]
+    },
+    "newCards": 2,
+    "learnedCards": 0,
     "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
@@ -129,38 +170,6 @@
     },
     "newCards": 0,
     "learnedCards": 4,
-    "dueCards": 0,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1
-  },
-  {
-    "deckName": "Deck11",
-    "labelDescription": "",
-    "cards": {
-      "cards": [
-        {
-          "question": "bread",
-          "answer": "bánh mì",
-          "selector": {
-            "deadlineAt": "May 30, 2024, 6:09:07 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
-          "question": "confidential",
-          "answer": "Bí mật",
-          "selector": {
-            "deadlineAt": "May 30, 2024, 6:04:46 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        }
-      ]
-    },
-    "newCards": 2,
-    "learnedCards": 0,
     "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,

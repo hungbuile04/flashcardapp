@@ -24,6 +24,6 @@
         <Button fx:id="addCardButton" layoutX="320.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New Card" />
         <Button fx:id="fav_button" layoutX="180.0" layoutY="55.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Favourite" />
       <Label fx:id="text_label" layoutY="14.0" prefHeight="23.0" prefWidth="590.0" text="EngHust" />
-      <Button fx:id="setting_button" layoutX="-1.0" layoutY="-14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="43.0" />
+      <Button fx:id="setting_button" layoutX="-24.0" layoutY="-19.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="43.0" />
    </children>
 </AnchorPane>

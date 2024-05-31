@@ -1,7 +1,8 @@
 .button {
     -fx-background-color: #44BC91;
     -fx-background-radius: 10px;
-    -fx-font-family: "DVN-Poppins";
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 12px;
     -fx-text-fill: white;
 }
 
@@ -14,6 +15,14 @@
     -fx-border-color: black;
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
+}
+
+.table-column .label{
+    /*Viet sau*/
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #77DEB9;
 }
 
 #text_label {
