@@ -16,7 +16,7 @@
         <GridPane hgap="10" vgap="10">
             <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Label text="Card List:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
             <TextArea fx:id="labelField" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          <columnConstraints>
             <ColumnConstraints />

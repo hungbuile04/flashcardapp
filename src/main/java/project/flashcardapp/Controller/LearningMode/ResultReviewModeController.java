@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Deck;
+import project.flashcardapp.Model.DeckData;
 
 import java.io.IOException;
 
@@ -24,6 +25,7 @@ public class ResultReviewModeController {
 
     @FXML
     void backButtonClicked(MouseEvent event) throws IOException {
+        DeckData.deck.counting();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
         Parent detailSceneRoot = loader.load();
         Scene detailScene = new Scene(detailSceneRoot);

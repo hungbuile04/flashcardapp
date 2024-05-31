@@ -163,6 +163,7 @@ public class ReviewModeController implements Initializable {
             Parent detailSceneRoot = loader.load();
             Scene detailScene = new Scene(detailSceneRoot);
             Stage stage = (Stage)CardPane.getScene().getWindow();
+            stage.setResizable(false);
             stage.setTitle(deck.getDeckName());
             stage.setScene(detailScene);
             stage.show();

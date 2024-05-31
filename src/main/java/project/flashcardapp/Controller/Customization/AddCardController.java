@@ -1,5 +1,6 @@
 package project.flashcardapp.Controller.Customization;
 
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -38,6 +39,9 @@ public class AddCardController implements Initializable {
     private TableColumn<Card, String> front;
 
     @FXML
+    private TableColumn<Card, Integer> indexColumn; // Khai báo cột số thứ tự
+
+    @FXML
     private TextArea frontField;
 
     @FXML
@@ -62,6 +66,11 @@ public class AddCardController implements Initializable {
 
         front.setCellValueFactory(new PropertyValueFactory<>("question"));
         back.setCellValueFactory(new PropertyValueFactory<>("answer"));
+        // Thiết lập giá trị cho cột số thứ tự
+        indexColumn.setCellValueFactory(column ->
+                new ReadOnlyObjectWrapper<>(cardTable.getItems().indexOf(column.getValue()) + 1)
+        );
+        indexColumn.setSortable(false);
 
         chooseDeck.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {

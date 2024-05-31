@@ -12,9 +12,9 @@
    <children>
       <TableView fx:id="cardTable" layoutX="46.0" layoutY="114.0" prefHeight="200.0" prefWidth="293.0">
         <columns>
-          <TableColumn fx:id="front" prefWidth="35.5" text="STT" />
-          <TableColumn fx:id="back" minWidth="0.0" prefWidth="129.0" text="Front" />
-            <TableColumn fx:id="back1" prefWidth="127.5" text="Back" />
+          <TableColumn fx:id="indexColumn" prefWidth="35.5" text="STT" />
+          <TableColumn fx:id="front" minWidth="0.0" prefWidth="129.0" text="Front" />
+            <TableColumn fx:id="back" prefWidth="127.5" text="Back" />
         </columns>
       </TableView>
       <TextArea fx:id="frontField" layoutX="376.0" layoutY="102.0" prefHeight="91.0" prefWidth="195.0" />

@@ -15,5 +15,6 @@
       <Button layoutX="273.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isMedium" text="Medium" />
       <Button layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#isEasy" text="Easy" />
       <Button layoutX="36.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" text="Back" />
+      <Label alignment="CENTER" layoutX="236.0" layoutY="277.0" prefHeight="17.0" prefWidth="138.0" text="Click on the card to flip it" textAlignment="CENTER" />
    </children>
 </AnchorPane>
