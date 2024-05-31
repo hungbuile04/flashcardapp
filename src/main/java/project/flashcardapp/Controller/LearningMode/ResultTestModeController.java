@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.input.MouseEvent;
 
-public class ResultDeckController {
+public class ResultTestModeController {
     @FXML
     private Button backtoDeckButton;
 

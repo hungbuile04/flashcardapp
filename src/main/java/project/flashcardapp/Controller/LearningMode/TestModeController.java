@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Controller.DeckInfoController;
-import project.flashcardapp.HelloApplication;
 import project.flashcardapp.Model.Deck;
 
 import java.io.IOException;
@@ -84,7 +83,7 @@ public class  TestModeController implements Initializable {
 
         }
         if(currentIndex == deck.getCards().getSize()){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_deck.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
             Parent addCardSceneRoot = loader.load();
             Scene addCardScene = new Scene(addCardSceneRoot);
             Stage stage = new Stage();
