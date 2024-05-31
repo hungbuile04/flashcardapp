@@ -149,6 +149,7 @@ public class AddCardController implements Initializable {
             Parent detailsCardSceneRoot = loader.load();
             Scene detailsCardScene = new Scene(detailsCardSceneRoot);
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setTitle("Details");
             stage.setScene(detailsCardScene);
             DetailsCardController detailsCardController = loader.getController();
@@ -166,6 +167,7 @@ public class AddCardController implements Initializable {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.setTitle("Hello!");
         stage.show();

@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button2">
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="new 30/5.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/CustomizeDeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/CustomizeDeckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/DetailsCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/DetailsCardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/DeckInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/MainWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/MainWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/deckinfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/deckinfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/details_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/details_card.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/main_window.fxml" afterDir="false" />
@@ -229,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717037564908</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="new 30/5.3">
+      <option name="closed" value="true" />
+      <created>1717067854751</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717067854751</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +310,7 @@
     <MESSAGE value="Deck Info Window Style" />
     <MESSAGE value="Add resource directory" />
     <MESSAGE value="Main Window Icon Button2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main Window Icon Button2" />
+    <MESSAGE value="new 30/5.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="new 30/5.3" />
   </component>
 </project>

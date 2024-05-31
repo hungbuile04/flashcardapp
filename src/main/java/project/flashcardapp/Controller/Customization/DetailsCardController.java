@@ -9,13 +9,16 @@ import javafx.stage.Stage;
 import project.flashcardapp.Model.Card;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 //Chi tiết nội dung card+ chức năng chỉnh sửa thẻ
 public class DetailsCardController implements Initializable {
-    public TextField questionTextFeild;
-    public TextField answerTextField;
+    public TextField frontTextField;
+    public TextField backTextField;
+    public TextField dueDateTextField;
     Card current;
     private AddCardController addCardController;
 
@@ -29,10 +32,10 @@ public class DetailsCardController implements Initializable {
     }
 
     public void saveChanges(MouseEvent mouseEvent) {
-        current.setQuestion(questionTextFeild.getText());
-        current.setAnswer(answerTextField.getText());
+        current.setQuestion(frontTextField.getText());
+        current.setAnswer(backTextField.getText());
         addCardController.refreshCard();
-        ((Stage) questionTextFeild.getScene().getWindow()).close();
+        ((Stage) backTextField.getScene().getWindow()).close();
     }
 
     public void cancelChanges(MouseEvent mouseEvent) {
@@ -47,17 +50,22 @@ public class DetailsCardController implements Initializable {
                 saveChanges(mouseEvent);
             }
         }
-        ((Stage) questionTextFeild.getScene().getWindow()).close();
+        ((Stage) frontTextField.getScene().getWindow()).close();
     }
     private boolean changesMade() {
-        return !questionTextFeild.getText().equals(current.getQuestion()) ||
-                !answerTextField.getText().equals(current.getAnswer());
+        return !frontTextField.getText().equals(current.getQuestion()) ||
+                !backTextField.getText().equals(current.getAnswer());
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         current=AddCardController.selectedCard;
-        questionTextFeild.setText(current.getQuestion());
-        answerTextField.setText(current.getAnswer());
+        frontTextField.setText(current.getQuestion());
+        backTextField.setText(current.getAnswer());
+        dueDateTextField.setText(toString(current.getSelector().getDeadlineAt()));
+    }
+    private String toString(Date deadlineAt) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        return sdf.format(deadlineAt);
     }
 }

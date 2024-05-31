@@ -22,7 +22,7 @@
         <Label fx:id="stats_label" layoutX="1.0" layoutY="371.0" prefHeight="20.0" prefWidth="590.0" text="Today stats 20 cards studied" />
         <Label fx:id="deck_list" layoutX="-1.0" layoutY="111.0" prefHeight="17.0" prefWidth="590.0" text="Deck List" />
         <Button fx:id="addCardButton" layoutX="320.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New Card" />
-        <Button fx:id="fav_button" layoutX="180.0" layoutY="55.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Favourite" />
+        <Button fx:id="fav_button" layoutX="180.0" layoutY="55.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Statistic" onMouseClicked="#statistic"/>
       <Label fx:id="text_label" layoutY="14.0" prefHeight="23.0" prefWidth="590.0" text="EngHust" />
       <Button fx:id="setting_button" layoutX="-1.0" layoutY="-14.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="43.0" />
    </children>

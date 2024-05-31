@@ -67,6 +67,7 @@ public class MainWindowController implements Initializable {
             Parent detailSceneRoot = loader.load();
             Scene detailScene = new Scene(detailSceneRoot);
             Stage stage = (Stage)tableDeckView.getScene().getWindow();
+            stage.setResizable(false);
             stage.setTitle(deck.getDeckName());
             stage.setScene(detailScene);
             stage.show();
@@ -81,8 +82,13 @@ public class MainWindowController implements Initializable {
         Parent addCardSceneRoot = loader.load();
         Scene addCardScene = new Scene(addCardSceneRoot);
         Stage stage = (Stage) tableDeckView.getScene().getWindow();
+        stage.setResizable(false);
         stage.setTitle("Add Card");
         stage.setScene(addCardScene);
         stage.show();
+    }
+
+    public void statistic(MouseEvent mouseEvent) {
+
     }
 }

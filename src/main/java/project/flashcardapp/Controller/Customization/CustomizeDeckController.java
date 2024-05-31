@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Controller.DeckInfoController;
@@ -54,6 +55,7 @@ public class CustomizeDeckController implements Initializable {
                     Parent detailSceneRoot = loader.load();
                     Scene detailScene = new Scene(detailSceneRoot);
                     Stage stage = (Stage)deckLabelField.getScene().getWindow();
+                    stage.setResizable(false);
                     stage.setTitle(deck.getDeckName());
                     stage.setScene(detailScene);
                     stage.show();
@@ -86,6 +88,7 @@ public class CustomizeDeckController implements Initializable {
             Parent detailSceneRoot = loader.load();
             Scene detailScene = new Scene(detailSceneRoot);
             Stage stage = (Stage)deckLabelField.getScene().getWindow();
+            stage.setResizable(false);
             stage.setTitle(deck.getDeckName());
             stage.setScene(detailScene);
             stage.show();
@@ -102,5 +105,29 @@ public class CustomizeDeckController implements Initializable {
           easyCardField.setText(Integer.toString(deck.getEasyCard()));
           mediumCardField.setText(Integer.toString(deck.getMediumCard()));
           hardCardField.setText(Integer.toString(deck.getHardCard()));
+          easyCardField.setTextFormatter(new TextFormatter<>(change -> {
+              String newText = change.getControlNewText();
+              if (newText.matches("\\d*")) {
+                  return change;
+              } else {
+                  return null;
+              }
+          }));
+          mediumCardField.setTextFormatter(new TextFormatter<>(change -> {
+              String newText = change.getControlNewText();
+              if (newText.matches("\\d*")) {
+                  return change;
+              } else {
+                  return null;
+              }
+          }));
+          hardCardField.setTextFormatter(new TextFormatter<>(change -> {
+              String newText = change.getControlNewText();
+              if (newText.matches("\\d*")) {
+                  return change;
+              } else {
+                  return null;
+              }
+          }));
     }
 }

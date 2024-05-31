@@ -22,6 +22,6 @@
       <Button fx:id="testModeBtn" layoutX="331.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#selectTest" prefHeight="30.0" prefWidth="70.0" text="Test " />
       <Button fx:id="deleteDeckBtn" layoutX="497.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#deleteDeck" text="Delete deck" />
       <Button fx:id="backBtn" layoutX="-6.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow" />
-      <Label fx:id="deckName" layoutX="1.0" layoutY="35.0" prefHeight="27.0" prefWidth="600.0" text="IELTS"/>
+      <Label fx:id="deckName" layoutX="1.0" layoutY="35.0" prefHeight="27.0" prefWidth="600.0" text="IELTS" />
    </children>
 </AnchorPane>

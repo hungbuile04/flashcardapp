@@ -1,69 +1,14 @@
 [
   {
-    "deckName": "deck5",
-    "cards": {
-      "cards": []
-    },
-    "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 0,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1
-  },
-  {
-    "deckName": "Deck4",
-    "cards": {
-      "cards": []
-    },
-    "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 0,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1
-  },
-  {
-    "deckName": "Deck3",
-    "cards": {
-      "cards": [
-        {
-          "question": "sleep",
-          "answer": "ngủ",
-          "selector": {
-            "deadlineAt": "May 30, 2024, 4:07:15 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
-          "question": "eat",
-          "answer": "ăn",
-          "selector": {
-            "deadlineAt": "May 30, 2024, 4:07:15 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        }
-      ]
-    },
-    "newCards": 2,
-    "learnedCards": 0,
-    "dueCards": 0,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1
-  },
-  {
     "deckName": "Deck2",
     "cards": {
       "cards": [
         {
-          "question": "sleep",
-          "answer": "ngủ",
+          "question": "a",
+          "answer": "b",
           "selector": {
-            "deadlineAt": "Jun 1, 2024, 6:03:58 PM",
-            "answerType": "MEDIUM",
+            "deadlineAt": "Jun 1, 2024, 4:47:02 PM",
+            "answerType": "FAILURE",
             "cycle": 1
           }
         },
@@ -71,15 +16,24 @@
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "deadlineAt": "Jun 1, 2024, 6:03:57 PM",
-            "answerType": "MEDIUM",
-            "cycle": 1
+            "deadlineAt": "Jun 1, 2024, 4:47:02 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
+          }
+        },
+        {
+          "question": "sleep",
+          "answer": "ngủ",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 4:47:02 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
+    "learnedCards": 3,
     "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
@@ -99,8 +53,8 @@
           }
         },
         {
-          "question": "study",
-          "answer": "học",
+          "question": "bye",
+          "answer": "tạm biệt",
           "selector": {
             "deadlineAt": "Jun 2, 2024, 4:54:30 PM",
             "answerType": "CORRECT",
@@ -108,8 +62,8 @@
           }
         },
         {
-          "question": "bye",
-          "answer": "tạm biệt",
+          "question": "study",
+          "answer": "học",
           "selector": {
             "deadlineAt": "Jun 2, 2024, 4:54:30 PM",
             "answerType": "CORRECT",
@@ -135,32 +89,63 @@
     "hardCard": 1
   },
   {
+    "deckName": "Deck3",
+    "cards": {
+      "cards": [
+        {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 11:47:59 AM",
+            "answerType": "MEDIUM",
+            "cycle": 1
+          }
+        },
+        {
+          "question": "sleep",
+          "answer": "ngủ",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 11:47:58 AM",
+            "answerType": "MEDIUM",
+            "cycle": 1
+          }
+        }
+      ]
+    },
+    "newCards": 0,
+    "learnedCards": 2,
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
+  },
+  {
     "deckName": "Deck11",
     "labelDescription": "",
     "cards": {
       "cards": [
         {
-          "question": "bread",
-          "answer": "bánh mì",
-          "selector": {
-            "deadlineAt": "May 30, 2024, 6:09:07 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
           "question": "confidential",
           "answer": "Bí mật",
           "selector": {
-            "deadlineAt": "May 30, 2024, 6:04:46 PM",
-            "answerType": "MEDIUM",
-            "cycle": 0
+            "deadlineAt": "Jun 1, 2024, 11:57:32 AM",
+            "answerType": "FAILURE",
+            "cycle": 1
+          }
+        },
+        {
+          "question": "bread",
+          "answer": "bánh mì",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 11:57:31 AM",
+            "answerType": "FAILURE",
+            "cycle": 1
           }
         }
       ]
     },
-    "newCards": 2,
-    "learnedCards": 0,
+    "newCards": 0,
+    "learnedCards": 2,
     "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
