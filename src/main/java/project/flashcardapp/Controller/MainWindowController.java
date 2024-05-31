@@ -3,11 +3,13 @@ package project.flashcardapp.Controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
@@ -24,12 +26,13 @@ public class MainWindowController implements Initializable {
     @FXML
     private MenuButton settings;
 
+
     @FXML
     private TableView<Deck> tableDeckView;
+    
 
     @FXML
     private TableColumn<Deck, String> deckName;
-
     @FXML
     private TableColumn<Deck, Integer> dueCards;
 

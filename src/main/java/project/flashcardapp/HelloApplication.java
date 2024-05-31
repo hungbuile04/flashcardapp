@@ -3,8 +3,11 @@ package project.flashcardapp;
 import com.google.gson.Gson;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.DeckData;
 
@@ -19,6 +22,7 @@ public class    HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+        stage.centerOnScreen();
     }
 
 

@@ -4,30 +4,30 @@
     "cards": {
       "cards": [
         {
-          "question": "a",
-          "answer": "b",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 4:47:02 PM",
-            "answerType": "FAILURE",
-            "cycle": 1
-          }
-        },
-        {
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "deadlineAt": "Jun 1, 2024, 4:47:02 PM",
+            "deadlineAt": "Jun 1, 2024, 5:16:07 PM",
             "answerType": "FAILURE",
-            "cycle": 2
+            "cycle": 3
           }
         },
         {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 1, 2024, 4:47:02 PM",
-            "answerType": "FAILURE",
-            "cycle": 2
+            "deadlineAt": "Jun 2, 2024, 5:23:40 PM",
+            "answerType": "MEDIUM",
+            "cycle": 3
+          }
+        },
+        {
+          "question": "a",
+          "answer": "b",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 5:23:39 PM",
+            "answerType": "MEDIUM",
+            "cycle": 3
           }
         }
       ]
@@ -44,20 +44,11 @@
     "cards": {
       "cards": [
         {
-          "question": "12356789",
-          "answer": "23456891",
+          "question": "1",
+          "answer": "2",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 4:54:31 PM",
-            "answerType": "CORRECT",
-            "cycle": 1
-          }
-        },
-        {
-          "question": "bye",
-          "answer": "tạm biệt",
-          "selector": {
-            "deadlineAt": "Jun 2, 2024, 4:54:30 PM",
-            "answerType": "CORRECT",
+            "deadlineAt": "Jun 1, 2024, 5:17:06 PM",
+            "answerType": "FAILURE",
             "cycle": 1
           }
         },
@@ -65,9 +56,27 @@
           "question": "study",
           "answer": "học",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 4:54:30 PM",
-            "answerType": "CORRECT",
-            "cycle": 1
+            "deadlineAt": "Jun 1, 2024, 5:17:08 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
+          }
+        },
+        {
+          "question": "bye",
+          "answer": "tạm biệt",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
+          }
+        },
+        {
+          "question": "12356789",
+          "answer": "23456891",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
           }
         },
         {
@@ -82,7 +91,7 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 4,
+    "learnedCards": 5,
     "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
@@ -146,6 +155,19 @@
     },
     "newCards": 0,
     "learnedCards": 2,
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
+  },
+  {
+    "deckName": "test",
+    "labelDescription": "",
+    "cards": {
+      "cards": []
+    },
+    "newCards": 0,
+    "learnedCards": 0,
     "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
