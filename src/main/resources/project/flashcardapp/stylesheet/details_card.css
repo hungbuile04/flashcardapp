@@ -12,10 +12,30 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
 }
 
+.button .text {
+    -fx-font-family: "DVN-Poppins ExtBd";
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
+
 #front, #back, #dueDate {
     -fx-font-family: "DVN-Poppins";
 }
 
 #cardDetailLabel {
     -fx-font-family: "DVN-Poppins ExtBd";
+}
+
+#cancelBtn {
+    -fx-background-color: #B7B7B7;
+}
+
+#cancelBtn:hover {
+    -fx-background-color: #737373;
+}
+
+#saveBtn:hover {
+    -fx-background-color: #77DEB9;
 }
