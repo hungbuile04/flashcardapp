@@ -25,6 +25,10 @@
     -fx-background-color: #77DEB9;
 }
 
+.button:hover {
+    -fx-background-color: #77DEB9;
+}
+
 #text_label {
     -fx-font-family: "DVN-Poppins ExtBd";
     -fx-font-size: 20px;
@@ -68,5 +72,11 @@
 .table-view:row-selection .column-header-background .nested-column-header .table-column .label {
     -fx-font-family: "DVN-Poppins";
     -fx-text-fill: black;
+}
+
+#fav_button:hover {
+    -fx-border-color: none;
+    -fx-background-color: #44BC91;
+    -fx-text-fill: white;
 }
 
