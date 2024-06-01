@@ -6,17 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Controller.DeckInfoController;
-import project.flashcardapp.HelloApplication;
 import project.flashcardapp.Model.Deck;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 //Chức năng kiểm tra
@@ -84,7 +82,7 @@ public class  TestModeController implements Initializable {
 
         }
         if(currentIndex == deck.getCards().getSize()){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_deck.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
             Parent addCardSceneRoot = loader.load();
             Scene addCardScene = new Scene(addCardSceneRoot);
             Stage stage = new Stage();
@@ -117,6 +115,22 @@ public class  TestModeController implements Initializable {
     }
 
 
+    public void backToDeckInfoWindow(MouseEvent mouseEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirm Cancel");
+        alert.setHeaderText("Do you want to exit?");
+        alert.setContentText("Click OK to confirm, or Cancel to continue.");
 
-
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
+            Parent detailSceneRoot = loader.load();
+            Scene detailScene = new Scene(detailSceneRoot);
+            Stage stage = (Stage)answerField.getScene().getWindow();
+            stage.setResizable(false);
+            stage.setTitle(deck.getDeckName());
+            stage.setScene(detailScene);
+            stage.show();
+        }
+    }
 }

@@ -31,6 +31,6 @@
             <TextField fx:id="dueDateTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Label fx:id="cardDetailLabel" layoutX="11.0" layoutY="6.0" text="Card detail" />
+      <Label fx:id="cardDetailLabel" layoutX="14.0" layoutY="6.0" text="Card detail" />
    </children>
 </AnchorPane>

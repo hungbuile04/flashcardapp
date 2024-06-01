@@ -64,6 +64,7 @@ public class DeckInfoController implements Initializable {
         Stage stage = (Stage) reviewModeBtn.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/review_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());//hàm load cần gọi trước để xác định đc controller
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
@@ -74,6 +75,7 @@ public class DeckInfoController implements Initializable {
         Stage stage = (Stage) testModeBtn.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/test_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
@@ -82,12 +84,13 @@ public class DeckInfoController implements Initializable {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/customize_deck.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
 
     // Xoá deck
-    public void deleteDeck(MouseEvent mouseEvent) {
+    public void deleteDeck(MouseEvent mouseEvent) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirm Cancel");
         alert.setHeaderText("Do you want to delete this deck?");
@@ -96,7 +99,13 @@ public class DeckInfoController implements Initializable {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
             DeckData.getInstance().getDecks().remove(deck);
-            ((Stage) reviewModeBtn.getScene().getWindow()).close();
+            Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.setTitle("Hello!");
+            stage.show();;
         }
 
     }
@@ -107,6 +116,7 @@ public class DeckInfoController implements Initializable {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.setTitle("Hello!");
         stage.show();
