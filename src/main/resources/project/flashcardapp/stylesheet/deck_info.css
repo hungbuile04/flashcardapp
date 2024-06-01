@@ -6,7 +6,7 @@
 .button {
     -fx-font-family: "DVN-Poppins ExtBd";
     -fx-background-radius: 10px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0)
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
 }
 
 #paneInfo {
@@ -15,7 +15,7 @@
     -fx-border-width: 3px;
 }
 
-#totalCardLabel, #learnLabel, #dueLabel {
+#newLabel, #learnedLabel, #dueLabel {
     -fx-font-family: "DVN-Poppins";
 }
 
@@ -26,7 +26,7 @@
     -fx-text-fill: #44BC91;
 }
 
-#testModeButton {
+#testModeBtn {
     -fx-background-color: #77DEB9;
     -fx-text-fill: white;
 }
@@ -46,7 +46,7 @@
 #customizeBtn, #deleteDeckBtn {
     -fx-background-color: transparent;
     -fx-underline: true;
-    -fx-effect: false;
+    -fx-effect: null;
     -fx-font-size: 12px;
 }
 

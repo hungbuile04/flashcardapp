@@ -53,7 +53,7 @@
     -fx-text-fill: black;
     -fx-underline: true;
     -fx-font-size: 15px;
-    -fx-effect: false;
+    -fx-effect: null;
 }
 
 #createNewDeck {
@@ -62,7 +62,7 @@
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
     -fx-text-fill: #44BC91;
-    -fx-effect: false;
+    -fx-effect: null;
 }
 
 #deleteBtn {
