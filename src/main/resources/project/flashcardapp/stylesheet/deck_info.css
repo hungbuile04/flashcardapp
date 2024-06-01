@@ -27,13 +27,21 @@
 }
 
 #testModeBtn {
-    -fx-background-color: #77DEB9;
+    -fx-background-color: #44BC91;
     -fx-text-fill: white;
+}
+
+#testModeBtn:hover {
+    -fx-background-color: #77DEB9;
 }
 
 #reviewModeBtn {
     -fx-background-color: #B7B7B7;
     -fx-text-fill: white;
+}
+
+#reviewModeBtn:hover {
+    -fx-background-color: #737373;
 }
 
 #backBtn {
@@ -52,4 +60,12 @@
 
 #deleteDeckBtn {
     -fx-text-fill: #AB3434;
+}
+
+#deleteDeckBtn:hover {
+    -fx-text-fill: #881b1b;
+}
+
+#customizeBtn:hover {
+    -fx-text-fill: #6e6e6e;
 }

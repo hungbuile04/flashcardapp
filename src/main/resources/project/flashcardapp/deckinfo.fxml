@@ -17,11 +17,11 @@
             <Label fx:id="learnedLabel" layoutX="160.0" layoutY="78.0" text="20" />
             <Label fx:id="dueLabel" layoutX="160.0" layoutY="117.0" text="5" />
          </children>
-      </Pane>
+      </Pane>  
       <Button fx:id="reviewModeBtn" layoutX="201.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#selectReview" prefHeight="30.0" prefWidth="70.0" text="Review" />
       <Button fx:id="testModeBtn" layoutX="331.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#selectTest" prefHeight="30.0" prefWidth="70.0" text="Test " />
       <Button fx:id="deleteDeckBtn" layoutX="497.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#deleteDeck" text="Delete deck" />
-      <Button fx:id="backBtn" layoutX="-22.0" layoutY="-18.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow" />
+      <Button fx:id="backBtn" layoutX="-13.0" layoutY="-13.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow" />
       <Label fx:id="deckName" layoutX="1.0" layoutY="35.0" prefHeight="27.0" prefWidth="600.0" text="IELTS Intermediate" />
    </children>
 </AnchorPane>

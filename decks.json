@@ -182,5 +182,18 @@
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
+  },
+  {
+    "deckName": "",
+    "labelDescription": "",
+    "cards": {
+      "cards": []
+    },
+    "newCards": 0,
+    "learnedCards": 0,
+    "dueCards": 0,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
   }
 ]
