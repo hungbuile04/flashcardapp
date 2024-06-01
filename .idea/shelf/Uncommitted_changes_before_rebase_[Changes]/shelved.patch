@@ -1,0 +1,151 @@
+Index: src/main/resources/project/flashcardapp/add_card.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.ComboBox?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.TableColumn?>\r\n<?import javafx.scene.control.TableView?>\r\n<?import javafx.scene.control.TextArea?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n<AnchorPane fx:id=\"addCardPane\" prefHeight=\"400.0\" prefWidth=\"600.0\" xmlns=\"http://javafx.com/javafx/21\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"project.flashcardapp.Controller.AddCardController\">\r\n   <children>\r\n      <TableView fx:id=\"cardTable\" layoutX=\"46.0\" layoutY=\"100.0\" prefHeight=\"200.0\" prefWidth=\"293.0\">\r\n        <columns>\r\n          <TableColumn fx:id=\"front\" prefWidth=\"75.0\" text=\"Front\" />\r\n          <TableColumn fx:id=\"back\" prefWidth=\"75.0\" text=\"Back\" />\r\n        </columns>\r\n      </TableView>\r\n      <TextArea fx:id=\"questionField\" layoutX=\"376.0\" layoutY=\"88.0\" prefHeight=\"98.0\" prefWidth=\"195.0\" />\r\n      <TextArea fx:id=\"answerField\" layoutX=\"376.0\" layoutY=\"200.0\" prefHeight=\"98.0\" prefWidth=\"195.0\" />\r\n      <Button layoutX=\"211.0\" layoutY=\"327.0\" mnemonicParsing=\"false\" onMouseClicked=\"#deleteCard\" text=\"Delete\" />\r\n      <Button layoutX=\"454.0\" layoutY=\"327.0\" mnemonicParsing=\"false\" onMouseClicked=\"#saveNewCard\" text=\"Add\" />\r\n      <Button layoutX=\"121.0\" layoutY=\"327.0\" mnemonicParsing=\"false\" onMouseClicked=\"#detailCard\" text=\"Details\" />\r\n      <ComboBox fx:id=\"chooseDeck\" layoutX=\"46.0\" layoutY=\"35.0\" prefWidth=\"150.0\" />\r\n      <Label layoutX=\"432.0\" layoutY=\"53.0\" prefHeight=\"9.0\" prefWidth=\"85.0\" text=\"Add new card\" />\r\n      <Button layoutX=\"228.0\" layoutY=\"36.0\" mnemonicParsing=\"false\" onMouseClicked=\"#createNewDeck\" prefHeight=\"26.0\" prefWidth=\"109.0\" text=\"Create new deck\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/project/flashcardapp/add_card.fxml b/src/main/resources/project/flashcardapp/add_card.fxml
+--- a/src/main/resources/project/flashcardapp/add_card.fxml	(revision 6548749ed372e49d4a8cdbc46cc15476608045ff)
++++ b/src/main/resources/project/flashcardapp/add_card.fxml	(date 1716953801083)
+@@ -8,12 +8,13 @@
+ <?import javafx.scene.control.TextArea?>
+ <?import javafx.scene.layout.AnchorPane?>
+ 
+-<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.AddCardController">
++<AnchorPane fx:id="addCardPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/add_card.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.AddCardController">
+    <children>
+       <TableView fx:id="cardTable" layoutX="46.0" layoutY="100.0" prefHeight="200.0" prefWidth="293.0">
+         <columns>
+-          <TableColumn fx:id="front" prefWidth="75.0" text="Front" />
+-          <TableColumn fx:id="back" prefWidth="75.0" text="Back" />
++          <TableColumn fx:id="front" prefWidth="35.5" text="STT" />
++          <TableColumn fx:id="back" minWidth="0.0" prefWidth="129.0" text="Front" />
++            <TableColumn fx:id="back1" prefWidth="127.5" text="Back" />
+         </columns>
+       </TableView>
+       <TextArea fx:id="questionField" layoutX="376.0" layoutY="88.0" prefHeight="98.0" prefWidth="195.0" />
+@@ -21,8 +22,9 @@
+       <Button layoutX="211.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#deleteCard" text="Delete" />
+       <Button layoutX="454.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" text="Add" />
+       <Button layoutX="121.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
+-      <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="35.0" prefWidth="150.0" />
++      <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="62.0" prefHeight="25.0" prefWidth="166.0" />
+       <Label layoutX="432.0" layoutY="53.0" prefHeight="9.0" prefWidth="85.0" text="Add new card" />
+-      <Button layoutX="228.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
++      <Button layoutX="228.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
++      <Label layoutY="21.0" prefHeight="17.0" prefWidth="600.0" text="Add New Card" />
+    </children>
+ </AnchorPane>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7c2ab0f7-8bcc-4bb8-90b8-342a80583ece\" name=\"Changes\" comment=\"Main Window Icon Button\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"history\": [\r\n    {\r\n      \"state\": \"OPEN\",\r\n      \"assignee\": \"hungbuile04\"\r\n    }\r\n  ],\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"hungbuile04\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"126f97a1-6e61-4e5e-bea6-c9590048c9d1\" />\r\n        <option name=\"url\" value=\"https://github.com/hungbuile04/flashcardapp.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fofyo5MJF94LmjCA8QSnwoCXsa\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.HelloApplication.executor\": \"Run\",\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet\",\r\n    \"list.type.of.created.stylesheet\": \"CSS\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"editor.preferences.smartKeys\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\20232\\OOP_HUST\\OOP_Project\\src\\main\\resources\\project\\flashcardapp\\stylesheet\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Model\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"project.flashcardapp.Controller\" />\r\n      <recent name=\"project.flashcardapp\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021\" />\r\n        <option value=\"jdk-22-openjdk-22-4caba194b151-f504ca98\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7c2ab0f7-8bcc-4bb8-90b8-342a80583ece\" name=\"Changes\" comment=\"\" />\r\n      <created>1714472610848</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714472610848</updated>\r\n      <workItem from=\"1714472612206\" duration=\"42284000\" />\r\n      <workItem from=\"1714694858552\" duration=\"37600000\" />\r\n      <workItem from=\"1715010333631\" duration=\"1267000\" />\r\n      <workItem from=\"1715012600871\" duration=\"28647000\" />\r\n      <workItem from=\"1715480463727\" duration=\"26031000\" />\r\n      <workItem from=\"1716883999630\" duration=\"1004000\" />\r\n      <workItem from=\"1716888680436\" duration=\"2893000\" />\r\n      <workItem from=\"1716911114539\" duration=\"1907000\" />\r\n      <workItem from=\"1716947985348\" duration=\"632000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"init\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714608600830</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714608600830</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"new(5/5)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714926954373</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714926954373</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"new(5/5)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714927156099</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714927156099</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"new(12/5)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715485366961</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715485366961</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Initial Commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716884101644</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716884101644</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Main Window Style\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716891139108</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716891139108</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"main\" />\r\n                </option>\r\n              </RecentGroup>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"frontEnd\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n        <entry key=\"User\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"*\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"user\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"*\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"init\" />\r\n    <MESSAGE value=\"new(5/5)\" />\r\n    <MESSAGE value=\"new(12/5)\" />\r\n    <MESSAGE value=\"Initial Commit\" />\r\n    <MESSAGE value=\"Main Window Style\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Main Window Style\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6548749ed372e49d4a8cdbc46cc15476608045ff)
++++ b/.idea/workspace.xml	(date 1716953810222)
+@@ -4,7 +4,13 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button" />
++    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button">
++      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_card.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_9_15_SA__Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -27,26 +33,6 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+     <option name="RESET_MODE" value="HARD" />
+-  </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "history": [
+-    {
+-      "state": "OPEN",
+-      "assignee": "hungbuile04"
+-    }
+-  ],
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "hungbuile04"
+-  }
+-}]]></component>
+-  <component name="GithubPullRequestsUISettings">
+-    <option name="selectedUrlAndAccountId">
+-      <UrlAndAccount>
+-        <option name="accountId" value="126f97a1-6e61-4e5e-bea6-c9590048c9d1" />
+-        <option name="url" value="https://github.com/hungbuile04/flashcardapp.git" />
+-      </UrlAndAccount>
+-    </option>
+   </component>
+   <component name="MavenImportPreferences">
+     <option name="generalSettings">
+@@ -64,32 +50,32 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.HelloApplication.executor": "Run",
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet",
+-    "list.type.of.created.stylesheet": "CSS",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "editor.preferences.smartKeys",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;frontEnd&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet" />
+diff --git a/src/main/resources/project/flashcardapp/stylesheet/add_card.css b/src/main/resources/project/flashcardapp/stylesheet/add_card.css
+new file mode 100644

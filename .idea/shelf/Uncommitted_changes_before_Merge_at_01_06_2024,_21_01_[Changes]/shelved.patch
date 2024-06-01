@@ -1,0 +1,200 @@
+Index: src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package project.flashcardapp.Controller.LearningMode;\n\nimport javafx.animation.*;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Alert;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.ButtonType;\nimport javafx.scene.control.Label;\nimport javafx.scene.input.MouseEvent;\nimport javafx.scene.layout.StackPane;\nimport javafx.stage.Stage;\nimport javafx.util.Duration;\nimport project.flashcardapp.Controller.DeckInfoController;\nimport project.flashcardapp.Model.Deck;\nimport project.flashcardapp.Model.Selector;\n\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.Optional;\nimport java.util.ResourceBundle;\n\n//Chức năng ôn tập\npublic class ReviewModeController implements Initializable {\n    @FXML\n    private Label questionLabel;\n    @FXML\n    private Label answerLabel;\n    @FXML\n    private Button backButton;\n\n    private static int currentIndex = 0;\n    private boolean showingQuestion = true;\n    private Deck deck;\n    public void setDeck(Deck deck) {\n        this.deck = deck;\n    }\n\n    @FXML\n    private StackPane CardPane;\n\n    private void updateCard() {\n        if (deck.getCards().getSize() == 0) {\n            System.out.println(\"Card list is empty!\");\n            return;\n        }\n\n        questionLabel.setText(deck.getCards().getCard(currentIndex).getQuestion());\n        answerLabel.setText(deck.getCards().getCard(currentIndex).getAnswer());\n        showingQuestion = true;\n        questionLabel.setVisible(true);\n        answerLabel.setVisible(false);\n    }\n\n    @Override\n    public void initialize(URL url, ResourceBundle resourceBundle) {\n        this.deck = DeckInfoController.deck;\n        updateCard();\n    }\n\n    @FXML\n    void showNextCard(MouseEvent event) {\n        if (currentIndex < deck.getCards().getSize() - 1) {\n            currentIndex++;\n            updateCard();\n        }\n    }\n\n    @FXML\n    void showPreviousCard(MouseEvent event) {\n        if (currentIndex > 0) {\n            currentIndex--;\n            updateCard();\n        }\n    }\n\n    @FXML\n    private void flipCard() {\n        Timeline timeline = new Timeline();\n\n        // Nửa đầu của lật: quay tới 90 độ\n//        KeyFrame kf1 = new KeyFrame(Duration.seconds(0.25),\n//                new KeyValue(CardPane.rotateProperty(), 90));\n\n        // Tạo một khoảng dừng để thay đổi nội dung thẻ\n        PauseTransition pause = new PauseTransition(Duration.seconds(0.1));\n        pause.setOnFinished(event -> {\n            if (showingQuestion) {\n                questionLabel.setVisible(false);\n                answerLabel.setVisible(true);\n                showingQuestion = false;\n            } else {\n                questionLabel.setVisible(true);\n                answerLabel.setVisible(false);\n                showingQuestion = true;\n            }\n        });\n        // Nửa sau của lật: quay từ 90 đến 180 độ\n//        KeyFrame kf2 = new KeyFrame(Duration.seconds(0.5),\n//                new KeyValue(CardPane.rotateProperty(), 180));\n//\n//        timeline.getKeyFrames().addAll(kf1, kf2);\n//\n//        timeline.setOnFinished(event -> {\n//            CardPane.setRotate(0);\n//            showingQuestion = !showingQuestion;\n//        });\n        timeline.play();\n        pause.playFromStart();\n    }\n\n    @FXML\n    void isEasy(MouseEvent event) throws IOException {\n        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.CORRECT,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());\n        if (currentIndex < deck.getCards().getSize() - 1) {\n            currentIndex++;\n            updateCard();\n        }\n        if(currentIndex == deck.getCards().getSize() - 1){\n            goToResult();\n            currentIndex = 0;\n        }\n    }\n\n    @FXML\n    void isHard(MouseEvent event) throws IOException {\n        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.FAILURE,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());\n        if (currentIndex < deck.getCards().getSize() - 1) {\n            currentIndex++;\n            updateCard();\n        }\n        if(currentIndex == deck.getCards().getSize() - 1){\n            goToResult();\n            currentIndex = 0;\n        }\n    }\n\n    @FXML\n    void isMedium(MouseEvent event) throws IOException {\n        deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.MEDIUM,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());\n        if (currentIndex < deck.getCards().getSize() - 1) {\n            currentIndex++;\n            updateCard();\n        }\n        if(currentIndex == deck.getCards().getSize() - 1){\n            goToResult();\n            currentIndex = 0;\n        }\n    }\n\n    public void backToDeckInfoWindow(MouseEvent mouseEvent) throws Exception {\n        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);\n        alert.setTitle(\"Confirm Cancel\");\n        alert.setHeaderText(\"Do you want to stop reviewing?\");\n        alert.setContentText(\"Click OK to confirm, or Cancel to continue.\");\n\n        Optional<ButtonType> result = alert.showAndWait();\n        if (result.isPresent() && result.get() == ButtonType.OK) {\n            FXMLLoader loader = new FXMLLoader(getClass().getResource(\"/project/flashcardapp/deckinfo.fxml\"));\n            Parent detailSceneRoot = loader.load();\n            Scene detailScene = new Scene(detailSceneRoot);\n            Stage stage = (Stage)CardPane.getScene().getWindow();\n            stage.setResizable(false);\n            stage.setTitle(deck.getDeckName());\n            stage.setScene(detailScene);\n            stage.show();\n        }\n    }\n\n    void goToResult() throws IOException {\n        Stage stage = (Stage) answerLabel.getScene().getWindow();\n        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(\"/project/flashcardapp/result_review_mode.fxml\"));\n        Scene scene = new Scene(fxmlLoader.load());\n        stage.setScene(scene);\n        stage.show();\n    }\n\n}\n\n\n\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java b/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java
+--- a/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java	(revision 344de8575d41c9ccc0633f13b0731399056f2241)
++++ b/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java	(date 1717250134416)
+@@ -152,6 +152,7 @@
+     }
+ 
+     public void backToDeckInfoWindow(MouseEvent mouseEvent) throws Exception {
++        deck.store();
+         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+         alert.setTitle("Confirm Cancel");
+         alert.setHeaderText("Do you want to stop reviewing?");
+Index: src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package project.flashcardapp.Controller.LearningMode;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.Parent;\nimport javafx.scene.Scene;\nimport javafx.scene.control.*;\nimport javafx.scene.input.MouseEvent;\nimport javafx.stage.Stage;\nimport project.flashcardapp.Controller.DeckInfoController;\nimport project.flashcardapp.Model.Deck;\n\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.Optional;\nimport java.util.ResourceBundle;\n\n//Chức năng kiểm tra\npublic class  TestModeController implements Initializable {\n    private int currentIndex = 0;\n    private Deck deck;\n    public void setDeck(Deck deck) {\n        this.deck = deck;\n    }\n\n    @FXML\n    private TextField answerField;\n\n    @FXML\n    private Button nextCard;\n\n    @FXML\n    private Button previousCard;\n\n    @FXML\n    private Label questionLabel;\n\n    @FXML\n    private Label resultAlert;\n\n    @FXML\n    private Label showAnswer;\n\n    @FXML\n    private Button checkButton;\n\n    @FXML\n    private Button showAnswerButton;\n\n    @Override\n    public void initialize(URL url, ResourceBundle resourceBundle) {\n        this.deck = DeckInfoController.deck;\n        deck.randomCard(deck.getCards());\n       updateCard();\n    }\n\n    private void updateCard() {\n        if (deck.getCards().getSize() == 0) {\n            System.out.println(\"Card list is empty!\");\n            return;\n        }\n\n        questionLabel.setText(deck.getCards().getCard(currentIndex).getQuestion());\n        questionLabel.setVisible(true);\n        answerField.clear();\n        resultAlert.setText(\"\");\n        showAnswer.setText(\"\");\n    }\n\n    @FXML\n    void showNextCard(MouseEvent event) throws IOException {\n        if (currentIndex <= deck.getCards().getSize() - 1) {\n            currentIndex++;\n            if(currentIndex <= deck.getCards().getSize() - 1){\n                updateCard();\n            }\n        }\n        if (currentIndex == deck.getCards().getSize() -1) {\n            nextCard.setText(\"Show Result Deck\");\n\n        }\n        if(currentIndex == deck.getCards().getSize()){\n            FXMLLoader loader = new FXMLLoader(getClass().getResource(\"/project/flashcardapp/result_test_mode.fxml\"));\n            Parent addCardSceneRoot = loader.load();\n            Scene addCardScene = new Scene(addCardSceneRoot);\n            Stage stage = new Stage();\n            //stage.setTitle(\"RESULT DECK\");\n            stage.setScene(addCardScene);\n            stage.show();\n        }\n    }\n\n    @FXML\n    void showPreviousCard(MouseEvent event) {\n        if (currentIndex > 0) {\n            currentIndex--;\n            updateCard();\n        }\n    }\n    public void checkAnswer(ActionEvent event){\n        String as = answerField.getText();\n        if (as.equals(deck.getCards().getCard(currentIndex).getAnswer())) {\n            resultAlert.setText(\"CORRECT\");\n            resultAlert.setVisible(true);\n        }else{\n            resultAlert.setText(\"WRONG\");\n            resultAlert.setVisible(true);\n        }\n    }\n\n    public void showAnswer(MouseEvent event){\n        showAnswer.setText(deck.getCards().getCard(currentIndex).getAnswer());\n    }\n\n\n    public void backToDeckInfoWindow(MouseEvent mouseEvent) throws IOException {\n        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);\n        alert.setTitle(\"Confirm Cancel\");\n        alert.setHeaderText(\"Do you want to exit?\");\n        alert.setContentText(\"Click OK to confirm, or Cancel to continue.\");\n\n        Optional<ButtonType> result = alert.showAndWait();\n        if (result.isPresent() && result.get() == ButtonType.OK) {\n            FXMLLoader loader = new FXMLLoader(getClass().getResource(\"/project/flashcardapp/deckinfo.fxml\"));\n            Parent detailSceneRoot = loader.load();\n            Scene detailScene = new Scene(detailSceneRoot);\n            Stage stage = (Stage)answerField.getScene().getWindow();\n            stage.setResizable(false);\n            stage.setTitle(deck.getDeckName());\n            stage.setScene(detailScene);\n            stage.show();\n        }\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java b/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java
+--- a/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java	(revision 344de8575d41c9ccc0633f13b0731399056f2241)
++++ b/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java	(date 1717250397725)
+@@ -85,7 +85,8 @@
+             FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
+             Parent addCardSceneRoot = loader.load();
+             Scene addCardScene = new Scene(addCardSceneRoot);
+-            Stage stage = new Stage();
++            Stage stage = (Stage) answerField.getScene().getWindow();
++            stage.setResizable(false);
+             //stage.setTitle("RESULT DECK");
+             stage.setScene(addCardScene);
+             stage.show();
+Index: src/main/resources/project/flashcardapp/stylesheet/deck_info.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.label {\n    -fx-font-family: \"DVN-Poppins ExtBd\";\n    -fx-font-size: 13px;\n}\n\n.button {\n    -fx-font-family: \"DVN-Poppins ExtBd\";\n    -fx-background-radius: 10px;\n    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0)\n}\n\n#paneInfo {\n    -fx-border-color: #158C62;\n    -fx-border-radius: 10px;\n    -fx-border-width: 3px;\n}\n\n#totalCardLabel, #learnLabel, #dueLabel {\n    -fx-font-family: \"DVN-Poppins\";\n}\n\n#deckName {\n    -fx-font-family: \"DVN-Poppins ExtBd\";\n    -fx-font-size: 18px;\n    -fx-alignment: center;\n    -fx-text-fill: #44BC91;\n}\n\n#testModeButton {\n    -fx-background-color: #77DEB9;\n    -fx-text-fill: white;\n}\n\n#reviewModeBtn {\n    -fx-background-color: #B7B7B7;\n    -fx-text-fill: white;\n}\n\n#backBtn {\n    -fx-graphic: url(resource/arrowBack.png);\n    -fx-background-color: transparent;\n    -fx-scale-x: 0.5;\n    -fx-scale-y: 0.5\n}\n\n#customizeBtn, #deleteDeckBtn {\n    -fx-background-color: transparent;\n    -fx-underline: true;\n    -fx-effect: false;\n    -fx-font-size: 12px;\n}\n\n#deleteDeckBtn {\n    -fx-text-fill: #AB3434;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/project/flashcardapp/stylesheet/deck_info.css b/src/main/resources/project/flashcardapp/stylesheet/deck_info.css
+--- a/src/main/resources/project/flashcardapp/stylesheet/deck_info.css	(revision 344de8575d41c9ccc0633f13b0731399056f2241)
++++ b/src/main/resources/project/flashcardapp/stylesheet/deck_info.css	(date 1717250134422)
+@@ -46,7 +46,7 @@
+ #customizeBtn, #deleteDeckBtn {
+     -fx-background-color: transparent;
+     -fx-underline: true;
+-    -fx-effect: false;
++    -fx-effect:false;
+     -fx-font-size: 12px;
+ }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"7c2ab0f7-8bcc-4bb8-90b8-342a80583ece\" name=\"Changes\" comment=\"hung31/5.2\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/decks.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/decks.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ResultReviewModeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ResultReviewModeController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/HelloApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/HelloApplication.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n        <option value=\"FxmlFile\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"frontEnd\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"HARD\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;history&quot;: [\n    {\n      &quot;state&quot;: &quot;OPEN&quot;,\n      &quot;assignee&quot;: &quot;hungbuile04&quot;\n    }\n  ],\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;hungbuile04&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">\n    <option name=\"selectedUrlAndAccountId\">\n      <UrlAndAccount>\n        <option name=\"accountId\" value=\"126f97a1-6e61-4e5e-bea6-c9590048c9d1\" />\n        <option name=\"url\" value=\"https://github.com/hungbuile04/flashcardapp.git\" />\n      </UrlAndAccount>\n    </option>\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 6\n}</component>\n  <component name=\"ProjectId\" id=\"2fofyo5MJF94LmjCA8QSnwoCXsa\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\n    \"Application.HelloApplication.executor\": \"Run\",\n    \"Downloaded.Files.Path.Enabled\": \"false\",\n    \"Repository.Attach.Annotations\": \"false\",\n    \"Repository.Attach.JavaDocs\": \"false\",\n    \"Repository.Attach.Sources\": \"false\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"/Users/builehuy/Downloads/TechByBLH/git learn/flashcardapp\",\n    \"list.type.of.created.stylesheet\": \"CSS\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"project.structure.last.edited\": \"Project\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"settings.editor.selected.configurable\": \"editor.preferences.smartKeys\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"D:\\20232\\OOP_HUST\\OOP_Project\\src\\main\\resources\\project\\flashcardapp\\stylesheet\\resource\" />\n      <recent name=\"D:\\20232\\OOP_HUST\\OOP_Project\\src\\main\\resources\\project\\flashcardapp\\stylesheet\" />\n      <recent name=\"$PROJECT_DIR$/src/main/resources/project/flashcardapp\" />\n      <recent name=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller\" />\n      <recent name=\"$PROJECT_DIR$/src/main/java/project/flashcardapp/Model\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"D:\\20232\\OOP_HUST\\OOP_Project\\src\\main\\resources\\project\\flashcardapp\\stylesheet\\resource\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"project.flashcardapp.Controller\" />\n      <recent name=\"project.flashcardapp\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240\" />\n        <option value=\"bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"7c2ab0f7-8bcc-4bb8-90b8-342a80583ece\" name=\"Changes\" comment=\"\" />\n      <created>1714472610848</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1714472610848</updated>\n      <workItem from=\"1714472612206\" duration=\"42284000\" />\n      <workItem from=\"1714694858552\" duration=\"37600000\" />\n      <workItem from=\"1715010333631\" duration=\"1267000\" />\n      <workItem from=\"1715012600871\" duration=\"28647000\" />\n      <workItem from=\"1715480463727\" duration=\"26031000\" />\n      <workItem from=\"1716883999630\" duration=\"1004000\" />\n      <workItem from=\"1716888680436\" duration=\"2893000\" />\n      <workItem from=\"1716911114539\" duration=\"1907000\" />\n      <workItem from=\"1716947985348\" duration=\"632000\" />\n      <workItem from=\"1716992793947\" duration=\"7578000\" />\n      <workItem from=\"1717036964587\" duration=\"980000\" />\n      <workItem from=\"1717047802048\" duration=\"2815000\" />\n      <workItem from=\"1717068337887\" duration=\"30125000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"init\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714608600830</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714608600830</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"new(5/5)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714926954373</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714926954373</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"new(5/5)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714927156099</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714927156099</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"new(12/5)\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1715485366961</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1715485366961</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Initial Commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716884101644</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716884101644</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Main Window Style\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716891139108</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716891139108</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Add Card Window style\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716995788574</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716995788574</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"modify Add Card Window style\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1716996754631</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1716996754631</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Deck Info Window Style\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1717004041531</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1717004041531</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Add resource directory\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1717037564908</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1717037564908</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"hung31/5.2\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1717151630445</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1717151630445</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"12\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"RECENT_FILTERS\">\n      <map>\n        <entry key=\"Branch\">\n          <value>\n            <list>\n              <RecentGroup>\n                <option name=\"FILTER_VALUES\">\n                  <option value=\"main\" />\n                </option>\n              </RecentGroup>\n              <RecentGroup>\n                <option name=\"FILTER_VALUES\">\n                  <option value=\"frontEnd\" />\n                </option>\n              </RecentGroup>\n            </list>\n          </value>\n        </entry>\n        <entry key=\"User\">\n          <value>\n            <list>\n              <RecentGroup>\n                <option name=\"FILTER_VALUES\">\n                  <option value=\"*\" />\n                </option>\n              </RecentGroup>\n            </list>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"user\">\n                    <value>\n                      <list>\n                        <option value=\"*\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"init\" />\n    <MESSAGE value=\"new(5/5)\" />\n    <MESSAGE value=\"new(12/5)\" />\n    <MESSAGE value=\"Initial Commit\" />\n    <MESSAGE value=\"Main Window Style\" />\n    <MESSAGE value=\"Add Card Window style\" />\n    <MESSAGE value=\"modify Add Card Window style\" />\n    <MESSAGE value=\"Deck Info Window Style\" />\n    <MESSAGE value=\"Add resource directory\" />\n    <MESSAGE value=\"Main Window Icon Button2\" />\n    <MESSAGE value=\"new 30/5.3\" />\n    <MESSAGE value=\"hung31/5.2\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"hung31/5.2\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 344de8575d41c9ccc0633f13b0731399056f2241)
++++ b/.idea/workspace.xml	(date 1717250458998)
+@@ -6,16 +6,9 @@
+   <component name="ChangeListManager">
+     <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="hung31/5.2">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ResultReviewModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ResultReviewModeController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/ReviewModeController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/HelloApplication.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_card.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/add_deck.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/review_mode.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/test_mode.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/deck_info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/deck_info.css" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -26,15 +19,15 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="CSS File" />
+-        <option value="FxmlFile" />
+         <option value="Class" />
++        <option value="FxmlFile" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="frontEnd" />
++        <entry key="$PROJECT_DIR$" value="Test-Statistic" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -52,14 +45,12 @@
+     &quot;assignee&quot;: &quot;hungbuile04&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">
+-    <option name="selectedUrlAndAccountId">
+-      <UrlAndAccount>
+-        <option name="accountId" value="126f97a1-6e61-4e5e-bea6-c9590048c9d1" />
+-        <option name="url" value="https://github.com/hungbuile04/flashcardapp.git" />
+-      </UrlAndAccount>
+-    </option>
+-  </component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/hungbuile04/flashcardapp.git&quot;,
++    &quot;accountId&quot;: &quot;f729ff6b-1993-4ea6-b114-e78cd885f18b&quot;
++  }
++}</component>
+   <component name="MavenImportPreferences">
+     <option name="generalSettings">
+       <MavenGeneralSettings>
+@@ -81,7 +72,7 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "Application.HelloApplication.executor": "Run",
++    "Application.HelloApplication.executor": "Debug",
+     "Downloaded.Files.Path.Enabled": "false",
+     "Repository.Attach.Annotations": "false",
+     "Repository.Attach.JavaDocs": "false",
+@@ -121,6 +112,39 @@
+       <recent name="project.flashcardapp" />
+     </key>
+   </component>
++  <component name="RunManager">
++    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="project.flashcardapp.HelloApplication" />
++      <module name="flash-cardApp" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="project.flashcardapp.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="JetRunConfigurationType">
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++      <option name="filePath" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.HelloApplication" />
++        <item itemvalue="Application.HelloApplication" />
++        <item itemvalue="Application.HelloApplication" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -150,6 +174,9 @@
+       <workItem from="1717036964587" duration="980000" />
+       <workItem from="1717047802048" duration="2815000" />
+       <workItem from="1717068337887" duration="30125000" />
++      <workItem from="1717220180398" duration="2217000" />
++      <workItem from="1717222854010" duration="83000" />
++      <workItem from="1717241358513" duration="3141000" />
+     </task>
+     <task id="LOCAL-00001" summary="init">
+       <option name="closed" value="true" />
+@@ -239,7 +266,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1717151630445</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="hung31/5.2">
++      <option name="closed" value="true" />
++      <created>1717222344834</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1717222344834</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
