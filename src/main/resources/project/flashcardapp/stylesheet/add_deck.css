@@ -25,3 +25,11 @@
 .text-area:focused {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
 }
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
+
+.text-area:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
