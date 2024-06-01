@@ -1,7 +1,8 @@
 .button {
     -fx-background-color: #44BC91;
     -fx-background-radius: 10px;
-    -fx-font-family: "DVN-Poppins";
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 12px;
     -fx-text-fill: white;
 }
 
@@ -14,6 +15,18 @@
     -fx-border-color: black;
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
+}
+
+.table-column .label{
+    /*Viet sau*/
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #77DEB9;
+}
+
+.button:hover {
+    -fx-background-color: #77DEB9;
 }
 
 #text_label {
@@ -37,7 +50,7 @@
     -fx-text-fill: #44BC91;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
-    -fx-effect: false;
+    -fx-effect: null;
 }
 
 #addCardButton {
@@ -59,5 +72,11 @@
 .table-view:row-selection .column-header-background .nested-column-header .table-column .label {
     -fx-font-family: "DVN-Poppins";
     -fx-text-fill: black;
+}
+
+#fav_button:hover {
+    -fx-border-color: none;
+    -fx-background-color: #44BC91;
+    -fx-text-fill: white;
 }
 
