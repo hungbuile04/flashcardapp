@@ -91,7 +91,13 @@ public class MainWindowController implements Initializable {
         stage.show();
     }
 
-    public void statistic(MouseEvent mouseEvent) {
-
+    public void statistic(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/statistic_window.fxml"));
+        Parent statisticSceneRoot = loader.load();
+        Scene statisticScene = new Scene(statisticSceneRoot);
+        Stage stage = new Stage();
+        stage.setTitle("Statistic");
+        stage.setScene(statisticScene);
+        stage.show();
     }
 }

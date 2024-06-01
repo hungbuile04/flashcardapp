@@ -30,6 +30,13 @@ public class Deck {
     private int mediumCard=2;
     private int hardCard=1;
 
+    public StatisticOfDeck StatOfDeck;
+
+    public void store(){
+        StatOfDeck.storeStatistic_Week(this);
+        StatOfDeck.storeStatistic_Month(this);
+    }
+
 
     public Deck() {
         this.deckName = deckName;
