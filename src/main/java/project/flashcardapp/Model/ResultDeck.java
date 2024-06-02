@@ -5,6 +5,7 @@ public class ResultDeck {
     private String answer;
     private String youranswer;
     private String yourresult;
+
     public ResultDeck(String question, String answer,  String youranswer,  String yourresult) {
         this.question = question;
         this.answer = answer;

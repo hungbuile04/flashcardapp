@@ -71,21 +71,21 @@
           }
         },
         {
-          "question": "12356789",
-          "answer": "23456891",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
-            "answerType": "FAILURE",
-            "cycle": 2
-          }
-        },
-        {
           "question": "hello",
           "answer": "pằng pằng",
           "selector": {
             "deadlineAt": "Jun 2, 2024, 4:54:29 PM",
             "answerType": "CORRECT",
             "cycle": 1
+          }
+        },
+        {
+          "question": "12356789",
+          "answer": "23456891",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
           }
         }
       ]

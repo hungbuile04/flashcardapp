@@ -61,6 +61,7 @@ public class ResultTestModeController {
         stage.setTitle("RESULT DECK");
         stage.setScene(addCardScene);
         stage.show();
+        result.clear();
     }
 
     public void showingAnswer(ActionEvent event) {
