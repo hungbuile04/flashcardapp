@@ -62,8 +62,8 @@
           }
         },
         {
-          "question": "bye",
-          "answer": "tạm biệt",
+          "question": "12356789",
+          "answer": "23456891",
           "selector": {
             "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
             "answerType": "FAILURE",
@@ -80,8 +80,8 @@
           }
         },
         {
-          "question": "12356789",
-          "answer": "23456891",
+          "question": "bye",
+          "answer": "tạm biệt",
           "selector": {
             "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
             "answerType": "FAILURE",

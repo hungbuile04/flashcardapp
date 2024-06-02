@@ -15,5 +15,6 @@
       <Button fx:id="checkButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="26.0" prefWidth="89.0" text="Submit" />
       <Label fx:id="showAnswer" layoutX="280.0" layoutY="145.0" prefHeight="17.0" prefWidth="44.0" />
       <Button fx:id="backtoDeck" layoutX="43.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" text="Back" />
+      <Button fx:id="showResultDeck" layoutX="481.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#movetoResultPage" text="ResultPage" />
    </children>
 </AnchorPane>

@@ -143,4 +143,15 @@ public class  TestModeController implements Initializable {
 
         }
     }
+
+    @FXML
+    void movetoResultPage(MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
+        Parent addCardSceneRoot = loader.load();
+        Scene addCardScene = new Scene(addCardSceneRoot);
+        Stage stage = new Stage();
+        //stage.setTitle("RESULT DECK");
+        stage.setScene(addCardScene);
+        stage.show();
+    }
 }
