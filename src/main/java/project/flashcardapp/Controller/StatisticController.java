@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller.Customization;
+package project.flashcardapp.Controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

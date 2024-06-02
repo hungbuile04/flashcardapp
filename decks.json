@@ -28,6 +28,15 @@
     "cards": {
       "cards": [
         {
+          "question": "sas",
+          "answer": "ss",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 2:40:48 PM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
           "question": "go",
           "answer": "di",
           "selector": {
@@ -56,7 +65,7 @@
         }
       ]
     },
-    "newCards": 3,
+    "newCards": 4,
     "learnedCards": 0,
     "dueCards": 0,
     "easyCard": 3,
