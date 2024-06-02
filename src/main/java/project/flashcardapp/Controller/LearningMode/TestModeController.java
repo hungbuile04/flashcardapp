@@ -115,13 +115,6 @@ public class  TestModeController implements Initializable {
     @FXML
     public void checkAnswer(ActionEvent event) throws IOException {
         String as = answerField.getText();
-//        int count = currentIndex + 1;
-//        if(count == result.size()){
-//            result.removeLast();
-//        }
-//        if(as.isEmpty()){
-//            as = "";
-//        }
         if (as.equals(deck.getCards().getCard(currentIndex).getAnswer())) {
             result.set(currentIndex, new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"correct"));
         }else{
