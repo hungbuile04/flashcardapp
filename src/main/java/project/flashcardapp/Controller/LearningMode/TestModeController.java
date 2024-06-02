@@ -50,6 +50,9 @@ public class  TestModeController implements Initializable {
     @FXML
     private Button backtoDeck ;
 
+    @FXML
+    private Button showResultDeck;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
