@@ -10,12 +10,11 @@
       <Label fx:id="questionLabel" alignment="CENTER" layoutX="119.0" layoutY="34.0" prefHeight="154.0" prefWidth="362.0" text="Label" />
       <TextField fx:id="answerField" layoutX="70.0" layoutY="312.0" prefHeight="47.0" prefWidth="195.0" />
       <Label layoutX="146.0" layoutY="276.0" prefHeight="17.0" prefWidth="44.0" text="Answer:" />
-      <Button fx:id="previousCard" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="26.0" prefWidth="44.0" text="Button" />
-      <Button fx:id="nextCard" layoutX="529.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="26.0" prefWidth="44.0" text="Button" />
+      <Button fx:id="previousCard" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="26.0" prefWidth="79.0" text="Button" />
+      <Button fx:id="nextCard" layoutX="473.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="26.0" prefWidth="100.0" text="Button" />
       <Label fx:id="resultAlert" alignment="CENTER" layoutX="194.0" layoutY="154.0" prefHeight="77.0" prefWidth="231.0" text="Result" />
-      <Button fx:id="checkButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="26.0" prefWidth="89.0" text="Check" />
-      <Button fx:id="showAnswerButton" layoutX="475.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#showAnswer" prefHeight="26.0" prefWidth="89.0" text="ShowAnswer" />
+      <Button fx:id="checkButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="26.0" prefWidth="89.0" text="Submit" />
       <Label fx:id="showAnswer" layoutX="280.0" layoutY="145.0" prefHeight="17.0" prefWidth="44.0" />
-      <Button layoutX="43.0" layoutY="45.0" mnemonicParsing="false" text="Back" onMouseClicked="#backToDeckInfoWindow"/>
+      <Button layoutX="43.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" text="Back" />
    </children>
 </AnchorPane>

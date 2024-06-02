@@ -11,9 +11,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Controller.DeckInfoController;
 import project.flashcardapp.Model.Deck;
+import project.flashcardapp.Model.ResultDeck;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -21,6 +24,7 @@ import java.util.ResourceBundle;
 public class  TestModeController implements Initializable {
     private int currentIndex = 0;
     private Deck deck;
+    public static List<ResultDeck> result = new ArrayList<>();
     public void setDeck(Deck deck) {
         this.deck = deck;
     }
@@ -46,14 +50,11 @@ public class  TestModeController implements Initializable {
     @FXML
     private Button checkButton;
 
-    @FXML
-    private Button showAnswerButton;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
         deck.randomCard(deck.getCards());
-       updateCard();
+        updateCard();
     }
 
     private void updateCard() {
@@ -99,21 +100,19 @@ public class  TestModeController implements Initializable {
             updateCard();
         }
     }
-    public void checkAnswer(ActionEvent event){
+
+    public void checkAnswer(ActionEvent event) throws IOException {
         String as = answerField.getText();
+        int count = currentIndex + 1;
+        if(count == result.size()){
+            result.removeLast();
+        }
         if (as.equals(deck.getCards().getCard(currentIndex).getAnswer())) {
-            resultAlert.setText("CORRECT");
-            resultAlert.setVisible(true);
+            result.add(new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"correct"));
         }else{
-            resultAlert.setText("WRONG");
-            resultAlert.setVisible(true);
+            result.add(new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(),as,"incorrect"));
         }
     }
-
-    public void showAnswer(MouseEvent event){
-        showAnswer.setText(deck.getCards().getCard(currentIndex).getAnswer());
-    }
-
 
     public void backToDeckInfoWindow(MouseEvent mouseEvent) throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
