@@ -12,7 +12,7 @@
    <children>
       <Button fx:id="saveBtn" layoutX="266.0" layoutY="227.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="25.0" prefWidth="60.0" text="Save" />
       <Button fx:id="cancelBtn" layoutX="167.0" layoutY="227.0" mnemonicParsing="false" onMouseClicked="#cancelChanges" prefHeight="25.0" prefWidth="60.0" text="Cancel" />
-      <GridPane fx:id="backTextField" layoutX="86.0" layoutY="47.0" prefHeight="164.0" prefWidth="240.0">
+      <GridPane layoutX="86.0" layoutY="47.0" prefHeight="164.0" prefWidth="240.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="55.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="158.0" />
@@ -27,7 +27,7 @@
             <Label fx:id="back" text="Back:" GridPane.rowIndex="1" />
             <Label fx:id="dueDate" text="Due date:" GridPane.rowIndex="2" />
             <TextField fx:id="frontTextField" GridPane.columnIndex="1" />
-            <TextField prefHeight="25.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="backTextField" prefHeight="25.0" prefWidth="171.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="dueDateTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>

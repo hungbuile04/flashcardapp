@@ -64,8 +64,8 @@ public class ResultTestModeController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
         Parent addCardSceneRoot = loader.load();
         Scene addCardScene = new Scene(addCardSceneRoot);
-        Stage stage = new Stage();
-        stage.setTitle("RESULT DECK");
+        Stage stage = (Stage) resultTable.getScene().getWindow();
+        stage.setScene(addCardScene);
         stage.setScene(addCardScene);
         stage.show();
         result.clear();

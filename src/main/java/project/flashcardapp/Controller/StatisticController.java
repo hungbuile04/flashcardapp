@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller.Customization;
+package project.flashcardapp.Controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,10 +14,12 @@ import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 import project.flashcardapp.Model.StatisticOfDeck;
 
+import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.ResourceBundle;
 
-public class StatisticController{
+public class StatisticController implements Initializable {
     private Deck deck;
 
     @FXML
@@ -27,10 +29,15 @@ public class StatisticController{
     @FXML
     private BarChart<String, Number> StatisticBarChart;
 
-    @FXML
-    public void initialize() throws Exception {
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         Deck all = new Deck();
-        all.setDeckName("All");
+        try {
+            all.setDeckName("All");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         for(Deck t: DeckData.decks){
             int temp = all.getNewCards();
             temp += t.getNewCards();

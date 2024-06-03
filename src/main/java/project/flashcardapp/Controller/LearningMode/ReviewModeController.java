@@ -152,7 +152,7 @@ public class ReviewModeController implements Initializable {
     }
 
     public void backToDeckInfoWindow(MouseEvent mouseEvent) throws Exception {
-        deck.store();
+        //deck.store();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirm Cancel");
         alert.setHeaderText("Do you want to stop reviewing?");
