@@ -71,14 +71,4 @@ public class ResultTestModeController implements Initializable {
         result.clear();
     }
 
-//    public void showingAnswer(ActionEvent event) {
-//        questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
-//        answerCol.setCellValueFactory(new PropertyValueFactory<>("answer"));
-//        youranswerCol.setCellValueFactory(new PropertyValueFactory<>("youranswer"));
-//        yourresultCol.setCellValueFactory(new PropertyValueFactory<>("yourresult"));
-//        ObservableList<ResultDeck> std = FXCollections.observableList(result);
-//        resultTable.setItems(std);
-//
-//    }
-
 }
