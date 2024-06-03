@@ -33,8 +33,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 3,
-    "dueCards": 0,
+    "learnedCards": 1,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -62,15 +62,6 @@
           }
         },
         {
-          "question": "bye",
-          "answer": "tạm biệt",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
-            "answerType": "FAILURE",
-            "cycle": 2
-          }
-        },
-        {
           "question": "12356789",
           "answer": "23456891",
           "selector": {
@@ -87,12 +78,21 @@
             "answerType": "CORRECT",
             "cycle": 1
           }
+        },
+        {
+          "question": "bye",
+          "answer": "tạm biệt",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
+          }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 5,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 5,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -122,8 +122,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -154,8 +154,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -177,8 +177,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 1,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 1,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
