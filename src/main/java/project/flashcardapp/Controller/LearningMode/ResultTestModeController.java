@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -24,7 +25,7 @@ import project.flashcardapp.Model.ResultDeck;
 
 import static project.flashcardapp.Controller.LearningMode.TestModeController.result;
 
-public class ResultTestModeController {
+public class ResultTestModeController implements Initializable {
     @FXML
     private Button backtoDeckButton;
 
@@ -50,6 +51,12 @@ public class ResultTestModeController {
     public List <ResultDeck> resultDecks;
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
+        questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+        answerCol.setCellValueFactory(new PropertyValueFactory<>("answer"));
+        youranswerCol.setCellValueFactory(new PropertyValueFactory<>("youranswer"));
+        yourresultCol.setCellValueFactory(new PropertyValueFactory<>("yourresult"));
+        ObservableList<ResultDeck> std = FXCollections.observableList(result);
+        resultTable.setItems(std);
     }
 
     @FXML
@@ -64,14 +71,14 @@ public class ResultTestModeController {
         result.clear();
     }
 
-    public void showingAnswer(ActionEvent event) {
-        questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
-        answerCol.setCellValueFactory(new PropertyValueFactory<>("answer"));
-        youranswerCol.setCellValueFactory(new PropertyValueFactory<>("youranswer"));
-        yourresultCol.setCellValueFactory(new PropertyValueFactory<>("yourresult"));
-        ObservableList<ResultDeck> std = FXCollections.observableList(result);
-        resultTable.setItems(std);
-
-    }
+//    public void showingAnswer(ActionEvent event) {
+//        questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+//        answerCol.setCellValueFactory(new PropertyValueFactory<>("answer"));
+//        youranswerCol.setCellValueFactory(new PropertyValueFactory<>("youranswer"));
+//        yourresultCol.setCellValueFactory(new PropertyValueFactory<>("yourresult"));
+//        ObservableList<ResultDeck> std = FXCollections.observableList(result);
+//        resultTable.setItems(std);
+//
+//    }
 
 }
