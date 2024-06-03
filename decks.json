@@ -33,8 +33,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 1,
-    "dueCards": 2,
+    "learnedCards": 0,
+    "dueCards": 3,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -44,21 +44,12 @@
     "cards": {
       "cards": [
         {
-          "question": "study",
-          "answer": "học",
+          "question": "bye",
+          "answer": "tạm biệt",
           "selector": {
-            "deadlineAt": "Jun 1, 2024, 5:17:08 PM",
+            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
             "answerType": "FAILURE",
             "cycle": 2
-          }
-        },
-        {
-          "question": "hello",
-          "answer": "pằng pằng",
-          "selector": {
-            "deadlineAt": "Jun 2, 2024, 4:54:29 PM",
-            "answerType": "CORRECT",
-            "cycle": 1
           }
         },
         {
@@ -71,19 +62,10 @@
           }
         },
         {
-          "question": "11+5",
-          "answer": "16",
+          "question": "study",
+          "answer": "học",
           "selector": {
-            "deadlineAt": "Jun 3, 2024, 8:43:52 AM",
-            "answerType": "MEDIUM",
-            "cycle": 0
-          }
-        },
-        {
-          "question": "bye",
-          "answer": "tạm biệt",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
+            "deadlineAt": "Jun 1, 2024, 5:17:08 PM",
             "answerType": "FAILURE",
             "cycle": 2
           }
@@ -95,6 +77,24 @@
             "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
             "answerType": "FAILURE",
             "cycle": 2
+          }
+        },
+        {
+          "question": "11+5",
+          "answer": "16",
+          "selector": {
+            "deadlineAt": "Jun 3, 2024, 8:43:52 AM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
+          "question": "hello",
+          "answer": "pằng pằng",
+          "selector": {
+            "deadlineAt": "Jun 2, 2024, 4:54:29 PM",
+            "answerType": "CORRECT",
+            "cycle": 1
           }
         }
       ]

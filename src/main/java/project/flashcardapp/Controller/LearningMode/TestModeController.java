@@ -88,16 +88,14 @@ public class  TestModeController implements Initializable {
         }else{
             questionN.setStyle("-fx-background-color: #AFEEEE");
         }
-        if (currentIndex <= deck.getCards().getSize() - 1) {
+        if(currentIndex < deck.getCards().getSize() - 1 ) {
             currentIndex++;
-            if(currentIndex <= deck.getCards().getSize() - 1 ) {
-                if(!flag[currentIndex]) {
-                    answerField.clear();
-                }else{
-                    answerField.setText(result.get(currentIndex).getYouranswer());
-                }
-                updateCard();
+            if(!flag[currentIndex]) {
+                answerField.clear();
+            }else{
+                answerField.setText(result.get(currentIndex).getYouranswer());
             }
+            updateCard();
         }
     }
 
