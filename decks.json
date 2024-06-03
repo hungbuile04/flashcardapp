@@ -44,28 +44,10 @@
     "cards": {
       "cards": [
         {
-          "question": "1",
-          "answer": "2",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 5:17:06 PM",
-            "answerType": "FAILURE",
-            "cycle": 1
-          }
-        },
-        {
           "question": "study",
           "answer": "học",
           "selector": {
             "deadlineAt": "Jun 1, 2024, 5:17:08 PM",
-            "answerType": "FAILURE",
-            "cycle": 2
-          }
-        },
-        {
-          "question": "12356789",
-          "answer": "23456891",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
             "answerType": "FAILURE",
             "cycle": 2
           }
@@ -80,8 +62,35 @@
           }
         },
         {
+          "question": "1",
+          "answer": "2",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 5:17:06 PM",
+            "answerType": "FAILURE",
+            "cycle": 1
+          }
+        },
+        {
+          "question": "11+5",
+          "answer": "16",
+          "selector": {
+            "deadlineAt": "Jun 3, 2024, 8:43:52 AM",
+            "answerType": "MEDIUM",
+            "cycle": 0
+          }
+        },
+        {
           "question": "bye",
           "answer": "tạm biệt",
+          "selector": {
+            "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
+            "answerType": "FAILURE",
+            "cycle": 2
+          }
+        },
+        {
+          "question": "12356789",
+          "answer": "23456891",
           "selector": {
             "deadlineAt": "Jun 1, 2024, 5:17:07 PM",
             "answerType": "FAILURE",
@@ -90,7 +99,7 @@
         }
       ]
     },
-    "newCards": 0,
+    "newCards": 1,
     "learnedCards": 0,
     "dueCards": 5,
     "easyCard": 3,
@@ -105,25 +114,25 @@
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 11:47:59 AM",
-            "answerType": "MEDIUM",
-            "cycle": 1
+            "deadlineAt": "Jun 4, 2024, 8:43:20 AM",
+            "answerType": "FAILURE",
+            "cycle": 3
           }
         },
         {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 11:47:58 AM",
-            "answerType": "MEDIUM",
-            "cycle": 1
+            "deadlineAt": "Jun 6, 2024, 8:43:17 AM",
+            "answerType": "CORRECT",
+            "cycle": 2
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 2,
+    "learnedCards": 2,
+    "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1

@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import project.flashcardapp.Controller.DeckInfoController;
 import project.flashcardapp.Model.Deck;
@@ -24,7 +25,7 @@ import java.util.ResourceBundle;
 public class  TestModeController implements Initializable {
     private int currentIndex = 0;
     private boolean[] flag = new boolean[1000];
-
+    private boolean[] submitflag = new boolean[1000];
     private Deck deck;
     public static List<ResultDeck> result = new ArrayList<>();
 
@@ -53,6 +54,9 @@ public class  TestModeController implements Initializable {
     @FXML
     private Button showResultDeck;
 
+    @FXML
+    private ToggleButton questionN;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
@@ -60,6 +64,7 @@ public class  TestModeController implements Initializable {
         for(int i = 0 ; i < deck.getCards().getSize(); i++){
             result.add( new ResultDeck(deck.getCards().getCard(i).getQuestion(),deck.getCards().getCard(i).getAnswer(),"","incorrect"));
         }
+        questionN.setStyle("-fx-background-color: white");
         updateCard();
     }
 
@@ -70,14 +75,20 @@ public class  TestModeController implements Initializable {
         }
 
         questionLabel.setText(deck.getCards().getCard(currentIndex).getQuestion());
+
+        questionN.setText("Câu hỏi " + (currentIndex + 1) + "/" + deck.getCards().getSize());
         flag[currentIndex] = true;
         questionLabel.setVisible(true);
     }
 
     @FXML
     void showNextCard(MouseEvent event) throws IOException {
+        if(!submitflag[currentIndex+1]) {
+            questionN.setStyle("-fx-background-color: white");
+        }else{
+            questionN.setStyle("-fx-background-color: #AFEEEE");
+        }
         if (currentIndex <= deck.getCards().getSize() - 1) {
-            //flag[currentIndex] = true;
             currentIndex++;
             if(currentIndex <= deck.getCards().getSize() - 1 ) {
                 if(!flag[currentIndex]) {
@@ -85,27 +96,18 @@ public class  TestModeController implements Initializable {
                 }else{
                     answerField.setText(result.get(currentIndex).getYouranswer());
                 }
-                //answerField.clear();
                 updateCard();
             }
-        }
-        if (currentIndex == deck.getCards().getSize() -1) {
-            nextCard.setText("Show Result Deck");
-        }
-        if(currentIndex == deck.getCards().getSize()){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
-            Parent addCardSceneRoot = loader.load();
-            Scene addCardScene = new Scene(addCardSceneRoot);
-            Stage stage = (Stage) answerField.getScene().getWindow();
-            stage.setResizable(false);
-            //stage.setTitle("RESULT DECK");
-            stage.setScene(addCardScene);
-            stage.show();
         }
     }
 
     @FXML
     void showPreviousCard(MouseEvent event) {
+        if(submitflag[currentIndex-1]) {
+            questionN.setStyle("-fx-background-color: #AFEEEE");
+        }else{
+            questionN.setStyle("-fx-background-color: white");
+        }
         if (currentIndex > 0) {
             currentIndex--;
             updateCard();
@@ -118,6 +120,10 @@ public class  TestModeController implements Initializable {
 
     @FXML
     public void checkAnswer(ActionEvent event) throws IOException {
+        if(!submitflag[currentIndex]) {
+            questionN.setStyle("-fx-background-color: #AFEEEE");
+            submitflag[currentIndex] = true;
+        }
         String as = answerField.getText();
         if (as.equals(deck.getCards().getCard(currentIndex).getAnswer())) {
             result.set(currentIndex, new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"correct"));
@@ -150,12 +156,31 @@ public class  TestModeController implements Initializable {
 
     @FXML
     void movetoResultPage(MouseEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
-        Parent addCardSceneRoot = loader.load();
-        Scene addCardScene = new Scene(addCardSceneRoot);
-        Stage stage = new Stage();
-        //stage.setTitle("RESULT DECK");
-        stage.setScene(addCardScene);
-        stage.show();
+        int cnt = 0;
+        for (int i = 0 ; i < deck.getCards().getSize(); i++){
+            if(!submitflag[i]) cnt++;
+        }
+        if(cnt > 0) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirm Show Result");
+            alert.setHeaderText("You have " + cnt + " incompleted question. Do you want to show your result?");
+            alert.setContentText("Click OK to confirm, or Cancel to continue.");
+            Optional<ButtonType> check = alert.showAndWait();
+            if (check.isPresent() && check.get() == ButtonType.OK) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
+                Parent addCardSceneRoot = loader.load();
+                Scene addCardScene = new Scene(addCardSceneRoot);
+                Stage stage = new Stage();
+                stage.setScene(addCardScene);
+                stage.show();
+            }
+        }else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
+            Parent addCardSceneRoot = loader.load();
+            Scene addCardScene = new Scene(addCardSceneRoot);
+            Stage stage = new Stage();
+            stage.setScene(addCardScene);
+            stage.show();
+        }
     }
 }

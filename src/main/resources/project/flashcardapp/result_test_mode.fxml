@@ -12,10 +12,9 @@
           <TableColumn fx:id="questionCol" prefWidth="75.0" text="Question" />
           <TableColumn fx:id="answerCol" prefWidth="75.0" text="Answer" />
             <TableColumn fx:id="youranswerCol" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="yourresultCol" prefWidth="75.0" text="Question" />
+            <TableColumn fx:id="yourresultCol" prefWidth="119.99998982747394" text="Question" />
         </columns>
       </TableView>
       <Button fx:id="backtoDeckButton" layoutX="32.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#backToDeck" prefHeight="25.0" prefWidth="100.0" text="Back to Deck" />
-      <Button fx:id="showed" layoutX="74.0" layoutY="274.0" mnemonicParsing="false" onAction="#showingAnswer" text="Button" />
    </children>
 </AnchorPane>

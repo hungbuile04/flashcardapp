@@ -3,18 +3,20 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.TestModeController">
    <children>
-      <Label fx:id="questionLabel" alignment="CENTER" layoutX="119.0" layoutY="34.0" prefHeight="154.0" prefWidth="362.0" text="Label" />
+      <Label fx:id="questionLabel" alignment="CENTER" layoutX="119.0" layoutY="85.0" prefHeight="154.0" prefWidth="362.0" text="Label" />
       <TextField fx:id="answerField" layoutX="70.0" layoutY="312.0" prefHeight="47.0" prefWidth="195.0" />
       <Label layoutX="146.0" layoutY="276.0" prefHeight="17.0" prefWidth="44.0" text="Answer:" />
-      <Button fx:id="previousCard" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="26.0" prefWidth="79.0" text="Button" />
-      <Button fx:id="nextCard" layoutX="473.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="26.0" prefWidth="100.0" text="Button" />
+      <Button fx:id="previousCard" layoutX="26.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" prefHeight="26.0" prefWidth="79.0" text="Prev Card" />
+      <Button fx:id="nextCard" layoutX="481.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#showNextCard" prefHeight="26.0" prefWidth="100.0" text="Next Card" />
       <Button fx:id="checkButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="26.0" prefWidth="89.0" text="Submit" />
       <Label fx:id="showAnswer" layoutX="280.0" layoutY="145.0" prefHeight="17.0" prefWidth="44.0" />
       <Button fx:id="backtoDeck" layoutX="43.0" layoutY="45.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" text="Back" />
       <Button fx:id="showResultDeck" layoutX="481.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#movetoResultPage" text="ResultPage" />
+      <ToggleButton fx:id="questionN" layoutX="130.0" layoutY="94.0" mnemonicParsing="false" text="Câu hỏi" />
    </children>
 </AnchorPane>
