@@ -24,7 +24,7 @@ public class MainWindowController implements Initializable {
     private Button addCardButton;
 
     @FXML
-    private MenuButton settings;
+    private MenuButton setting;
 
 
     @FXML

@@ -63,7 +63,6 @@ public class AddCardController implements Initializable {
                 setText(empty ? null : deck.getDeckName()); // Hiển thị tên của deck khi ComboBox đóng lại
             }
         });
-
         front.setCellValueFactory(new PropertyValueFactory<>("question"));
         back.setCellValueFactory(new PropertyValueFactory<>("answer"));
         // Thiết lập giá trị cho cột số thứ tự
@@ -95,6 +94,8 @@ public class AddCardController implements Initializable {
             e.printStackTrace();
             return;
         }
+        ButtonType okButton = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().add(okButton);
        dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
        dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
        Optional<ButtonType> result = dialog.showAndWait();

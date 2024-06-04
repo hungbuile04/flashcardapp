@@ -83,13 +83,13 @@ public class  TestModeController implements Initializable {
 
     @FXML
     void showNextCard(MouseEvent event) throws IOException {
-        if(!submitflag[currentIndex+1]) {
-            questionN.setStyle("-fx-background-color: white");
-        }else{
-            questionN.setStyle("-fx-background-color: #AFEEEE");
-        }
         if(currentIndex < deck.getCards().getSize() - 1 ) {
             currentIndex++;
+            if(!submitflag[currentIndex+1] ) {
+                questionN.setStyle("-fx-background-color: white");
+            }else{
+                questionN.setStyle("-fx-background-color: #AFEEEE");
+            }
             if(!flag[currentIndex]) {
                 answerField.clear();
             }else{
@@ -101,13 +101,13 @@ public class  TestModeController implements Initializable {
 
     @FXML
     void showPreviousCard(MouseEvent event) {
-        if(submitflag[currentIndex-1]) {
-            questionN.setStyle("-fx-background-color: #AFEEEE");
-        }else{
-            questionN.setStyle("-fx-background-color: white");
-        }
         if (currentIndex > 0) {
             currentIndex--;
+            if(submitflag[currentIndex+1]) {
+                questionN.setStyle("-fx-background-color: #AFEEEE");
+            }else{
+                questionN.setStyle("-fx-background-color: white");
+            }
             updateCard();
             answerField.setText(result.get(currentIndex).getYouranswer());
         }

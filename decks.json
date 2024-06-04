@@ -71,8 +71,8 @@
           }
         },
         {
-          "question": "12356789",
-          "answer": "23456891",
+          "question": "study",
+          "answer": "học",
           "selector": {
             "deadlineAt": "Jun 5, 2024, 9:15:37 PM",
             "answerType": "MEDIUM",
@@ -80,8 +80,8 @@
           }
         },
         {
-          "question": "study",
-          "answer": "học",
+          "question": "12356789",
+          "answer": "23456891",
           "selector": {
             "deadlineAt": "Jun 5, 2024, 9:15:37 PM",
             "answerType": "MEDIUM",
@@ -100,8 +100,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 5,
-    "dueCards": 1,
+    "learnedCards": 4,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -131,8 +131,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 1,
+    "dueCards": 1,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -188,6 +188,19 @@
     "newCards": 0,
     "learnedCards": 0,
     "dueCards": 1,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1
+  },
+  {
+    "deckName": "",
+    "labelDescription": "",
+    "cards": {
+      "cards": []
+    },
+    "newCards": 0,
+    "learnedCards": 0,
+    "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1

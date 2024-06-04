@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<DialogPane stylesheets="@stylesheet/add_deck.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Customization.AddDeckController">
+<DialogPane prefHeight="181.0" prefWidth="610.0" stylesheets="@stylesheet/add_deck.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Customization.AddDeckController">
     <headerText>
         Create new deck
     </headerText>
@@ -28,4 +28,7 @@
          </rowConstraints>
         </GridPane>
     </content>
+   <header>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="542.0" text="Add deck" />
+   </header>
 </DialogPane>
