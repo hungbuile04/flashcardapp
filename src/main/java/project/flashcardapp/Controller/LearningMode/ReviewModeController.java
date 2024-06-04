@@ -119,7 +119,7 @@ public class ReviewModeController implements Initializable {
             currentIndex++;
             updateCard();
         }
-        if(currentIndex == deck.getCards().getSize() - 1){
+        else{
             goToResult();
             currentIndex = 0;
         }
@@ -132,7 +132,7 @@ public class ReviewModeController implements Initializable {
             currentIndex++;
             updateCard();
         }
-        if(currentIndex == deck.getCards().getSize() - 1){
+        else{
             goToResult();
             currentIndex = 0;
         }
@@ -145,7 +145,7 @@ public class ReviewModeController implements Initializable {
             currentIndex++;
             updateCard();
         }
-        if(currentIndex == deck.getCards().getSize() - 1){
+        else{
             goToResult();
             currentIndex = 0;
         }
