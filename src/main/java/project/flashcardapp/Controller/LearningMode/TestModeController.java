@@ -88,16 +88,14 @@ public class  TestModeController implements Initializable {
         }else{
             questionN.setStyle("-fx-background-color: #AFEEEE");
         }
-        if (currentIndex < deck.getCards().getSize() - 1) {
+        if(currentIndex < deck.getCards().getSize() - 1 ) {
             currentIndex++;
-            if(currentIndex <= deck.getCards().getSize() - 1 ) {
-                if(!flag[currentIndex]) {
-                    answerField.clear();
-                }else{
-                    answerField.setText(result.get(currentIndex).getYouranswer());
-                }
-                updateCard();
+            if(!flag[currentIndex]) {
+                answerField.clear();
+            }else{
+                answerField.setText(result.get(currentIndex).getYouranswer());
             }
+            updateCard();
         }
     }
 
@@ -170,7 +168,7 @@ public class  TestModeController implements Initializable {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
                 Parent addCardSceneRoot = loader.load();
                 Scene addCardScene = new Scene(addCardSceneRoot);
-                Stage stage = (Stage) answerField.getScene().getWindow();
+                Stage stage = new Stage();
                 stage.setScene(addCardScene);
                 stage.show();
             }
@@ -178,8 +176,7 @@ public class  TestModeController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
             Parent addCardSceneRoot = loader.load();
             Scene addCardScene = new Scene(addCardSceneRoot);
-            Stage stage = (Stage) answerField.getScene().getWindow();
-            stage.setResizable(false);
+            Stage stage = new Stage();
             stage.setScene(addCardScene);
             stage.show();
         }
