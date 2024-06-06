@@ -4,15 +4,6 @@
     "cards": {
       "cards": [
         {
-          "question": "a",
-          "answer": "b",
-          "selector": {
-            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
-            "answerType": "MEDIUM",
-            "cycle": 4
-          }
-        },
-        {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
@@ -29,12 +20,21 @@
             "answerType": "CORRECT",
             "cycle": 4
           }
+        },
+        {
+          "question": "a",
+          "answer": "b",
+          "selector": {
+            "deadlineAt": "Jun 6, 2024, 10:08:20 AM",
+            "answerType": "CORRECT",
+            "cycle": 5
+          }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 3,
-    "dueCards": 0,
+    "learnedCards": 1,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -91,8 +91,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 1,
-    "dueCards": 4,
+    "learnedCards": 0,
+    "dueCards": 5,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -122,8 +122,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -177,8 +177,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 1,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 1,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
