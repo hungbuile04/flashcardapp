@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
@@ -9,18 +10,24 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/test_mode.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.TestModeController">
    <children>
       <Label fx:id="questionLabel" alignment="CENTER" layoutX="67.0" layoutY="80.0" prefHeight="220.0" prefWidth="469.0" text="Question will appear here" />
-      <TextField fx:id="answerField" layoutX="149.0" layoutY="332.0" prefHeight="26.0" prefWidth="195.0" />
+      <TextField fx:id="answerField" layoutX="149.0" layoutY="332.0" prefHeight="40.0" prefWidth="195.0" />
       <Label layoutX="223.0" layoutY="310.0" prefHeight="17.0" prefWidth="52.0" text="Answer:" />
       <Button fx:id="previousCard" layoutX="-11.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#showPreviousCard" />
       <Button fx:id="nextCard" layoutX="510.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#showNextCard" />
-      <Button fx:id="checkButton" layoutX="356.0" layoutY="332.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="26.0" prefWidth="89.0" text="Submit" />
+      <Button fx:id="checkButton" layoutX="356.0" layoutY="332.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="40.0" prefWidth="89.0" text="Submit" />
       <Button fx:id="backtoDeck" layoutX="-6.0" layoutY="-4.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" />
-      <Button fx:id="showResultDeck" layoutX="524.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#movetoResultPage" text="Result page" />
+      <Button fx:id="showResultDeck" layoutX="521.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#movetoResultPage" text="Result page" />
       <Label fx:id="deckName" layoutX="1.0" layoutY="24.0" prefHeight="23.0" prefWidth="622.0" text="IELTS: Intermediate" />
       <ProgressBar fx:id="progressBar" layoutX="67.0" layoutY="62.0" prefHeight="7.0" prefWidth="469.0" progress="0.3" />
       <Label fx:id="cardLearned" layoutX="507.0" layoutY="42.0" text="3" />
       <Label fx:id="cardLearned1" layoutX="519.0" layoutY="42.0" text="30" />
-      <Label fx:id="isCorrect" layoutX="279.0" layoutY="257.0" text="Correct" />
-      <Label fx:id="isIncorrect" layoutX="279.0" layoutY="274.0" text="Incorrect" />
+      <Label fx:id="isCorrect" layoutX="264.0" layoutY="257.0" text="Correct">
+         <graphic>
+            <FontAwesomeIconView fill="#158c62" glyphName="CHECK" />
+         </graphic></Label>
+      <Label fx:id="isIncorrect" layoutX="264.0" layoutY="274.0" text="Incorrect">
+         <graphic>
+            <FontAwesomeIconView fill="#ab3434" glyphName="CLOSE" />
+         </graphic></Label>
    </children>
 </AnchorPane>
