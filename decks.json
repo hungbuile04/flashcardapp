@@ -100,8 +100,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 4,
-    "dueCards": 2,
+    "learnedCards": 0,
+    "dueCards": 6,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -131,8 +131,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 1,
-    "dueCards": 1,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
