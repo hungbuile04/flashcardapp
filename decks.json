@@ -4,37 +4,37 @@
     "cards": {
       "cards": [
         {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "deadlineAt": "Jun 7, 2024, 2:06:22 PM",
+            "answerType": "FAILURE",
+            "cycle": 5
+          }
+        },
+        {
           "question": "a",
           "answer": "b",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
+            "deadlineAt": "Jun 8, 2024, 2:06:17 PM",
             "answerType": "MEDIUM",
-            "cycle": 4
+            "cycle": 5
           }
         },
         {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
-            "answerType": "MEDIUM",
-            "cycle": 5
-          }
-        },
-        {
-          "question": "eat",
-          "answer": "ăn",
-          "selector": {
-            "deadlineAt": "Jun 3, 2024, 6:13:45 PM",
+            "deadlineAt": "Jun 9, 2024, 2:06:22 PM",
             "answerType": "CORRECT",
-            "cycle": 4
+            "cycle": 6
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 3,
+    "learnedCards": 3,
+    "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1

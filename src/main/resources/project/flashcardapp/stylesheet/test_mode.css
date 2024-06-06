@@ -1,0 +1,77 @@
+.label {
+    -fx-font-family: "DVN-Poppins";
+}
+
+.progress-bar {
+    -fx-accent: #44BC91;
+    -fx-padding: 0px;
+}
+
+.progress-bar .track {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 0;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #158C62, #77DEB9); /* Gradient fill */
+    -fx-background-radius: 5px;  /* Rounded corners for the bar */
+    -fx-background-insets: 0;
+}
+
+#backtoDeck {
+    -fx-graphic: url(resource/arrowBack.png);
+    -fx-background-color: transparent;
+    -fx-scale-x: 0.5;
+    -fx-scale-y: 0.5;
+}
+
+#deckName {
+    -fx-alignment: center;
+    -fx-text-fill: #158C62;
+    -fx-font-size: 15px;
+    -fx-font-family: "DVN-Poppins ExtBd";
+}
+
+#questionLabel {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 15px;
+}
+
+#previousCard {
+    -fx-graphic: url(resource/arrowBack1.png);
+    -fx-background-color: transparent;
+    -fx-scale-x: 0.4;
+    -fx-scale-y: 0.4;
+}
+
+#nextCard {
+    -fx-graphic: url(resource/arrowForward.png);
+    -fx-background-color: transparent;
+    -fx-scale-x: 0.4;
+    -fx-scale-y: 0.4;
+}
+
+#answerField {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #158C62;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+}
+
+#checkButton {
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-background-color: #158C62;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+}
+
+#showResultDeck {
+    -fx-background-color: transparent;
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-text-fill: black;
+    -fx-underline: true;
+}
