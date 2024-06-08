@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="466.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.StatisticController">
+   <children>
+      <ComboBox fx:id="WeekOrMonth" layoutX="354.0" layoutY="26.0" prefWidth="150.0" promptText="Week/Month" />
+      <ComboBox fx:id="WhichDeck" layoutX="536.0" layoutY="26.0" prefWidth="150.0" promptText="Choose Deck" />
+      <BarChart fx:id="StatisticBarChart" layoutX="79.0" layoutY="67.0" prefHeight="362.0" prefWidth="567.0" title="Statistic">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

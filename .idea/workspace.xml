@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="hung31/5.2">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_06_2024,_20_55_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_06_2024__20_55__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_06_2024,_19_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_06_2024,_21_01_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_06_2024,_21_09_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_06_2024__19_42__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_06_2024__21_01__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_06_2024__21_09__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="01df541d58a9b8bc23dfc460cb2c90eb0a287596" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;hungbuile04&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hungbuile04&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2fofyo5MJF94LmjCA8QSnwoCXsa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.HelloApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/buihung/Library/Mobile Documents/com~apple~CloudDocs/java/Bản sao flash-cardApp",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet\resource" />
+      <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet" />
+      <recent name="$PROJECT_DIR$/src/main/resources/project/flashcardapp" />
+      <recent name="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller" />
+      <recent name="$PROJECT_DIR$/src/main/java/project/flashcardapp/Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\20232\OOP_HUST\OOP_Project\src\main\resources\project\flashcardapp\stylesheet\resource" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="project.flashcardapp" />
+      <recent name="project.flashcardapp.Controller.LearningMode" />
+      <recent name="project.flashcardapp.Controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Bản sao flash-cardApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Bản sao flash-cardApp" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="" />
+      <created>1714472610848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714472610848</updated>
+      <workItem from="1714472612206" duration="42284000" />
+      <workItem from="1714694858552" duration="37600000" />
+      <workItem from="1715010333631" duration="1267000" />
+      <workItem from="1715012600871" duration="28647000" />
+      <workItem from="1715480463727" duration="26031000" />
+      <workItem from="1716883999630" duration="1004000" />
+      <workItem from="1716888680436" duration="2893000" />
+      <workItem from="1716911114539" duration="1907000" />
+      <workItem from="1716947985348" duration="632000" />
+      <workItem from="1716992793947" duration="7578000" />
+      <workItem from="1717036964587" duration="980000" />
+      <workItem from="1717047802048" duration="2815000" />
+      <workItem from="1717068337887" duration="30125000" />
+      <workItem from="1717176954592" duration="2465000" />
+      <workItem from="1717322734661" duration="632000" />
+      <workItem from="1717323391800" duration="1694000" />
+      <workItem from="1717356105788" duration="58000" />
+      <workItem from="1717356179822" duration="63000" />
+      <workItem from="1717356249163" duration="3261000" />
+      <workItem from="1717361275638" duration="803000" />
+      <workItem from="1717362224671" duration="174000" />
+      <workItem from="1717362620745" duration="5406000" />
+      <workItem from="1717368247947" duration="336000" />
+      <workItem from="1717368648255" duration="104000" />
+      <workItem from="1717378896716" duration="239000" />
+      <workItem from="1717399351263" duration="17000" />
+      <workItem from="1717399442226" duration="15000" />
+      <workItem from="1717399511413" duration="14000" />
+      <workItem from="1717399585366" duration="596000" />
+      <workItem from="1717402589736" duration="3652000" />
+      <workItem from="1717658413276" duration="28122000" />
+      <workItem from="1717862042846" duration="801000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1714608600830</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714608600830</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new(5/5)">
+      <option name="closed" value="true" />
+      <created>1714926954373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714926954373</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new(5/5)">
+      <option name="closed" value="true" />
+      <created>1714927156099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714927156099</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new(12/5)">
+      <option name="closed" value="true" />
+      <created>1715485366961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715485366961</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1716884101644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716884101644</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Main Window Style">
+      <option name="closed" value="true" />
+      <created>1716891139108</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716891139108</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add Card Window style">
+      <option name="closed" value="true" />
+      <created>1716995788574</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716995788574</updated>
+    </task>
+    <task id="LOCAL-00008" summary="modify Add Card Window style">
+      <option name="closed" value="true" />
+      <created>1716996754631</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716996754631</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Deck Info Window Style">
+      <option name="closed" value="true" />
+      <created>1717004041531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717004041531</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add resource directory">
+      <option name="closed" value="true" />
+      <created>1717037564908</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717037564908</updated>
+    </task>
+    <task id="LOCAL-00011" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717151630445</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717151630445</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717362343256</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717362343256</updated>
+    </task>
+    <task id="LOCAL-00013" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717362369305</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717362369305</updated>
+    </task>
+    <task id="LOCAL-00014" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717368067416</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717368067416</updated>
+    </task>
+    <task id="LOCAL-00015" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717368268409</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717368268409</updated>
+    </task>
+    <task id="LOCAL-00016" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717368277971</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717368277971</updated>
+    </task>
+    <task id="LOCAL-00017" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717368534877</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717368534877</updated>
+    </task>
+    <task id="LOCAL-00018" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717368729158</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717368729158</updated>
+    </task>
+    <task id="LOCAL-00019" summary="hung31/5.2">
+      <option name="closed" value="true" />
+      <created>1717399839662</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717399839662</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="frontEnd" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <MESSAGE value="new(5/5)" />
+    <MESSAGE value="new(12/5)" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Main Window Style" />
+    <MESSAGE value="Add Card Window style" />
+    <MESSAGE value="modify Add Card Window style" />
+    <MESSAGE value="Deck Info Window Style" />
+    <MESSAGE value="Add resource directory" />
+    <MESSAGE value="Main Window Icon Button2" />
+    <MESSAGE value="new 30/5.3" />
+    <MESSAGE value="hung31/5.2" />
+    <MESSAGE value="hung31/5.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="hung31/5.3" />
+  </component>
+</project>

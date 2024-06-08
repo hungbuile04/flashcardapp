@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<DialogPane prefHeight="181.0" prefWidth="610.0" stylesheets="@stylesheet/add_deck.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Customization.AddDeckController">
+    <headerText>
+        Create new deck
+    </headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Description:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="labelField" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+   <header>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="542.0" text="Add new deck" />
+   </header>
+</DialogPane>

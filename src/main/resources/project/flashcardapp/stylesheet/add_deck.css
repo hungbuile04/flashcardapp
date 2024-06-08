@@ -1,0 +1,35 @@
+.label {
+    -fx-font-family: "DVN-Poppins";
+}
+
+.dialog-pane .header-panel .label .text {
+    -fx-font-family: "DVN-Poppins ExtBd";
+}
+
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #77DEB9;
+    -fx-background-radius: 10px;
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
+
+.text-area:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
+
+.text-area:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
