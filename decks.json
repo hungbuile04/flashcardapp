@@ -71,8 +71,8 @@
           }
         },
         {
-          "question": "study",
-          "answer": "học",
+          "question": "12356789",
+          "answer": "23456891",
           "selector": {
             "deadlineAt": "Jun 5, 2024, 9:15:37 PM",
             "answerType": "MEDIUM",
@@ -80,8 +80,8 @@
           }
         },
         {
-          "question": "12356789",
-          "answer": "23456891",
+          "question": "study",
+          "answer": "học",
           "selector": {
             "deadlineAt": "Jun 5, 2024, 9:15:37 PM",
             "answerType": "MEDIUM",
@@ -143,28 +143,28 @@
     "cards": {
       "cards": [
         {
-          "question": "confidential",
-          "answer": "Bí mật",
-          "selector": {
-            "deadlineAt": "Jun 1, 2024, 11:57:32 AM",
-            "answerType": "FAILURE",
-            "cycle": 1
-          }
-        },
-        {
           "question": "bread",
           "answer": "bánh mì",
           "selector": {
-            "deadlineAt": "Jun 1, 2024, 11:57:31 AM",
-            "answerType": "FAILURE",
-            "cycle": 1
+            "deadlineAt": "Jun 12, 2024, 1:11:20 AM",
+            "answerType": "CORRECT",
+            "cycle": 2
+          }
+        },
+        {
+          "question": "confidential",
+          "answer": "Bí mật",
+          "selector": {
+            "deadlineAt": "Jun 12, 2024, 1:11:19 AM",
+            "answerType": "CORRECT",
+            "cycle": 2
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 2,
+    "learnedCards": 2,
+    "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1

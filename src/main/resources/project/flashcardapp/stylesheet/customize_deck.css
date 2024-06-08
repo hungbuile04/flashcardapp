@@ -38,6 +38,10 @@
     -fx-scale-y: 0.5
 }
 
+#backBtn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 12, 0.5, 0.5, 0);
+}
+
 #cancelBtn {
     -fx-background-color: #B7B7B7;
 }

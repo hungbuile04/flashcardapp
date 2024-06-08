@@ -47,6 +47,10 @@
     -fx-scale-y: 0.5
 }
 
+#turnBack:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 12, 0.5, 0.5, 0)
+}
+
 #detailBtn {
     -fx-background-color: transparent;
     -fx-font-family: "DVN-Poppins ExtBd";

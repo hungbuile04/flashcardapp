@@ -57,7 +57,7 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0.5, 0.5, 0)
 }
 
-#settings {
+#setting_button {
     -fx-background-color: transparent;
     -fx-graphic: url(resource/icon.png);
     -fx-padding: 10px;
@@ -67,6 +67,13 @@
 
 #stats_label {
     -fx-alignment: center;
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 12px;
+}
+
+#cardStudied {
+    -fx-alignment: center;
+    -fx-font-size: 12px;
 }
 
 .table-view:row-selection .column-header-background .nested-column-header .table-column .label {
