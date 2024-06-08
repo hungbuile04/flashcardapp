@@ -55,7 +55,7 @@ public class  TestModeController implements Initializable {
     private Button showResultDeck;
 
     @FXML
-    private ToggleButton questionN;
+    private Label cardLearned;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,7 +64,7 @@ public class  TestModeController implements Initializable {
         for(int i = 0 ; i < deck.getCards().getSize(); i++){
             result.add( new ResultDeck(deck.getCards().getCard(i).getQuestion(),deck.getCards().getCard(i).getAnswer(),"","incorrect"));
         }
-        questionN.setStyle("-fx-background-color: white");
+        cardLearned.setStyle("-fx-background-color: white");
         updateCard();
     }
 
@@ -76,7 +76,7 @@ public class  TestModeController implements Initializable {
 
         questionLabel.setText(deck.getCards().getCard(currentIndex).getQuestion());
 
-        questionN.setText("Câu hỏi " + (currentIndex + 1) + "/" + deck.getCards().getSize());
+        cardLearned.setText("Câu hỏi " + (currentIndex + 1) + "/" + deck.getCards().getSize());
         flag[currentIndex] = true;
         questionLabel.setVisible(true);
     }
@@ -86,9 +86,9 @@ public class  TestModeController implements Initializable {
         if(currentIndex < deck.getCards().getSize() - 1 ) {
             currentIndex++;
             if(!submitflag[currentIndex+1] ) {
-                questionN.setStyle("-fx-background-color: white");
+                cardLearned.setStyle("-fx-background-color: white");
             }else{
-                questionN.setStyle("-fx-background-color: #AFEEEE");
+                cardLearned.setStyle("-fx-background-color: #AFEEEE");
             }
             if(!flag[currentIndex]) {
                 answerField.clear();
@@ -104,9 +104,9 @@ public class  TestModeController implements Initializable {
         if (currentIndex > 0) {
             currentIndex--;
             if(submitflag[currentIndex+1]) {
-                questionN.setStyle("-fx-background-color: #AFEEEE");
+                cardLearned.setStyle("-fx-background-color: #AFEEEE");
             }else{
-                questionN.setStyle("-fx-background-color: white");
+                cardLearned.setStyle("-fx-background-color: white");
             }
             updateCard();
             answerField.setText(result.get(currentIndex).getYouranswer());
@@ -119,7 +119,7 @@ public class  TestModeController implements Initializable {
     @FXML
     public void checkAnswer(ActionEvent event) throws IOException {
         if(!submitflag[currentIndex]) {
-            questionN.setStyle("-fx-background-color: #AFEEEE");
+            cardLearned.setStyle("-fx-background-color: #AFEEEE");
             submitflag[currentIndex] = true;
         }
         String as = answerField.getText();

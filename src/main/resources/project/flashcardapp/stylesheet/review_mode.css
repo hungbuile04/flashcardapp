@@ -1,0 +1,72 @@
+.label {
+    -fx-font-family: "DVN-Poppins ExtBd";
+}
+
+.button {
+    -fx-background-color: #44BC91;
+    -fx-background-radius: 10px;
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-text-fill: white;
+}
+
+.progress-bar {
+    -fx-accent: #44BC91;
+    -fx-padding: 0px;
+}
+
+.progress-bar .track {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-background-insets: 0;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #158C62, #77DEB9); /* Gradient fill */
+    -fx-background-radius: 5px;  /* Rounded corners for the bar */
+    -fx-background-insets: 0;
+}
+
+#deckName {
+    -fx-alignment: center;
+    -fx-text-fill: #158C62;
+    -fx-font-size: 15px;
+}
+
+#backBtn {
+    -fx-background-color: transparent;
+    -fx-graphic: url(resource/arrowBack.png);
+    -fx-scale-x: 0.5;
+    -fx-scale-y: 0.5
+}
+
+#cardLearned, #totalCard {
+    -fx-font-family: "DVN-Poppins";
+}
+
+#CardPane {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+#instructionLabel {
+    -fx-font-family: "DVN-Poppins";
+    -fx-text-fill: #B7B7B7;
+    -fx-font-size: 10px;
+}
+
+#hardBtn {
+    -fx-background-color: #158C62;
+}
+
+#easyBtn {
+    -fx-background-color: #77DEB9;
+}
+
+#hardTime, #mediumTime, #easyTime {
+    -fx-font-family: "DVN-Poppins";
+}
+
+#editCard {
+    -fx-font-size: 13px;
+    -fx-underline: true;
+}

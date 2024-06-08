@@ -23,6 +23,6 @@
       <Label layoutX="421.0" layoutY="265.0" prefHeight="26.0" prefWidth="42.0" text="day(s)" />
       <Button fx:id="saveBtn" layoutX="349.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#saveButton" prefHeight="25.0" prefWidth="65.0" text="Save" />
       <Button fx:id="cancelBtn" layoutX="203.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#cancelButton" prefHeight="25.0" prefWidth="65.0" text="Cancel" />
-      <Button fx:id="backBtn" layoutX="-13.0" layoutY="-13.0" mnemonicParsing="false" />
+      <Button fx:id="backBtn" layoutX="-13.0" layoutY="-13.0" mnemonicParsing="false" onMouseClicked="#backButton" />
    </children>
 </AnchorPane>
