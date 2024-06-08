@@ -1,6 +1,3 @@
-.root {
-    -fx-background-color: #f6f6f6;
-}
 .label {
     -fx-font-family: "DVN-Poppins";
 }
@@ -57,20 +54,12 @@
     -fx-scale-y: 0.4;
 }
 
-#previousCard:hover, #nextCard:hover {
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 15, 0.5, 0.5, 0);
-}
-
 #answerField {
     -fx-background-color: white;
     -fx-background-radius: 10px;
     -fx-border-color: #158C62;
-    -fx-border-radius: 9px;
+    -fx-border-radius: 10px;
     -fx-border-width: 2px;
-}
-
-#answerField:focused {
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
 }
 
 #checkButton {
@@ -80,26 +69,9 @@
     -fx-background-radius: 10px;
 }
 
-#checkButton:hover {
-    -fx-background-color: #44BC91;
-}
-
 #showResultDeck {
     -fx-background-color: transparent;
     -fx-font-family: "DVN-Poppins ExtBd";
     -fx-text-fill: black;
     -fx-underline: true;
-}
-
-#showResultDeck:hover {
-    -fx-text-fill: #B7B7B7;
-}
-
-#isIncorrect {
-    -fx-text-fill: #AB3434;
-
-}
-
-#isCorrect {
-    -fx-text-fill: #158C62;
 }

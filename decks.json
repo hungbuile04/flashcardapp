@@ -4,37 +4,37 @@
     "cards": {
       "cards": [
         {
-          "question": "eat",
-          "answer": "ăn",
-          "selector": {
-            "deadlineAt": "Jun 7, 2024, 2:06:22 PM",
-            "answerType": "FAILURE",
-            "cycle": 5
-          }
-        },
-        {
           "question": "a",
           "answer": "b",
           "selector": {
-            "deadlineAt": "Jun 8, 2024, 2:06:17 PM",
+            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
             "answerType": "MEDIUM",
-            "cycle": 5
+            "cycle": 4
           }
         },
         {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 9, 2024, 2:06:22 PM",
+            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
+            "answerType": "MEDIUM",
+            "cycle": 5
+          }
+        },
+        {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "deadlineAt": "Jun 3, 2024, 6:13:45 PM",
             "answerType": "CORRECT",
-            "cycle": 6
+            "cycle": 4
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 3,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 3,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1
@@ -111,28 +111,28 @@
     "cards": {
       "cards": [
         {
-          "question": "eat",
-          "answer": "ăn",
-          "selector": {
-            "deadlineAt": "Jun 4, 2024, 8:43:20 AM",
-            "answerType": "FAILURE",
-            "cycle": 3
-          }
-        },
-        {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 6, 2024, 8:43:17 AM",
-            "answerType": "CORRECT",
-            "cycle": 2
+            "deadlineAt": "Jun 10, 2024, 11:44:00 PM",
+            "answerType": "MEDIUM",
+            "cycle": 7
+          }
+        },
+        {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "deadlineAt": "Jun 10, 2024, 11:37:40 PM",
+            "answerType": "MEDIUM",
+            "cycle": 7
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 2,
+    "learnedCards": 2,
+    "dueCards": 0,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1

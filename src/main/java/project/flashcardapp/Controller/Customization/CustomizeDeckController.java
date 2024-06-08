@@ -49,19 +49,6 @@ public class CustomizeDeckController implements Initializable {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 saveChanges();
-                try {
-                    // Tải FXML cho scene chi tiết
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
-                    Parent detailSceneRoot = loader.load();
-                    Scene detailScene = new Scene(detailSceneRoot);
-                    Stage stage = (Stage)deckLabelField.getScene().getWindow();
-                    stage.setResizable(false);
-                    stage.setTitle(deck.getDeckName());
-                    stage.setScene(detailScene);
-                    stage.show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
         }
     }
@@ -72,16 +59,28 @@ public class CustomizeDeckController implements Initializable {
                 !hardCardField.getText().equals(deck.getHardCard());
     }
     public void saveChanges() throws Exception {
+        String nameDeck = deckNameField.getText().trim();
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        if (nameDeck.isEmpty()) {
+            alert.setContentText("Category's name can't be blank!");
+            alert.showAndWait();
+            return;
+        } else if (nameDeck.length() > 20) {
+            alert.setContentText("Category's name has to be up to 20 characters");
+            alert.showAndWait();
+            return;
+        } else if (nameDeck.length() < 2) {
+            alert.setContentText("Category's name has to have at least 2 characters");
+            alert.showAndWait();
+            return;
+        }
         deck.setDeckName(deckNameField.getText());
         deck.setLabelDescription(deckLabelField.getText());
         deck.setEasyCard(Integer.parseInt(easyCardField.getText()));
         deck.setMediumCard(Integer.parseInt(mediumCardField.getText()));
         deck.setHardCard(Integer.parseInt(hardCardField.getText()));
-    }
-
-    @FXML
-    void saveButton(MouseEvent event) throws Exception {
-        saveChanges();
         try {
             // Tải FXML cho scene chi tiết
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
@@ -97,37 +96,58 @@ public class CustomizeDeckController implements Initializable {
         }
     }
 
+    @FXML
+    void saveButton(MouseEvent event) throws Exception {
+        saveChanges();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-          this.deck= DeckInfoController.deck;
-          deckNameField.setText(deck.getDeckName());
-          deckLabelField.setText(deck.getLabelDescription());
-          easyCardField.setText(Integer.toString(deck.getEasyCard()));
-          mediumCardField.setText(Integer.toString(deck.getMediumCard()));
-          hardCardField.setText(Integer.toString(deck.getHardCard()));
-          easyCardField.setTextFormatter(new TextFormatter<>(change -> {
-              String newText = change.getControlNewText();
-              if (newText.matches("\\d*")) {
-                  return change;
-              } else {
-                  return null;
-              }
-          }));
-          mediumCardField.setTextFormatter(new TextFormatter<>(change -> {
-              String newText = change.getControlNewText();
-              if (newText.matches("\\d*")) {
-                  return change;
-              } else {
-                  return null;
-              }
-          }));
-          hardCardField.setTextFormatter(new TextFormatter<>(change -> {
-              String newText = change.getControlNewText();
-              if (newText.matches("\\d*")) {
-                  return change;
-              } else {
-                  return null;
-              }
-          }));
+        this.deck= DeckInfoController.deck;
+        deckNameField.setText(deck.getDeckName());
+        deckLabelField.setText(deck.getLabelDescription());
+        easyCardField.setText(Integer.toString(deck.getEasyCard()));
+        mediumCardField.setText(Integer.toString(deck.getMediumCard()));
+        hardCardField.setText(Integer.toString(deck.getHardCard()));
+        easyCardField.setTextFormatter(new TextFormatter<>(change -> {
+            String newText = change.getControlNewText();
+            if (newText.matches("\\d*")) {
+                return change;
+            } else {
+                return null;
+            }
+        }));
+        mediumCardField.setTextFormatter(new TextFormatter<>(change -> {
+            String newText = change.getControlNewText();
+            if (newText.matches("\\d*")) {
+                return change;
+            } else {
+                return null;
+            }
+        }));
+        hardCardField.setTextFormatter(new TextFormatter<>(change -> {
+            String newText = change.getControlNewText();
+            if (newText.matches("\\d*")) {
+                return change;
+            } else {
+                return null;
+            }
+        }));
+    }
+
+    public void backButton(MouseEvent mouseEvent) {
+        try {
+            // Tải FXML cho scene chi tiết
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/deckinfo.fxml"));
+            Parent detailSceneRoot = loader.load();
+            Scene detailScene = new Scene(detailSceneRoot);
+            Stage stage = (Stage)deckLabelField.getScene().getWindow();
+            stage.setResizable(false);
+            stage.setTitle(deck.getDeckName());
+            stage.setScene(detailScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

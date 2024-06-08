@@ -122,7 +122,3 @@ public class DeckInfoController implements Initializable {
         stage.show();
     }
 }
-
-
-
-

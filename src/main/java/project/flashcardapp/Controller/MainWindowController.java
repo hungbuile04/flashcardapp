@@ -19,18 +19,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainWindowController implements Initializable {
-    public Button settings;
     private Deck deck;
     @FXML
     private Button addCardButton;
 
     @FXML
-    private MenuButton setting;
+    private MenuButton setting_button;
 
 
     @FXML
     private TableView<Deck> tableDeckView;
-    
+
 
     @FXML
     private TableColumn<Deck, String> deckName;
@@ -45,13 +44,13 @@ public class MainWindowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       deckName.setCellValueFactory(new PropertyValueFactory<>("deckName"));
-       dueCards.setCellValueFactory(new PropertyValueFactory<>("dueCards"));
-       learnedCards.setCellValueFactory(new PropertyValueFactory<>("learnedCards"));
-       newCards.setCellValueFactory(new PropertyValueFactory<>("newCards"));
-       tableDeckView.setItems(DeckData.getInstance().getDecks());
-       //ấn đúp vào 1 hàng thì chuyển sang cửa sổ tương ứng
-       tableDeckView.setRowFactory(tv -> {
+        deckName.setCellValueFactory(new PropertyValueFactory<>("deckName"));
+        dueCards.setCellValueFactory(new PropertyValueFactory<>("dueCards"));
+        learnedCards.setCellValueFactory(new PropertyValueFactory<>("learnedCards"));
+        newCards.setCellValueFactory(new PropertyValueFactory<>("newCards"));
+        tableDeckView.setItems(DeckData.getInstance().getDecks());
+        //ấn đúp vào 1 hàng thì chuyển sang cửa sổ tương ứng
+        tableDeckView.setRowFactory(tv -> {
             TableRow<Deck> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
                 if (!row.isEmpty() && event.getClickCount() == 2) {

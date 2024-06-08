@@ -4,14 +4,13 @@ import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import project.flashcardapp.Controller.DeckInfoController;
@@ -23,14 +22,19 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-//Chức năng ôn tập
 public class ReviewModeController implements Initializable {
+    public Label totalCard;
+    public Label hardTime;
+    public Label easyTime;
+    public ProgressBar progressBar;
+    public Label cardLearned;
+    public Label deckName;
     @FXML
     private Label questionLabel;
     @FXML
     private Label answerLabel;
     @FXML
-    private Button backButton;
+    private Button backBtn;
 
     private static int currentIndex = 0;
     private boolean showingQuestion = true;
@@ -38,6 +42,9 @@ public class ReviewModeController implements Initializable {
     public void setDeck(Deck deck) {
         this.deck = deck;
     }
+    private Timeline flipForward, flipBackward;
+    private boolean isFlipped = false;
+    private final double FLIP_SECS = 0.3;
 
     @FXML
     private StackPane CardPane;
@@ -53,12 +60,78 @@ public class ReviewModeController implements Initializable {
         showingQuestion = true;
         questionLabel.setVisible(true);
         answerLabel.setVisible(false);
+
+        if (isFlipped) {
+            flipBackward.play();
+            isFlipped = false;
+        }
+
+        // Cập nhật giá trị của ProgressBar
+        double progress = (double) (currentIndex) / deck.getCards().getSize();
+        progressBar.setProgress(progress);
+
+        cardLearned.setText(Integer.toString(currentIndex));
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
+        deckName.setText(deck.getDeckName());
+        totalCard.setText("/"+ deck.getCards().getSize());
         updateCard();
+
+        CardPane.setRotationAxis(Rotate.X_AXIS);
+        CardPane.setAlignment(Pos.CENTER);
+        Rotate backRot = new Rotate(180, Rotate.X_AXIS);
+        answerLabel.getTransforms().add(backRot);
+
+        answerLabel.setVisible(false);
+
+        CardPane.layoutBoundsProperty().addListener((obs, oldBounds, newBounds) -> {
+            double centerX = newBounds.getWidth() / 2;
+            double centerY = newBounds.getHeight() / 2;
+            answerLabel.setLayoutX(centerX - questionLabel.getWidth() / 2);
+            answerLabel.setLayoutY(centerY - questionLabel.getHeight() / 2);
+            questionLabel.setLayoutX(centerX - questionLabel.getWidth() / 2);
+            questionLabel.setLayoutY(centerY - questionLabel.getHeight() / 2);
+            answerLabel.setTranslateY(18);
+            backRot.setPivotX(questionLabel.getWidth() / 2);
+            backRot.setPivotY(questionLabel.getHeight() / 2);
+        });
+
+        flipForward = new Timeline(
+                new KeyFrame(
+                        Duration.ZERO,
+                        new KeyValue(CardPane.rotateProperty(), 0d)),
+                new KeyFrame(
+                        Duration.seconds(FLIP_SECS / 2),
+                        t -> {
+                            answerLabel.setVisible(true);
+                            questionLabel.setVisible(false);
+                            answerLabel.toFront();
+                            CardPane.setStyle("-fx-background-color: #AFEEEE");
+                        },
+                        new KeyValue(CardPane.rotateProperty(), 90d)),
+                new KeyFrame(
+                        Duration.seconds(FLIP_SECS),
+                        new KeyValue(CardPane.rotateProperty(), 180d)));
+
+        flipBackward = new Timeline(
+                new KeyFrame(
+                        Duration.ZERO,
+                        new KeyValue(CardPane.rotateProperty(), 180d)),
+                new KeyFrame(
+                        Duration.seconds(FLIP_SECS / 2),
+                        t -> {
+                            answerLabel.setVisible(false);
+                            questionLabel.setVisible(true);
+                            questionLabel.toFront();
+                            CardPane.setStyle("-fx-background-color: #FFFFFF");
+                        },
+                        new KeyValue(CardPane.rotateProperty(), 90d)),
+                new KeyFrame(
+                        Duration.seconds(FLIP_SECS),
+                        new KeyValue(CardPane.rotateProperty(), 0d)));
     }
 
     @FXML
@@ -79,37 +152,14 @@ public class ReviewModeController implements Initializable {
 
     @FXML
     private void flipCard() {
-        Timeline timeline = new Timeline();
-
-        // Nửa đầu của lật: quay tới 90 độ
-//        KeyFrame kf1 = new KeyFrame(Duration.seconds(0.25),
-//                new KeyValue(CardPane.rotateProperty(), 90));
-
-        // Tạo một khoảng dừng để thay đổi nội dung thẻ
-        PauseTransition pause = new PauseTransition(Duration.seconds(0.1));
-        pause.setOnFinished(event -> {
-            if (showingQuestion) {
-                questionLabel.setVisible(false);
-                answerLabel.setVisible(true);
-                showingQuestion = false;
-            } else {
-                questionLabel.setVisible(true);
-                answerLabel.setVisible(false);
-                showingQuestion = true;
-            }
-        });
-        // Nửa sau của lật: quay từ 90 đến 180 độ
-//        KeyFrame kf2 = new KeyFrame(Duration.seconds(0.5),
-//                new KeyValue(CardPane.rotateProperty(), 180));
-//
-//        timeline.getKeyFrames().addAll(kf1, kf2);
-//
-//        timeline.setOnFinished(event -> {
-//            CardPane.setRotate(0);
-//            showingQuestion = !showingQuestion;
-//        });
-        timeline.play();
-        pause.playFromStart();
+        if (isFlipped) {
+            flipBackward.play();
+            System.out.println("flipped");
+        } else {
+            flipForward.play();
+            System.out.println("unflipped");
+        }
+        isFlipped = !isFlipped;
     }
 
     @FXML
@@ -179,10 +229,7 @@ public class ReviewModeController implements Initializable {
         stage.show();
     }
 
+    public void detailsCard(MouseEvent mouseEvent) {
+
+    }
 }
-
-
-
-
-
-
