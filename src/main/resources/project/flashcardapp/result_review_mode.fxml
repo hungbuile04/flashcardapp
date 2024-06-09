@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/result_review_mode.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.ResultReviewModeController">
    <children>
-      <Label fx:id="resultLabel" layoutX="45.0" layoutY="15.0" onMouseClicked="#backButtonClicked" prefHeight="100.0" prefWidth="510.0" text="Congratulations!  &#10;You have finished this deck for now.&#10;&#10;&#10;">
+      <Label fx:id="resultLabel" layoutX="45.0" layoutY="26.0" onMouseClicked="#backButtonClicked" prefHeight="100.0" prefWidth="510.0" text="Congratulations!  &#10;You have finished this deck for now.&#10;&#10;&#10;">
          <font>
             <Font size="24.0" />
          </font>

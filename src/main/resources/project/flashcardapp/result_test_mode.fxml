@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.ResultTestModeController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/result_test_mode.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.LearningMode.ResultTestModeController">
    <children>
-      <TableView fx:id="resultTable" layoutX="217.0" layoutY="62.0" prefHeight="276.0" prefWidth="347.0">
+      <TableView fx:id="resultTable" layoutX="43.0" layoutY="62.0" prefHeight="271.0" prefWidth="354.0">
         <columns>
           <TableColumn fx:id="questionCol" prefWidth="75.0" text="Question" />
-          <TableColumn fx:id="answerCol" prefWidth="75.0" text="Answer" />
-            <TableColumn fx:id="youranswerCol" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="yourresultCol" prefWidth="119.99998982747394" text="Question" />
+          <TableColumn fx:id="answerCol" prefWidth="90.4000244140625" text="Answer" />
+            <TableColumn fx:id="youranswerCol" prefWidth="88.79998779296875" text="Your answer" />
+            <TableColumn fx:id="yourresultCol" prefWidth="91.20001220703125" text="Result" />
         </columns>
       </TableView>
-      <Button fx:id="backtoDeckButton" layoutX="32.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#backToDeck" prefHeight="25.0" prefWidth="100.0" text="Back to Deck" />
+      <Button fx:id="backtoDeckButton" layoutX="442.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#backToDeck" prefHeight="30.0" prefWidth="114.0" text="Back to Deck" />
+      <Label fx:id="congratulationLabel" layoutX="435.0" layoutY="114.0" text="Congratulation!" />
+      <Label fx:id="resultLabel" layoutX="467.0" layoutY="146.0" text="You result:" />
+      <Label fx:id="correctAnswer" layoutX="475.0" layoutY="178.0" text="0" />
+      <Label fx:id="totalQuestion" layoutX="506.0" layoutY="178.0" text="15" />
+      <Label layoutX="493.0" layoutY="178.0" text="/" />
    </children>
 </AnchorPane>

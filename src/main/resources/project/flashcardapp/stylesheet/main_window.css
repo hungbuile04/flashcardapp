@@ -22,11 +22,11 @@
     -fx-border-radius: 5px;
 }
 
-.table-column .label{
-    /*Viet sau*/
+.table-view .table-cell {
+    -fx-alignment: center;
 }
 
-.table-view .table-row-cell:even {
+.table-row-cell:even {
     -fx-background-color: #77DEB9;
 }
 
