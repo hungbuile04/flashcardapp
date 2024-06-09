@@ -9,6 +9,11 @@
     -fx-text-fill: white;
 }
 
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
 .progress-bar {
     -fx-accent: #44BC91;
     -fx-padding: 0px;

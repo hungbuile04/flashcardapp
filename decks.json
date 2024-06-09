@@ -7,27 +7,27 @@
           "question": "a",
           "answer": "b",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
+            "deadlineAt": "Jun 11, 2024, 9:22:14 AM",
             "answerType": "MEDIUM",
-            "cycle": 4
+            "cycle": 5
           }
         },
         {
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 2, 2024, 6:17:35 PM",
+            "deadlineAt": "Jun 11, 2024, 9:22:17 AM",
             "answerType": "MEDIUM",
-            "cycle": 5
+            "cycle": 6
           }
         },
         {
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "deadlineAt": "Jun 3, 2024, 6:13:45 PM",
+            "deadlineAt": "Jun 12, 2024, 9:22:22 AM",
             "answerType": "CORRECT",
-            "cycle": 4
+            "cycle": 7
           }
         }
       ]
