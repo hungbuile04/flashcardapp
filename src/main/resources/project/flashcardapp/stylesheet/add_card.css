@@ -33,6 +33,10 @@
     -fx-background-color: transparent;
 }
 
+.table-view .table-cell {
+    -fx-alignment: center;
+}
+
 #addNewCard {
     -fx-alignment: center;
     -fx-font-family: "DVN-Poppins ExtBd";
