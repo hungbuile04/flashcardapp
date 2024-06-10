@@ -139,37 +139,10 @@
     "cards": {
       "cards": [
         {
-          "question": "11+5",
-          "answer": "16",
-          "selector": {
-            "deadlineAt": "Jun 11, 2024, 9:48:19 AM",
-            "answerType": "FAILURE",
-            "cycle": 6
-          }
-        },
-        {
           "question": "study",
           "answer": "học",
           "selector": {
             "deadlineAt": "Jun 11, 2024, 9:48:20 AM",
-            "answerType": "FAILURE",
-            "cycle": 7
-          }
-        },
-        {
-          "question": "1",
-          "answer": "2",
-          "selector": {
-            "deadlineAt": "Jun 11, 2024, 9:48:19 AM",
-            "answerType": "FAILURE",
-            "cycle": 7
-          }
-        },
-        {
-          "question": "12356789",
-          "answer": "23456891",
-          "selector": {
-            "deadlineAt": "Jun 11, 2024, 9:48:19 AM",
             "answerType": "FAILURE",
             "cycle": 7
           }
@@ -184,12 +157,39 @@
           }
         },
         {
+          "question": "11+5",
+          "answer": "16",
+          "selector": {
+            "deadlineAt": "Jun 11, 2024, 9:48:19 AM",
+            "answerType": "FAILURE",
+            "cycle": 6
+          }
+        },
+        {
+          "question": "1",
+          "answer": "2",
+          "selector": {
+            "deadlineAt": "Jun 11, 2024, 9:48:19 AM",
+            "answerType": "FAILURE",
+            "cycle": 7
+          }
+        },
+        {
           "question": "hello",
           "answer": "pằng pằng",
           "selector": {
             "deadlineAt": "Jun 12, 2024, 9:48:14 AM",
             "answerType": "MEDIUM",
             "cycle": 5
+          }
+        },
+        {
+          "question": "12356789",
+          "answer": "23456891",
+          "selector": {
+            "deadlineAt": "Jun 11, 2024, 9:48:19 AM",
+            "answerType": "FAILURE",
+            "cycle": 7
           }
         }
       ]
