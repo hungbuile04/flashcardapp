@@ -22,7 +22,6 @@ public class SortBySelector implements Comparator<Card> {
         Selector second = o2.getSelector();
         return compareSelectors(first, second);
     }
-
     /**
      * Default compare method
      *

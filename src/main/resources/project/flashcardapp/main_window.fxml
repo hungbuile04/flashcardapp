@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="408.0" prefWidth="590.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.MainWindowController">
+<AnchorPane prefHeight="408.0" prefWidth="590.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.MainWindowController">
     <children>
         <TableView fx:id="tableDeckView" editable="true" layoutX="10.0" layoutY="152.0" prefHeight="199.0" prefWidth="580.0">
             <columns>

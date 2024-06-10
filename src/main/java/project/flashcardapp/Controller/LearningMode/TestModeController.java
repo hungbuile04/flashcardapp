@@ -8,9 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import project.flashcardapp.Controller.DeckInfoController;
+import project.flashcardapp.Controller.Display.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.ResultDeck;
 
@@ -23,6 +22,8 @@ import java.util.ResourceBundle;
 
 //Chức năng kiểm tra
 public class  TestModeController implements Initializable {
+    public ProgressBar progressBar;
+    public Label deckName;
     private int currentIndex = 0;
     private boolean[] flag = new boolean[1000];
     private boolean[] submitflag = new boolean[1000];
@@ -60,6 +61,7 @@ public class  TestModeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
+        deckName.setText(deck.getDeckName());
         deck.randomCard(deck.getCards());
         for(int i = 0 ; i < deck.getCards().getSize(); i++){
             result.add( new ResultDeck(deck.getCards().getCard(i).getQuestion(),deck.getCards().getCard(i).getAnswer(),"","incorrect"));
@@ -79,6 +81,9 @@ public class  TestModeController implements Initializable {
         cardLearned.setText("Câu hỏi " + (currentIndex + 1) + "/" + deck.getCards().getSize());
         flag[currentIndex] = true;
         questionLabel.setVisible(true);
+        // Cập nhật giá trị của ProgressBar
+        double progress = (double) (currentIndex) / deck.getCards().getSize();
+        progressBar.setProgress(progress);
     }
 
     @FXML
@@ -111,9 +116,9 @@ public class  TestModeController implements Initializable {
             updateCard();
             answerField.setText(result.get(currentIndex).getYouranswer());
         }
-        if (currentIndex < deck.getCards().getSize() -1) {
-            nextCard.setText("Next Card");
-        }
+//        if (currentIndex < deck.getCards().getSize() -1) {
+//            nextCard.setText("Next Card");
+//        }
     }
 
     @FXML
@@ -132,6 +137,7 @@ public class  TestModeController implements Initializable {
 
     @FXML
     public void backToDeckInfoWindow(MouseEvent mouseEvent) throws IOException {
+        System.out.println("back");
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirm Cancel");
         alert.setHeaderText("Do you want to exit?");
@@ -168,7 +174,7 @@ public class  TestModeController implements Initializable {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
                 Parent addCardSceneRoot = loader.load();
                 Scene addCardScene = new Scene(addCardSceneRoot);
-                Stage stage = new Stage();
+                Stage stage = (Stage)answerField.getScene().getWindow();
                 stage.setScene(addCardScene);
                 stage.show();
             }
@@ -176,7 +182,7 @@ public class  TestModeController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_test_mode.fxml"));
             Parent addCardSceneRoot = loader.load();
             Scene addCardScene = new Scene(addCardSceneRoot);
-            Stage stage = new Stage();
+            Stage stage = (Stage)answerField.getScene().getWindow();
             stage.setScene(addCardScene);
             stage.show();
         }

@@ -13,7 +13,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import project.flashcardapp.Controller.DeckInfoController;
+import project.flashcardapp.Controller.Customization.AddCardController;
+import project.flashcardapp.Controller.Customization.DetailsCardController;
+import project.flashcardapp.Controller.Display.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.Selector;
 
@@ -29,6 +31,7 @@ public class ReviewModeController implements Initializable {
     public ProgressBar progressBar;
     public Label cardLearned;
     public Label deckName;
+    public Label mediumTime;
     @FXML
     private Label questionLabel;
     @FXML
@@ -78,6 +81,9 @@ public class ReviewModeController implements Initializable {
         this.deck = DeckInfoController.deck;
         deckName.setText(deck.getDeckName());
         totalCard.setText("/"+ deck.getCards().getSize());
+        hardTime.setText(deck.getHardCard()+" day(s)");
+        mediumTime.setText(deck.getMediumCard()+" day(s)");
+        easyTime.setText(deck.getEasyCard()+" day(s)");
         updateCard();
 
         CardPane.setRotationAxis(Rotate.X_AXIS);
@@ -229,7 +235,17 @@ public class ReviewModeController implements Initializable {
         stage.show();
     }
 
-    public void detailsCard(MouseEvent mouseEvent) {
-
+    public void detailCard(MouseEvent mouseEvent) throws IOException {
+            AddCardController.selectedCard = deck.getCards().getCard(currentIndex);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/details_card.fxml"));
+            Parent detailsCardSceneRoot = loader.load();
+            Scene detailsCardScene = new Scene(detailsCardSceneRoot);
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setTitle("Details");
+            stage.setScene(detailsCardScene);
+            DetailsCardController detailsCardController = loader.getController();
+            detailsCardController.setAddCardController(new AddCardController());
+            stage.show();
     }
 }

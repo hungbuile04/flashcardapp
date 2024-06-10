@@ -2,7 +2,6 @@ package project.flashcardapp.Controller.LearningMode;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,7 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import project.flashcardapp.Controller.DeckInfoController;
+import project.flashcardapp.Controller.Display.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 
 import java.io.IOException;
