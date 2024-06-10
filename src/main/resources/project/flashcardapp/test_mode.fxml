@@ -16,8 +16,8 @@
       <Button fx:id="checkButton" layoutX="356.0" layoutY="332.0" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="26.0" prefWidth="89.0" text="Submit" />
       <Button fx:id="backtoDeck" layoutX="-6.0" layoutY="-4.0" mnemonicParsing="false" onMouseClicked="#backToDeckInfoWindow" />
       <Button fx:id="showResultDeck" layoutX="527.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#movetoResultPage" text="ResultPage" />
-      <Label fx:id="deckName" layoutX="1.0" layoutY="24.0" prefHeight="23.0" prefWidth="622.0" text="IELTS: Intermediate" />
+      <Label fx:id="deckName" layoutX="50.0" layoutY="21.0" prefHeight="23.0" prefWidth="503.0" text="IELTS: Intermediate" />
       <ProgressBar fx:id="progressBar" layoutX="67.0" layoutY="62.0" prefHeight="7.0" prefWidth="469.0" progress="0.3" />
-      <Label fx:id="cardLearned" layoutX="499.0" layoutY="42.0" text="Label" />
+      <Label fx:id="cardLearned" layoutX="482.0" layoutY="42.0" text="Label" />
    </children>
 </AnchorPane>

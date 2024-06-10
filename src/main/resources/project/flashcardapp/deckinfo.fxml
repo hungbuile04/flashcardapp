@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="custo" onDragDetected="#customizeDeck" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/deck_info.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.DeckInfoController">
+<AnchorPane fx:id="custo" onDragDetected="#customizeDeck" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet/deck_info.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.DeckInfoController">
    <children>
       <Button fx:id="customizeBtn" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#customizeDeck" text="Customize" />
       <Pane fx:id="paneInfo" layoutX="201.0" layoutY="86.0" prefHeight="173.0" prefWidth="200.0">

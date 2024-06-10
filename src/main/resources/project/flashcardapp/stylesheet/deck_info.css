@@ -51,6 +51,10 @@
     -fx-scale-y: 0.5
 }
 
+#backBtn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 12, 0.5, 0.5, 0);
+}
+
 #customizeBtn, #deleteDeckBtn {
     -fx-background-color: transparent;
     -fx-underline: true;

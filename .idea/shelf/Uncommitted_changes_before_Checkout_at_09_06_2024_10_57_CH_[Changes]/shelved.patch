@@ -1,0 +1,225 @@
+Index: src/main/java/project/flashcardapp/HelloApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package project.flashcardapp;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\nimport project.flashcardapp.Model.DeckData;\r\n\r\nimport java.io.IOException;\r\n\r\npublic class HelloApplication extends Application {\r\n    @Override\r\n    public void start(Stage stage) throws IOException {\r\n        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(\"main_window.fxml\"));\r\n        Scene scene = new Scene(fxmlLoader.load());\r\n        stage.setResizable(false);\r\n        stage.setTitle(\"Hello!\");\r\n        stage.setScene(scene);\r\n        stage.show();\r\n        stage.centerOnScreen();\r\n    }\r\n\r\n\r\n    @Override\r\n    public void init() throws Exception {\r\n        try{\r\n            DeckData.getInstance().loadDeck();\r\n        }catch (Exception e){\r\n            System.out.println(e.getMessage());\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public void stop() throws IOException {\r\n        try{\r\n            DeckData.getInstance().storeDeck();\r\n        }catch (Exception e){\r\n            System.out.println(e.getMessage());\r\n        }\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/project/flashcardapp/HelloApplication.java b/src/main/java/project/flashcardapp/HelloApplication.java
+--- a/src/main/java/project/flashcardapp/HelloApplication.java	(revision 7732a419faf429a9cc35ad80c821da689435ef52)
++++ b/src/main/java/project/flashcardapp/HelloApplication.java	(date 1717948527476)
+@@ -14,7 +14,7 @@
+         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main_window.fxml"));
+         Scene scene = new Scene(fxmlLoader.load());
+         stage.setResizable(false);
+-        stage.setTitle("Hello!");
++        stage.setTitle("EngHust Flash Card App");
+         stage.setScene(scene);
+         stage.show();
+         stage.centerOnScreen();
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1717948527475)
++++ b/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH_[Changes]/shelved.patch	(date 1717948527475)
+@@ -0,0 +1,48 @@
++Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
+++++ /dev/null	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_rebase_[Changes]1" date="1716955644928" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
+++++ /dev/null	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1716955618178" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
+++++ /dev/null	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_rebase_[Changes]2" date="1716996777505" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
+++++ /dev/null	(revision ae89e284f4fbd3c12be126b484767f5a866bf788)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA_[Changes]" date="1716953494253" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA_[Changes]/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 29/05/2024 10:31 SA [Changes]" />
++-</changelist>
++\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1717948527474)
++++ b/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH_[Changes]/shelved.patch	(date 1717948527474)
+@@ -0,0 +1,89 @@
++Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
+++++ /dev/null	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_rebase_[Changes]1" date="1716955644928" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
+++++ /dev/null	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1716955618178" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_2.xml	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
+++++ /dev/null	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_rebase_[Changes]2" date="1716996777505" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]2/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml
++===================================================================
++diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml
++deleted file mode 100644
++--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA__Changes_.xml	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
+++++ /dev/null	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
++@@ -1,4 +0,0 @@
++-<changelist name="Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA_[Changes]" date="1716953494253" recycled="true" deleted="true">
++-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_10_31_SA_[Changes]/shelved.patch" />
++-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 29/05/2024 10:31 SA [Changes]" />
++-</changelist>
++\ No newline at end of file
++Index: .idea/misc.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_22\" default=\"true\" project-jdk-name=\"openjdk-21\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/misc.xml b/.idea/misc.xml
++--- a/.idea/misc.xml	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
+++++ b/.idea/misc.xml	(date 1717654666121)
++@@ -8,7 +8,7 @@
++       </list>
++     </option>
++   </component>
++-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
+++  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
++     <output url="file://$PROJECT_DIR$/out" />
++   </component>
++ </project>
++\ No newline at end of file
++Index: decks.json
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>[\r\n  {\r\n    \"deckName\": \"deck5\",\r\n    \"cards\": {\r\n      \"cards\": []\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 0,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1\r\n  },\r\n  {\r\n    \"deckName\": \"Deck4\",\r\n    \"cards\": {\r\n      \"cards\": []\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 0,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1\r\n  },\r\n  {\r\n    \"deckName\": \"Deck3\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"go\",\r\n          \"answer\": \"di\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"May 30, 2024, 7:19:59 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 0\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"eat\",\r\n          \"answer\": \"ăn\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"May 30, 2024, 4:07:15 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 0\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"sleep\",\r\n          \"answer\": \"ngủ\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"May 30, 2024, 4:07:15 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 0\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 3,\r\n    \"learnedCards\": 0,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1\r\n  },\r\n  {\r\n    \"deckName\": \"Deck2\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"sleep\",\r\n          \"answer\": \"ngủ\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 1, 2024, 6:03:58 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 1\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"eat\",\r\n          \"answer\": \"ăn\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 1, 2024, 6:03:57 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 1\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 0,\r\n    \"dueCards\": 2,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1\r\n  },\r\n  {\r\n    \"deckName\": \"Deck11\",\r\n    \"labelDescription\": \"\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"bread\",\r\n          \"answer\": \"bánh mì\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"May 30, 2024, 6:09:07 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 0\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"confidential\",\r\n          \"answer\": \"Bí mật\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"May 30, 2024, 6:04:46 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 0\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 2,\r\n    \"learnedCards\": 0,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1\r\n  },\r\n  {\r\n    \"deckName\": \"Deck1\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"12356789\",\r\n          \"answer\": \"23456891\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 2, 2024, 4:54:31 PM\",\r\n            \"answerType\": \"CORRECT\",\r\n            \"cycle\": 1\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"study\",\r\n          \"answer\": \"học\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 2, 2024, 4:54:30 PM\",\r\n            \"answerType\": \"CORRECT\",\r\n            \"cycle\": 1\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"bye\",\r\n          \"answer\": \"tạm biệt\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 2, 2024, 4:54:30 PM\",\r\n            \"answerType\": \"CORRECT\",\r\n            \"cycle\": 1\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"hello\",\r\n          \"answer\": \"chào\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 2, 2024, 4:54:29 PM\",\r\n            \"answerType\": \"CORRECT\",\r\n            \"cycle\": 1\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 4,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1\r\n  }\r\n]
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/decks.json b/decks.json
++--- a/decks.json	(revision 01df541d58a9b8bc23dfc460cb2c90eb0a287596)
+++++ b/decks.json	(date 1717654705225)
++@@ -169,8 +169,8 @@
++       ]
++     },
++     "newCards": 0,
++-    "learnedCards": 4,
++-    "dueCards": 0,
+++    "learnedCards": 0,
+++    "dueCards": 4,
++     "easyCard": 3,
++     "mediumCard": 2,
++     "hardCard": 1
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1717948597192)
++++ b/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH__Changes_.xml	(date 1717948597192)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH_[Changes]" date="1717654740705" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 06/06/2024 1:18 CH [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1717948597178)
++++ b/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH__Changes_.xml	(date 1717948597178)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH_[Changes]" date="1717654827439" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 06/06/2024 1:19 CH [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: src/main/resources/project/flashcardapp/stylesheet/main_window.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.button {\r\n    -fx-background-color: #44BC91;\r\n    -fx-background-radius: 10px;\r\n    -fx-font-family: \"DVN-Poppins ExtBd\";\r\n    -fx-font-size: 12px;\r\n    -fx-text-fill: white;\r\n}\r\n\r\n.label {\r\n    -fx-font-family: DVN-Poppins;\r\n}\r\n\r\n.table-view {\r\n    -fx-background-color: transparent;\r\n    -fx-border-color: black;\r\n    -fx-border-width: 2px;\r\n    -fx-border-radius: 5px;\r\n}\r\n\r\n.table-column .label{\r\n    /*Viet sau*/\r\n}\r\n\r\n.table-view .table-row-cell:even {\r\n    -fx-background-color: #77DEB9;\r\n}\r\n\r\n.button:hover {\r\n    -fx-background-color: #77DEB9;\r\n}\r\n\r\n#text_label {\r\n    -fx-font-family: \"DVN-Poppins ExtBd\";\r\n    -fx-font-size: 20px;\r\n    -fx-text-fill: #44BC91;\r\n    -fx-text-alignment: center;\r\n    -fx-alignment: center;\r\n\r\n}\r\n\r\n#deck_list {\r\n    -fx-font-family: \"DVN-Poppins ExtBd\";\r\n    -fx-font-size: 15px;\r\n    -fx-alignment: center;\r\n}\r\n\r\n#fav_button {\r\n    -fx-border-color: #44BC91;\r\n    -fx-background-color: none;\r\n    -fx-text-fill: #44BC91;\r\n    -fx-border-radius: 10px;\r\n    -fx-border-width: 2px;\r\n    -fx-effect: null;\r\n}\r\n\r\n#addCardButton {\r\n    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0.5, 0.5, 0)\r\n}\r\n\r\n#setting_button {\r\n    -fx-background-color: transparent;\r\n    -fx-graphic: url(resource/icon.png);\r\n    -fx-padding: 10px;\r\n    -fx-scale-x: 0.5;\r\n    -fx-scale-y: 0.5;\r\n}\r\n\r\n#stats_label {\r\n    -fx-alignment: center;\r\n}\r\n\r\n.table-view:row-selection .column-header-background .nested-column-header .table-column .label {\r\n    -fx-font-family: \"DVN-Poppins\";\r\n    -fx-text-fill: black;\r\n}\r\n\r\n#fav_button:hover {\r\n    -fx-border-color: none;\r\n    -fx-background-color: #44BC91;\r\n    -fx-text-fill: white;\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/project/flashcardapp/stylesheet/main_window.css b/src/main/resources/project/flashcardapp/stylesheet/main_window.css
+--- a/src/main/resources/project/flashcardapp/stylesheet/main_window.css	(revision 7732a419faf429a9cc35ad80c821da689435ef52)
++++ b/src/main/resources/project/flashcardapp/stylesheet/main_window.css	(date 1717948527477)
+@@ -57,7 +57,7 @@
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0.5, 0.5, 0)
+ }
+ 
+-#setting_button {
++#settings {
+     -fx-background-color: transparent;
+     -fx-graphic: url(resource/icon.png);
+     -fx-padding: 10px;

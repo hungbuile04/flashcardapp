@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import project.flashcardapp.Controller.DeckInfoController;
+import project.flashcardapp.Controller.Display.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 
 import java.io.IOException;

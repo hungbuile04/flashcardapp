@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller;
+package project.flashcardapp.Controller.Display;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,13 +14,10 @@ import javafx.stage.Stage;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 // Điều khiển cửa sổ của chi tiết bộ thẻ
 public class DeckInfoController implements Initializable {
