@@ -68,4 +68,23 @@ public class DetailsCardController implements Initializable {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         return sdf.format(deadlineAt);
     }
+
+    public void deleteCard(MouseEvent mouseEvent) {
+        // Kiểm tra xem có card nào được chọn hay không
+        if (current != null) {
+            // Tạo và cấu hình Alert
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirm delete");
+            alert.setHeaderText("Are you sure to delete this card?");
+            alert.setContentText("This action couldn't be undone!");
+            // Hiển thị Alert và chờ phản hồi người dùng
+            Optional<ButtonType> response = alert.showAndWait();
+            // Kiểm tra xem người dùng có nhấn OK không
+            if (response.isPresent() && response.get() == ButtonType.OK) {
+                addCardController.getDeck().getCards().remove(current);
+                addCardController.getCardTable().getItems().remove(current); // Xóa card khỏi danh sách
+                ((Stage) frontTextField.getScene().getWindow()).close();
+            }
+        }
+    }
 }

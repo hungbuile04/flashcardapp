@@ -3,6 +3,7 @@ package project.flashcardapp.Controller.Customization;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,6 +32,9 @@ public class AddCardController implements Initializable {
 
     @FXML
     private TableView<Card> cardTable = new TableView<>();
+    public TableView<Card> getCardTable() {
+        return cardTable;
+    }
 
     @FXML
     private TableColumn<Card, String> back;
@@ -48,6 +52,10 @@ public class AddCardController implements Initializable {
     private TextArea backField;
 
     private Deck deck;
+    public Deck getDeck() {
+        return deck;
+    }
+
     public static Card selectedCard;
     public ObservableList<Card> cards;
 
@@ -94,19 +102,39 @@ public class AddCardController implements Initializable {
             e.printStackTrace();
             return;
         }
-        ButtonType okButton = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
-        dialog.getDialogPane().getButtonTypes().add(okButton);
-       dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
-       dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
-       Optional<ButtonType> result = dialog.showAndWait();
-       if(result.isPresent() && result.get() == ButtonType.OK){
-           AddDeckController controller = fxmlLoader.getController();
-           Deck newDeck = controller.processResults();
-           chooseDeck.setItems(FXCollections.observableArrayList(DeckData.getInstance().getDecks()));
-           chooseDeck.getSelectionModel().select(newDeck);
-       }else {
+        ButtonType okButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().add(okButtonType);
+        // Lấy nút OK từ dialog
+        Button okButton = (Button) dialog.getDialogPane().lookupButton(okButtonType);
+        AddDeckController controller = fxmlLoader.getController();
+        // Thêm trình xử lý sự kiện cho nút OK
+        okButton.addEventFilter(ActionEvent.ACTION, event -> {
+            String nameDeck = controller.nameField.getText().trim();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            if (nameDeck.isEmpty()) {
+                alert.setContentText("Category's name can't be blank!");
+                alert.showAndWait();
+                event.consume(); // Ngăn dialog đóng
+            } else if (nameDeck.length() > 20) {
+                alert.setContentText("Category's name has to be up to 20 characters");
+                alert.showAndWait();
+                event.consume(); // Ngăn dialog đóng
+            } else if (nameDeck.length() < 2) {
+                alert.setContentText("Category's name has to have at least 2 characters");
+                alert.showAndWait();
+                event.consume(); // Ngăn dialog đóng
+            }
+        });
+        Optional<ButtonType> result = dialog.showAndWait();
+        if (result.isPresent() && result.get() == okButtonType) {
+            Deck newDeck = controller.processResults();
+            chooseDeck.setItems(FXCollections.observableArrayList(DeckData.getInstance().getDecks()));
+            chooseDeck.getSelectionModel().select(newDeck);
+        } else {
             System.out.println("Cancel pressed");
-       }
+        }
     }
 
     public void saveNewCard(MouseEvent mouseEvent) {
@@ -131,25 +159,6 @@ public class AddCardController implements Initializable {
         alert.setHeaderText(header);
         alert.setContentText(content);
         alert.showAndWait();
-    }
-
-    public void deleteCard(MouseEvent mouseEvent) {
-        Card selectedCard = cardTable.getSelectionModel().getSelectedItem();
-        // Kiểm tra xem có card nào được chọn hay không
-        if (selectedCard != null) {
-            // Tạo và cấu hình Alert
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Confirm delete");
-            alert.setHeaderText("Are you sure to delete this card?");
-            alert.setContentText("This action couldn't be undone!");
-            // Hiển thị Alert và chờ phản hồi người dùng
-            Optional<ButtonType> response = alert.showAndWait();
-            // Kiểm tra xem người dùng có nhấn OK không
-            if (response.isPresent() && response.get() == ButtonType.OK) {
-                deck.getCards().remove(selectedCard);
-                cardTable.getItems().remove(selectedCard); // Xóa card khỏi danh sách
-            }
-        }
     }
 
     public void detailCard(MouseEvent actionEvent) throws IOException {

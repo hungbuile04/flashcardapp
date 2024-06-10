@@ -39,3 +39,11 @@
 #saveBtn:hover {
     -fx-background-color: #77DEB9;
 }
+
+#deleteBtn {
+    -fx-background-color: #AB3434;
+}
+
+#deleteBtn:hover {
+    -fx-background-color: #881b1b;
+}
