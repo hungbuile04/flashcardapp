@@ -26,6 +26,12 @@
     -fx-text-fill: #44BC91;
 }
 
+#noteLabel {
+    -fx-alignment: center;
+    -fx-font-family: DVN-Poppins;
+    -fx-text-fill: #B7B7B7;
+}
+
 #testModeBtn {
     -fx-background-color: #44BC91;
     -fx-text-fill: white;

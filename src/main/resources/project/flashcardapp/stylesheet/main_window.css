@@ -24,10 +24,19 @@
 
 .table-view .table-cell {
     -fx-alignment: center;
+    -fx-font-family: DVN-Poppins;
+}
+
+.table-view .table-cell:odd {
+    -fx-text-fill: #77DEB9;
 }
 
 .table-row-cell:even {
     -fx-background-color: #77DEB9;
+}
+
+.table-row-cell:odd:selected {
+    -fx-background-color: transparent;
 }
 
 .button:hover {
