@@ -3,6 +3,7 @@ package project.flashcardapp;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.DeckData;
 
@@ -13,6 +14,11 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main_window.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+
+        // Add app icon
+        Image icon = new Image("logoApp_transparent_final.png");
+        stage.getIcons().add(icon);
+
         stage.setResizable(false);
         stage.setTitle("EngHust Flash Card App");
         stage.setScene(scene);
