@@ -124,11 +124,9 @@ public class  TestModeController implements Initializable {
         }
         String as = answerField.getText();
         String lowerCase = as.toLowerCase();
-        String upperCase = as.toUpperCase();
-//        boolean checkAnswer;
-//        if(lowerCase.equals(deck.getCards().getCard(currentIndex).getAnswer()))
+        String lowerCaseAnswer = deck.getCards().getCard(currentIndex).getAnswer().toLowerCase();
 
-        if ( lowerCase.equals(deck.getCards().getCard(currentIndex).getAnswer()) || upperCase.equals(deck.getCards().getCard(currentIndex).getAnswer()) ) {
+        if ( lowerCase.equals(lowerCaseAnswer)) {
             result.set(currentIndex, new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"correct"));
         }else{
             result.set(currentIndex, new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"incorrect"));

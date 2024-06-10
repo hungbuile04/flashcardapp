@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="hung31/5.3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/LearningMode/TestModeController.java" afterDir="false" />
-    </list>
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="0610" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,6 +170,7 @@
       <workItem from="1717949233236" duration="166000" />
       <workItem from="1718017167264" duration="508000" />
       <workItem from="1718017754264" duration="114000" />
+      <workItem from="1718017887891" duration="669000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -327,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717399839662</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="0610">
+      <option name="closed" value="true" />
+      <created>1718017954583</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718017954583</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +407,7 @@
     <MESSAGE value="new 30/5.3" />
     <MESSAGE value="hung31/5.2" />
     <MESSAGE value="hung31/5.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="hung31/5.3" />
+    <MESSAGE value="0610" />
+    <option name="LAST_COMMIT_MESSAGE" value="0610" />
   </component>
 </project>
