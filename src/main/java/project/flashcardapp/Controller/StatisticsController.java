@@ -94,14 +94,14 @@ public class StatisticsController {
                 Collections.reverse(newCard.getData());
 
                 XYChart.Series<String, Number> learnedCard = new XYChart.Series<>();
-                newCard.setName("Learned Cards");
+                learnedCard.setName("Learned Cards");
                 for (int i = 0; i < 7 && i < (deck.StatOfDeck.statisticsInWeek.size()); i++) {
                     learnedCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).learnedCards));
                 }
                 Collections.reverse(learnedCard.getData());
 
                 XYChart.Series<String, Number> dueCard = new XYChart.Series<>();
-                learnedCard.setName("Due Cards");
+                dueCard.setName("Due Cards");
                 for (int i = 0; i < 7 && i < (deck.StatOfDeck.statisticsInWeek.size()); i++) {
                     dueCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).dueCards));
                 }
@@ -119,14 +119,14 @@ public class StatisticsController {
                 Collections.reverse(newCard.getData());
 
                 XYChart.Series<String, Number> learnedCard = new XYChart.Series<>();
-                newCard.setName("Learned Cards");
+                learnedCard.setName("Learned Cards");
                 for (int i = 0; i < 6 && i < (deck.StatOfDeck.statisticsInMonth.size()); i++) {
                     learnedCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInMonth.get(i).date, deck.StatOfDeck.statisticsInMonth.get(i).learnedCards));
                 }
                 Collections.reverse(learnedCard.getData());
 
                 XYChart.Series<String, Number> dueCard = new XYChart.Series<>();
-                learnedCard.setName("Due Cards");
+                dueCard.setName("Due Cards");
                 for (int i = 0; i < 6 && i < (deck.StatOfDeck.statisticsInMonth.size()); i++) {
                     dueCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInMonth.get(i).date, deck.StatOfDeck.statisticsInMonth.get(i).dueCards));
                 }
