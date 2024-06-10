@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller;
+package project.flashcardapp.Controller.Display;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,10 +12,8 @@ import javafx.scene.control.ComboBox;
 import javafx.util.StringConverter;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
-import project.flashcardapp.Model.StatisticOfDeck;
 
 import java.net.URL;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.ResourceBundle;
 

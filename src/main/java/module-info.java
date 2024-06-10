@@ -9,10 +9,10 @@ module project.flashcardapp {
     opens project.flashcardapp.Model to javafx.fxml, javafx.base, com.google.gson;
     opens project.flashcardapp to javafx.fxml;
     exports project.flashcardapp;
-    exports project.flashcardapp.Controller;
-    opens project.flashcardapp.Controller to javafx.fxml;
     exports project.flashcardapp.Controller.Customization;
     opens project.flashcardapp.Controller.Customization to javafx.fxml;
     exports project.flashcardapp.Controller.LearningMode;
     opens project.flashcardapp.Controller.LearningMode to javafx.fxml;
+    exports project.flashcardapp.Controller.Display;
+    opens project.flashcardapp.Controller.Display to javafx.fxml;
 }
