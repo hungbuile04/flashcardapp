@@ -32,6 +32,7 @@ public class Deck {
 
     public StatisticOfDeck StatOfDeck;
 
+    //Lưu lại thống kê
     public void store(){
         StatOfDeck.storeStatistic_Week(this);
         StatOfDeck.storeStatistic_Month(this);

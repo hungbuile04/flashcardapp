@@ -7,7 +7,7 @@ public class StatisticOfDeck {
     public ArrayList<StatisticInTime> statisticsInWeek;
     public ArrayList<StatisticInTime> statisticsInMonth;
 
-
+    //Lưu Stats theo tuần
     public void storeStatistic_Week(Deck deck) {
         StatisticInTime statistic = new StatisticInTime();
         statistic.getStatistic(deck, "week");
@@ -16,6 +16,7 @@ public class StatisticOfDeck {
         else statisticsInWeek.set(0, statistic);
     }
 
+    //Lưu Stats theo tháng
     public void storeStatistic_Month(Deck deck) {
         StatisticInTime statistic = new StatisticInTime();
         StatisticInTime substatistic = new StatisticInTime();
