@@ -136,7 +136,7 @@ public class StatisticsController {
             }
         }
         else {
-            System.out.println("Deck or StatOfDeck is null");
+            System.out.println("Deck or StatsOfDeck is null");
         }
     }
 }

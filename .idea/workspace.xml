@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button2">
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/StatisticsController.java" afterDir="false" />
-    </list>
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +153,7 @@
       <workItem from="1718020416976" duration="1117000" />
       <workItem from="1718035820167" duration="2872000" />
       <workItem from="1718041687825" duration="133000" />
-      <workItem from="1718041823515" duration="3105000" />
+      <workItem from="1718041823515" duration="3265000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -261,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718044617015</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Main Window Icon Button2">
+      <option name="closed" value="true" />
+      <created>1718044987873</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718044987873</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
