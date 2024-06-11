@@ -6,11 +6,11 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="466.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.StatisticController">
+<AnchorPane prefHeight="466.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.StatisticsController">
    <children>
       <ComboBox fx:id="WeekOrMonth" layoutX="354.0" layoutY="26.0" prefWidth="150.0" promptText="Week/Month" />
       <ComboBox fx:id="WhichDeck" layoutX="536.0" layoutY="26.0" prefWidth="150.0" promptText="Choose Deck" />
-      <BarChart fx:id="StatisticBarChart" layoutX="79.0" layoutY="67.0" prefHeight="362.0" prefWidth="567.0" title="Statistic">
+      <BarChart fx:id="StatisticBarChart" layoutX="79.0" layoutY="67.0" prefHeight="362.0" prefWidth="567.0" title="Stats">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

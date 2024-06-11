@@ -2,10 +2,10 @@ package project.flashcardapp.Model;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.Month;
 
+//Class này để lấy ra ngày/tháng
 
-public class Date {
+public class PointInTime {
     static LocalDate now = LocalDate.now();
     static DayOfWeek dayOfWeek = now.getDayOfWeek();
     static int curentMonth = now.getMonthValue();
