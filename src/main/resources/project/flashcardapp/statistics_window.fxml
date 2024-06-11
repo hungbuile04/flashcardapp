@@ -10,12 +10,12 @@
    <children>
       <ComboBox fx:id="WeekOrMonth" layoutX="354.0" layoutY="26.0" prefWidth="150.0" promptText="Week/Month" />
       <ComboBox fx:id="WhichDeck" layoutX="536.0" layoutY="26.0" prefWidth="150.0" promptText="Choose Deck" />
-      <BarChart fx:id="StatisticBarChart" layoutX="79.0" layoutY="67.0" prefHeight="362.0" prefWidth="567.0" title="Stats">
+      <BarChart fx:id="StatisticBarChart" barGap="3.0" layoutX="79.0" layoutY="67.0" prefHeight="362.0" prefWidth="567.0" title="Stats">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <CategoryAxis label="Date" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" />
+          <NumberAxis autoRanging="false" label="Cards" minorTickCount="1" minorTickLength="1.0" side="LEFT" upperBound="30.0" />
         </yAxis>
       </BarChart>
    </children>

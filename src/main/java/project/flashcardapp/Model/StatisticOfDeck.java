@@ -26,7 +26,7 @@ public class StatisticOfDeck {
         if (statisticsInMonth.isEmpty()) statisticsInMonth.add(0, statistic);
         if (statistic.date != statisticsInMonth.get(0).date){
             statisticsInMonth.add(0, statistic);
-            statisticsInMonth.set(1, StatisticInTime.plusStatistic(statisticsInMonth.get(1), statisticsInWeek.get(1)));
+            //statisticsInMonth.set(1, StatisticInTime.plusStatistic(statisticsInMonth.get(1), statisticsInWeek.get(1)));
         }
         if (statistic.date == statisticsInMonth.get(0).date && substatistic.date != statisticsInWeek.get(0).date) {
             statisticsInMonth.set(0, StatisticInTime.plusStatistic(statisticsInMonth.get(0), statisticsInWeek.get(1)));

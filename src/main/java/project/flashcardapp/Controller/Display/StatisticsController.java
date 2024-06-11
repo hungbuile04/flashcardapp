@@ -11,6 +11,7 @@ import javafx.scene.control.ComboBox;
 import javafx.util.StringConverter;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
+import project.flashcardapp.Model.StatisticInTime;
 
 import java.util.Collections;
 
@@ -29,16 +30,31 @@ public class StatisticsController {
         //Tạo deck All lưu thông số của tất cả các deck
         Deck all = new Deck();
         all.setDeckName("All");
-        for (Deck t : DeckData.decks) {
-            int temp = all.getNewCards();
-            temp += t.getNewCards();
-            all.setNewCards(temp);
-            temp = all.getLearnedCards();
-            temp += t.getLearnedCards();
-            all.setLearnedCards(temp);
-            temp = all.getDueCards();
-            temp += t.getDueCards();
-            all.setDueCards(temp);
+        for (int i=0; i<7; i++) {
+            all.StatOfDeck.statisticsInMonth.add(new StatisticInTime());
+            all.StatOfDeck.statisticsInWeek.add(new StatisticInTime());
+        }
+        for (int i=0; i<7; i++) {
+            for (Deck t : DeckData.decks) {
+                if (t.StatOfDeck.statisticsInMonth.isEmpty()) continue;
+                if (t.StatOfDeck.statisticsInMonth.size()<=i) continue;
+                StatisticInTime temp = new StatisticInTime();
+                temp = all.StatOfDeck.statisticsInMonth.get(i);
+                all.StatOfDeck.statisticsInMonth.set(i, StatisticInTime.plusStatistic(t.StatOfDeck.statisticsInMonth.get(i), temp));
+            }
+            if (all.StatOfDeck.statisticsInMonth.get(i).date=="null") all.StatOfDeck.statisticsInMonth.remove(i);
+            break;
+        }
+        for (int i=0; i<7; i++) {
+            for (Deck t : DeckData.decks) {
+                if (t.StatOfDeck.statisticsInWeek.isEmpty()) continue;
+                if (t.StatOfDeck.statisticsInWeek.size()<=i) continue;
+                StatisticInTime temp = new StatisticInTime();
+                temp = all.StatOfDeck.statisticsInWeek.get(i);
+                all.StatOfDeck.statisticsInWeek.set(i, StatisticInTime.plusStatistic(t.StatOfDeck.statisticsInWeek.get(i), temp));
+            }
+            if (all.StatOfDeck.statisticsInWeek.get(i).date=="null") all.StatOfDeck.statisticsInWeek.remove(i);
+            break;
         }
 
         //Thiết lập comboBox chọn hiển thị theo tuần hay tháng
@@ -119,6 +135,7 @@ public class StatisticsController {
                     dueCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).dueCards));
                 }
 //                Collections.reverse(dueCard.getData());
+
                 // Kiểm tra xem các danh sách dữ liệu có rỗng không
                 if (newCard.getData().isEmpty() || learnedCard.getData().isEmpty() || dueCard.getData().isEmpty()) {
                     System.out.println("Dữ liệu rỗng!");
@@ -152,7 +169,15 @@ public class StatisticsController {
                 }
 //                Collections.reverse(dueCard.getData());
 
-                StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
+                // Kiểm tra xem các danh sách dữ liệu có rỗng không
+                if (newCard.getData().isEmpty() || learnedCard.getData().isEmpty() || dueCard.getData().isEmpty()) {
+                    System.out.println("Dữ liệu rỗng!");
+                } else {
+                    // Thêm dữ liệu vào BarChart
+                    StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
+                    System.out.println("flo");
+                }
+                //StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
             }
         }
         else {
