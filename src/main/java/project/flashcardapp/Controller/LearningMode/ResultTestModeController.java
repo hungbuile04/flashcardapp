@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Label;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import project.flashcardapp.Controller.Display.DeckInfoController;
@@ -22,6 +23,7 @@ import java.util.ResourceBundle;
 import javafx.scene.input.MouseEvent;
 import project.flashcardapp.Model.ResultDeck;
 
+import static java.lang.String.valueOf;
 import static project.flashcardapp.Controller.LearningMode.TestModeController.result;
 
 public class ResultTestModeController implements Initializable {
@@ -30,6 +32,12 @@ public class ResultTestModeController implements Initializable {
 
     @FXML
     private Button showed;
+
+    @FXML
+    private Label correctAnswer;
+
+    @FXML
+    private Label totalQuestion;
 
     @FXML
     private TableView <ResultDeck> resultTable;
@@ -50,6 +58,14 @@ public class ResultTestModeController implements Initializable {
     public List <ResultDeck> resultDecks;
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.deck = DeckInfoController.deck;
+        totalQuestion.setText(valueOf(deck.getCards().getSize()));
+        int count = 0;
+        for(ResultDeck k : result) {
+            if(k.getYourresult().equals("correct")){
+                count ++ ;
+            }
+        }
+        correctAnswer.setText(valueOf(count));
         questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
         answerCol.setCellValueFactory(new PropertyValueFactory<>("answer"));
         youranswerCol.setCellValueFactory(new PropertyValueFactory<>("youranswer"));

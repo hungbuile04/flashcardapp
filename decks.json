@@ -145,8 +145,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -235,6 +235,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Wednesday",
+          "newCards": 0,
+          "learnedCards": 1,
+          "dueCards": 2
+        },
+        {
           "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 1,
@@ -253,6 +259,12 @@
           "newCards": 0,
           "learnedCards": 1,
           "dueCards": 2
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 4
         },
         {
           "date": "June",
@@ -284,9 +296,18 @@
           "question": "hello",
           "answer": "pằng pằng",
           "selector": {
-            "deadlineAt": "Jun 13, 2024, 8:56:39 PM",
-            "answerType": "MEDIUM",
-            "cycle": 8
+            "deadlineAt": "Jun 13, 2024, 4:47:55 AM",
+            "answerType": "FAILURE",
+            "cycle": 9
+          }
+        },
+        {
+          "question": "12356789",
+          "answer": "23456891",
+          "selector": {
+            "deadlineAt": "Jun 13, 2024, 4:47:59 AM",
+            "answerType": "FAILURE",
+            "cycle": 11
           }
         },
         {
@@ -317,15 +338,6 @@
           }
         },
         {
-          "question": "12356789",
-          "answer": "23456891",
-          "selector": {
-            "deadlineAt": "Jun 13, 2024, 8:56:40 PM",
-            "answerType": "MEDIUM",
-            "cycle": 10
-          }
-        },
-        {
           "question": "1",
           "answer": "2",
           "selector": {
@@ -345,6 +357,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Wednesday",
+          "newCards": 0,
+          "learnedCards": 6,
+          "dueCards": 0
+        },
+        {
           "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 6,
@@ -356,6 +374,24 @@
           "date": "June",
           "newCards": 0,
           "learnedCards": 6,
+          "dueCards": 0
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 12,
+          "dueCards": 0
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 12,
+          "dueCards": 0
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 12,
           "dueCards": 0
         },
         {
