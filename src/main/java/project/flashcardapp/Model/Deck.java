@@ -30,7 +30,7 @@ public class Deck {
     private int mediumCard=2;
     private int hardCard=1;
 
-    public StatisticOfDeck StatOfDeck;
+    public StatisticOfDeck StatOfDeck = new StatisticOfDeck();
 
     //Lưu lại thống kê
     public void store(){

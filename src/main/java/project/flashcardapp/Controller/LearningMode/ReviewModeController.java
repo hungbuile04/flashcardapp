@@ -172,6 +172,7 @@ public class ReviewModeController implements Initializable {
     }
 
     void goToResult() throws IOException {
+        deck.store();
         Stage stage = (Stage) answerLabel.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_review_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

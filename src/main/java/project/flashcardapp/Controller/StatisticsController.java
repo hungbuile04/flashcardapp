@@ -91,21 +91,21 @@ public class StatisticsController {
                 for (int i = 0; i < 7 && i < (deck.StatOfDeck.statisticsInWeek.size()); i++) {
                     newCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).newCards));
                 }
-                Collections.reverse(newCard.getData());
+//                Collections.reverse(newCard.getData());
 
                 XYChart.Series<String, Number> learnedCard = new XYChart.Series<>();
                 learnedCard.setName("Learned Cards");
                 for (int i = 0; i < 7 && i < (deck.StatOfDeck.statisticsInWeek.size()); i++) {
                     learnedCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).learnedCards));
                 }
-                Collections.reverse(learnedCard.getData());
+//                Collections.reverse(learnedCard.getData());
 
                 XYChart.Series<String, Number> dueCard = new XYChart.Series<>();
                 dueCard.setName("Due Cards");
                 for (int i = 0; i < 7 && i < (deck.StatOfDeck.statisticsInWeek.size()); i++) {
                     dueCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).dueCards));
                 }
-                Collections.reverse(dueCard.getData());
+//                Collections.reverse(dueCard.getData());
 
                 StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
             }
@@ -116,21 +116,21 @@ public class StatisticsController {
                 for (int i = 0; i < 6 && i < (deck.StatOfDeck.statisticsInMonth.size()); i++) {
                     newCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInMonth.get(i).date, deck.StatOfDeck.statisticsInMonth.get(i).newCards));
                 }
-                Collections.reverse(newCard.getData());
+//                Collections.reverse(newCard.getData());
 
                 XYChart.Series<String, Number> learnedCard = new XYChart.Series<>();
                 learnedCard.setName("Learned Cards");
                 for (int i = 0; i < 6 && i < (deck.StatOfDeck.statisticsInMonth.size()); i++) {
                     learnedCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInMonth.get(i).date, deck.StatOfDeck.statisticsInMonth.get(i).learnedCards));
                 }
-                Collections.reverse(learnedCard.getData());
+//                Collections.reverse(learnedCard.getData());
 
                 XYChart.Series<String, Number> dueCard = new XYChart.Series<>();
                 dueCard.setName("Due Cards");
                 for (int i = 0; i < 6 && i < (deck.StatOfDeck.statisticsInMonth.size()); i++) {
                     dueCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInMonth.get(i).date, deck.StatOfDeck.statisticsInMonth.get(i).dueCards));
                 }
-                Collections.reverse(dueCard.getData());
+//                Collections.reverse(dueCard.getData());
 
                 StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
             }
