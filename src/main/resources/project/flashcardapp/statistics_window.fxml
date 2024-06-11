@@ -6,7 +6,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="466.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.StatisticsController">
+<AnchorPane prefHeight="466.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.StatisticsController">
    <children>
       <ComboBox fx:id="WeekOrMonth" layoutX="354.0" layoutY="26.0" prefWidth="150.0" promptText="Week/Month" />
       <ComboBox fx:id="WhichDeck" layoutX="536.0" layoutY="26.0" prefWidth="150.0" promptText="Choose Deck" />

@@ -1,4 +1,4 @@
-package project.flashcardapp.Controller;
+package project.flashcardapp.Controller.Display;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -68,14 +68,27 @@ public class StatisticsController {
         // Hiển thị biểu đồ cột
         CategoryAxis xAxis = new CategoryAxis(); xAxis.setLabel("Time");
         NumberAxis yAxis = new NumberAxis(); yAxis.setLabel("Count");
-        StatisticBarChart = new BarChart<>(xAxis, yAxis);
+        //StatisticBarChart = new BarChart<>(xAxis, yAxis);
         StatisticBarChart.setTitle("Statistic");
         updateChart();
+        if (StatisticBarChart.getData().size() == 0) {
+            System.out.println("Dữ liệu cho BarChart là rỗng.");
+        } else {
+            System.out.println("Dữ liệu cho BarChart không rỗng.");
+            System.out.println(StatisticBarChart.getData().size());
+        }
+
 
         //Cập nhật biểu đồ khi thay đổi lựa chọn hiển thị
         WhichDeck.setOnAction(event -> {
             deck = WhichDeck.getSelectionModel().getSelectedItem();
             updateChart();
+            if (StatisticBarChart.getData().size() == 0) {
+                System.out.println("Dữ liệu cho BarChart là rỗng.");
+            } else {
+                System.out.println("Dữ liệu cho BarChart không rỗng.");
+                System.out.println(StatisticBarChart.getData().size());
+            }
         });
         WeekOrMonth.setOnAction(event -> updateChart());
     }
@@ -106,8 +119,15 @@ public class StatisticsController {
                     dueCard.getData().add(new XYChart.Data<String, Number>(deck.StatOfDeck.statisticsInWeek.get(i).date, deck.StatOfDeck.statisticsInWeek.get(i).dueCards));
                 }
 //                Collections.reverse(dueCard.getData());
-
-                StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
+                // Kiểm tra xem các danh sách dữ liệu có rỗng không
+                if (newCard.getData().isEmpty() || learnedCard.getData().isEmpty() || dueCard.getData().isEmpty()) {
+                    System.out.println("Dữ liệu rỗng!");
+                } else {
+                    // Thêm dữ liệu vào BarChart
+                    StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
+                    System.out.println("flo");
+                }
+                //StatisticBarChart.getData().addAll(newCard, learnedCard, dueCard);
             }
 
             if (WeekOrMonth.getValue().equals("Month")) {

@@ -20,7 +20,7 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
 }
 
-#front, #back, #dueDate {
+#front, #back, #dueDate, #category {
     -fx-font-family: "DVN-Poppins";
 }
 

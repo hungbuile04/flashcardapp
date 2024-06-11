@@ -1,6 +1,7 @@
 package project.flashcardapp.Model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class StatisticOfDeck {
 
@@ -12,7 +13,7 @@ public class StatisticOfDeck {
         StatisticInTime statistic = new StatisticInTime();
         statistic.getStatistic(deck, "week");
         if (statisticsInWeek.isEmpty()) statisticsInWeek.add(statistic);
-        if (statistic.date != statisticsInWeek.get(0).date) statisticsInWeek.add(0, statistic);
+        if (!Objects.equals(statistic.date, statisticsInWeek.get(0).date)) statisticsInWeek.add(0, statistic);
         else statisticsInWeek.set(0, statistic);
     }
 
