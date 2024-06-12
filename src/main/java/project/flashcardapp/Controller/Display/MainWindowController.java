@@ -49,6 +49,7 @@ public class MainWindowController implements Initializable {
         learnedCards.setCellValueFactory(new PropertyValueFactory<>("learnedCards"));
         newCards.setCellValueFactory(new PropertyValueFactory<>("newCards"));
         tableDeckView.setItems(DeckData.getInstance().getDecks());
+        for (Deck d : DeckData.decks) d.store();
         //ấn đúp vào 1 hàng thì chuyển sang cửa sổ tương ứng
         tableDeckView.setRowFactory(tv -> {
             TableRow<Deck> row = new TableRow<>();
