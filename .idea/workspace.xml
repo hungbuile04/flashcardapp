@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="update UI">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/statistics_window.css" afterDir="false" />
+    <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="Main Window Icon Button2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/StatisticsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/statistics_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/statistics_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_card.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,9 +48,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/hungbuile04/flashcardapp.git&quot;,
-    &quot;accountId&quot;: &quot;83a2cc5d-1c3a-43b0-9777-61c25d7c1a99&quot;
+    &quot;accountId&quot;: &quot;f729ff6b-1993-4ea6-b114-e78cd885f18b&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -75,9 +76,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;frontEnd&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Test-Statistic&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/builehuy/Downloads/TechByBLH/git learn/flashcardapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/20232/OOP_HUST/OOP_Project/src/main/resources/project/flashcardapp/stylesheet/resource&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -107,12 +108,25 @@
       <recent name="project.flashcardapp" />
     </key>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.flashcardapp.HelloApplication" />
+      <module name="flash-cardApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.flashcardapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,29 +148,19 @@
       <workItem from="1716992793947" duration="7578000" />
       <workItem from="1717036964587" duration="980000" />
       <workItem from="1717047802048" duration="2815000" />
-      <workItem from="1717068337887" duration="30125000" />
-      <workItem from="1717176954592" duration="2465000" />
-      <workItem from="1717322734661" duration="632000" />
-      <workItem from="1717323391800" duration="1694000" />
-      <workItem from="1717356105788" duration="58000" />
-      <workItem from="1717356179822" duration="63000" />
-      <workItem from="1717356249163" duration="3261000" />
-      <workItem from="1717361275638" duration="803000" />
-      <workItem from="1717362224671" duration="174000" />
-      <workItem from="1717362620745" duration="5406000" />
-      <workItem from="1717368247947" duration="336000" />
-      <workItem from="1717368648255" duration="104000" />
-      <workItem from="1717378896716" duration="239000" />
-      <workItem from="1717399351263" duration="17000" />
-      <workItem from="1717399442226" duration="15000" />
-      <workItem from="1717399511413" duration="14000" />
-      <workItem from="1717399585366" duration="596000" />
-      <workItem from="1717402589736" duration="3652000" />
-      <workItem from="1717863709646" duration="1102000" />
-      <workItem from="1717897311511" duration="3224000" />
-      <workItem from="1717917871195" duration="3426000" />
-      <workItem from="1717990665586" duration="1156000" />
-      <workItem from="1718177992693" duration="3042000" />
+      <workItem from="1717116016484" duration="111000" />
+      <workItem from="1717128071290" duration="1893000" />
+      <workItem from="1717164871689" duration="138000" />
+      <workItem from="1717229816814" duration="40000" />
+      <workItem from="1717246748179" duration="967000" />
+      <workItem from="1717300471094" duration="445000" />
+      <workItem from="1717313870287" duration="1178000" />
+      <workItem from="1718020416976" duration="1117000" />
+      <workItem from="1718035820167" duration="2872000" />
+      <workItem from="1718041687825" duration="133000" />
+      <workItem from="1718041823515" duration="3265000" />
+      <workItem from="1718091091078" duration="2322000" />
+      <workItem from="1718106476861" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -238,106 +242,53 @@
       <option name="project" value="LOCAL" />
       <updated>1717037564908</updated>
     </task>
-    <task id="LOCAL-00011" summary="hung31/5.2">
+    <task id="LOCAL-00011" summary="Main Window Icon Button2">
       <option name="closed" value="true" />
-      <created>1717151630445</created>
+      <created>1717300807127</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1717151630445</updated>
+      <updated>1717300807127</updated>
     </task>
-    <task id="LOCAL-00012" summary="hung31/5.2">
+    <task id="LOCAL-00012" summary="Main Window Icon Button2">
       <option name="closed" value="true" />
-      <created>1717362343256</created>
+      <created>1717314980455</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1717362343256</updated>
+      <updated>1717314980455</updated>
     </task>
-    <task id="LOCAL-00013" summary="hung31/5.2">
+    <task id="LOCAL-00013" summary="Main Window Icon Button2">
       <option name="closed" value="true" />
-      <created>1717362369305</created>
+      <created>1718044617015</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1717362369305</updated>
+      <updated>1718044617015</updated>
     </task>
-    <task id="LOCAL-00014" summary="hung31/5.2">
+    <task id="LOCAL-00014" summary="Main Window Icon Button2">
       <option name="closed" value="true" />
-      <created>1717368067416</created>
+      <created>1718044987873</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1717368067416</updated>
+      <updated>1718044987873</updated>
     </task>
-    <task id="LOCAL-00015" summary="hung31/5.2">
+    <task id="LOCAL-00015" summary="Main Window Icon Button2">
       <option name="closed" value="true" />
-      <created>1717368268409</created>
+      <created>1718091157683</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1717368268409</updated>
+      <updated>1718091157683</updated>
     </task>
-    <task id="LOCAL-00016" summary="hung31/5.2">
-      <option name="closed" value="true" />
-      <created>1717368277971</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1717368277971</updated>
-    </task>
-    <task id="LOCAL-00017" summary="hung31/5.2">
-      <option name="closed" value="true" />
-      <created>1717368534877</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1717368534877</updated>
-    </task>
-    <task id="LOCAL-00018" summary="hung31/5.2">
-      <option name="closed" value="true" />
-      <created>1717368729158</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1717368729158</updated>
-    </task>
-    <task id="LOCAL-00019" summary="hung31/5.2">
-      <option name="closed" value="true" />
-      <created>1717399839662</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1717399839662</updated>
-    </task>
-    <task id="LOCAL-00020" summary="hung10/6.3">
-      <option name="closed" value="true" />
-      <created>1718036662738</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1718036662738</updated>
-    </task>
-    <task id="LOCAL-00021" summary="update UI">
-      <option name="closed" value="true" />
-      <created>1718168308406</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1718168308406</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="25948cbd-357b-48a8-9393-740022e69245" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -371,14 +322,21 @@
     </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="25948cbd-357b-48a8-9393-740022e69245">
-          <value>
-            <State />
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -396,11 +354,6 @@
     <MESSAGE value="Deck Info Window Style" />
     <MESSAGE value="Add resource directory" />
     <MESSAGE value="Main Window Icon Button2" />
-    <MESSAGE value="new 30/5.3" />
-    <MESSAGE value="hung31/5.3" />
-    <MESSAGE value="Fix bug" />
-    <MESSAGE value="hung10/6.3" />
-    <MESSAGE value="update UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="update UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main Window Icon Button2" />
   </component>
 </project>
