@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 
 <AnchorPane prefHeight="408.0" prefWidth="590.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.MainWindowController">
     <children>
@@ -36,5 +37,8 @@
             </ImageView>
          </graphic>
       </Button>
+      <Circle fx:id="strokeImg" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="nameMain" layoutX="54.0" layoutY="33.0" text="Your name" />
     </children>
 </AnchorPane>
