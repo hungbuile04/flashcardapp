@@ -24,6 +24,6 @@
       <Label fx:id="hardTime" layoutX="158.0" layoutY="362.0" text="+ 10min" />
       <Label fx:id="mediumTime" layoutX="289.0" layoutY="362.0" text="+ 5min" />
       <Label fx:id="easyTime" layoutX="413.0" layoutY="362.0" text="+ 2min" />
-      <Label fx:id="editCard" layoutX="28.0" layoutY="362.0" onMouseClicked="#detailCard" text="Edit" />
+      <Button fx:id="editCard" layoutX="28.0" layoutY="362.0" onMouseClicked="#detailCard" text="Edit" />
    </children>
 </AnchorPane>

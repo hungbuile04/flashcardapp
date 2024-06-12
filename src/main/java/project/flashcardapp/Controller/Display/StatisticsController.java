@@ -115,6 +115,8 @@ public class StatisticsController {
 
     //Hàm cập nhật biểu đồ
     private void updateChart() {
+        // Tắt hoạt cảnh cho BarChart
+        StatisticBarChart.setAnimated(false);
         StatisticBarChart.getData().clear(); // Xóa dữ liệu cũ
 
         //Trục Y chỉ hiện số nguyên

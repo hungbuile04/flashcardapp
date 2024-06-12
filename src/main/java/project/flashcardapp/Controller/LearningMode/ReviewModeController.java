@@ -86,6 +86,7 @@ public class ReviewModeController implements Initializable {
         easyTime.setText(deck.getEasyCard()+" day(s)");
         updateCard();
 
+        CardPane.setStyle("-fx-background-color: #F1F8E8");
         CardPane.setRotationAxis(Rotate.X_AXIS);
         CardPane.setAlignment(Pos.CENTER);
         Rotate backRot = new Rotate(180, Rotate.X_AXIS);
@@ -115,7 +116,7 @@ public class ReviewModeController implements Initializable {
                             answerLabel.setVisible(true);
                             questionLabel.setVisible(false);
                             answerLabel.toFront();
-                            CardPane.setStyle("-fx-background-color: #AFEEEE");
+                            CardPane.setStyle("-fx-background-color: #D8EFD3");
                         },
                         new KeyValue(CardPane.rotateProperty(), 90d)),
                 new KeyFrame(
@@ -132,7 +133,7 @@ public class ReviewModeController implements Initializable {
                             answerLabel.setVisible(false);
                             questionLabel.setVisible(true);
                             questionLabel.toFront();
-                            CardPane.setStyle("-fx-background-color: #FFFFFF");
+                            CardPane.setStyle("-fx-background-color: #F1F8E8");
                         },
                         new KeyValue(CardPane.rotateProperty(), 90d)),
                 new KeyFrame(
