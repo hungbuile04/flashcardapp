@@ -43,7 +43,7 @@
             <Label fx:id="userinformation" layoutX="9.0" layoutY="5.0" text="User Information:" />
             <Label fx:id="settings" layoutX="9.0" layoutY="140.0" text="Settings:" />
             <Label fx:id="username" layoutX="28.0" layoutY="33.0" text="Username:" />
-            <Label fx:id="age" layoutX="29.0" layoutY="69.0" text="Age:" />
+            <Label fx:id="age" layoutX="27.0" layoutY="69.0" text="Age:" />
             <Label fx:id="email" layoutX="27.0" layoutY="109.0" text="Email:" />
             <Button fx:id="settingsUser" layoutX="249.0" layoutY="9.0" mnemonicParsing="false">
                <graphic>
@@ -54,11 +54,11 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label layoutX="100.0" layoutY="33.0" text="Tu Minh Tuan" />
-            <Label layoutX="61.0" layoutY="69.0" text="20" />
-            <Label layoutX="70.0" layoutY="109.0" text="demo@gmail.com" />
-            <Label layoutX="112.0" layoutY="69.0" text="Phone:" />
-            <Label layoutX="157.0" layoutY="69.0" text="0123456789" />
+            <Label layoutX="99.0" layoutY="33.0" text="Tu Minh Tuan" />
+            <Label layoutX="59.0" layoutY="69.0" text="20" />
+            <Label layoutX="68.0" layoutY="109.0" text="demo@gmail.com" />
+            <Label layoutX="131.0" layoutY="69.0" text="Phone:" />
+            <Label layoutX="176.0" layoutY="69.0" text="0123456789" />
          </children>
       </Pane>
    </children>
