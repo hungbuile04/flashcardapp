@@ -1,0 +1,57 @@
+.label {
+    -fx-font-family: DVN-Poppins;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-font-family: DVN-Poppins;
+}
+
+.combo-box:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0.3, 0.3, 0);
+}
+
+.chart-bar {
+    -fx-background-radius: 10px 10px 0 0; /* Add rounded corners */
+}
+
+.chart-plot-background {
+    -fx-background-color: whitesmoke; /* Set background color */
+}
+
+.chart-axis {
+    -fx-stroke: black; /* Set axis line color */
+    -fx-tick-label-fill: black; /* Set tick label color */
+}
+
+.chart-legend {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1.5px;
+}
+
+.chart-legend-item-symbol{
+    -fx-background-radius: 10px;
+}
+
+.chart-legend-item {
+    -fx-font-size: 12px;
+    -fx-font-family: "DVN-Poppins"; /* Change this to your desired font family */
+}
+
+.axis-label {
+    -fx-font-family: DVN-Poppins;
+    -fx-text-fill: #737373;
+}
+
+#statisticsLabel {
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+    -fx-text-fill: #44BC91;
+}
