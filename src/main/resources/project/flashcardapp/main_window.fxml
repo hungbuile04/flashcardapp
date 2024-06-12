@@ -24,7 +24,7 @@
         </TableView>
         <Label fx:id="stats_label" layoutX="1.0" layoutY="363.0" prefHeight="20.0" prefWidth="601.0" text="Today Stats" />
         <Label fx:id="deck_list" layoutX="-1.0" layoutY="111.0" prefHeight="23.0" prefWidth="601.0" text="Deck List" />
-        <Button fx:id="addCardButton" layoutX="327.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New Card" />
+        <Button fx:id="addCardButton" layoutX="327.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New" />
         <Button fx:id="fav_button" layoutX="187.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#statistic" prefHeight="38.0" prefWidth="89.0" text="Statistics" />
         <Label fx:id="text_label" layoutY="14.0" prefHeight="28.0" prefWidth="601.0" text="EngHUST" />
       <Label fx:id="cardStudied" layoutY="381.0" prefHeight="20.0" prefWidth="601.0" text="20 cards studied" />

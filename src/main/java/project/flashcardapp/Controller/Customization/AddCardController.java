@@ -114,15 +114,15 @@ public class AddCardController implements Initializable {
             alert.setTitle("Error");
             alert.setHeaderText(null);
             if (nameDeck.isEmpty()) {
-                alert.setContentText("Category's name can't be blank!");
+                alert.setContentText("Deck's name can't be blank!");
                 alert.showAndWait();
                 event.consume(); // Ngăn dialog đóng
             } else if (nameDeck.length() > 20) {
-                alert.setContentText("Category's name has to be up to 20 characters");
+                alert.setContentText("Deck's name has to be up to 20 characters");
                 alert.showAndWait();
                 event.consume(); // Ngăn dialog đóng
             } else if (nameDeck.length() < 2) {
-                alert.setContentText("Category's name has to have at least 2 characters");
+                alert.setContentText("Deck's name has to have at least 2 characters");
                 alert.showAndWait();
                 event.consume(); // Ngăn dialog đóng
             }

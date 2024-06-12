@@ -54,9 +54,10 @@ public class CustomizeDeckController implements Initializable {
     }
     private boolean changesMade() {
         return !deckNameField.getText().equals(deck.getDeckName()) ||
-                !easyCardField.getText().equals(deck.getEasyCard()) ||
-                !mediumCardField.getText().equals(deck.getMediumCard()) ||
-                !hardCardField.getText().equals(deck.getHardCard());
+                !deckLabelField.getText().equals(deck.getLabelDescription())||
+                !easyCardField.getText().equals(deck.getEasyCard()+"") ||
+                !mediumCardField.getText().equals(deck.getMediumCard()+"") ||
+                !hardCardField.getText().equals(deck.getHardCard()+"");
     }
     public void saveChanges() throws Exception {
         String nameDeck = deckNameField.getText().trim();
@@ -64,15 +65,15 @@ public class CustomizeDeckController implements Initializable {
         alert.setTitle("Error");
         alert.setHeaderText(null);
         if (nameDeck.isEmpty()) {
-            alert.setContentText("Category's name can't be blank!");
+            alert.setContentText("Deck's name can't be blank!");
             alert.showAndWait();
             return;
         } else if (nameDeck.length() > 20) {
-            alert.setContentText("Category's name has to be up to 20 characters");
+            alert.setContentText("Deck's name has to be up to 20 characters");
             alert.showAndWait();
             return;
         } else if (nameDeck.length() < 2) {
-            alert.setContentText("Category's name has to have at least 2 characters");
+            alert.setContentText("Deck's name has to have at least 2 characters");
             alert.showAndWait();
             return;
         }
