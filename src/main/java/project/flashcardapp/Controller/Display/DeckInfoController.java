@@ -118,7 +118,7 @@ public class DeckInfoController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);
         stage.setScene(scene);
-        stage.setTitle("Hello!");
+        stage.setTitle("EngHUST Flash Card App");
         stage.show();
     }
 }

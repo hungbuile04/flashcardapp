@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="update UI">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/statistics_window.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/decks.json" beforeDir="false" afterPath="$PROJECT_DIR$/decks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/statistics_window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/statistics_window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/add_card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Customization/AddCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/DeckInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/DeckInfoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
