@@ -15,6 +15,14 @@
     -fx-font-family: DVN-Poppins;
 }
 
+#settingsButton {
+    -fx-background-color: null;
+}
+
+#settingsButton:hover {
+    -fx-cursor: hand;
+}
+
 .table-view {
     -fx-background-color: transparent;
     -fx-border-color: black;
@@ -59,8 +67,10 @@
 }
 
 #fav_button {
+    -fx-font-family: Poppins;
     -fx-border-color: #44BC91;
     -fx-background-color: none;
+    -fx-font-weight: bold;
     -fx-text-fill: #44BC91;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
@@ -69,14 +79,6 @@
 
 #addCardButton {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0.5, 0.5, 0)
-}
-
-#setting_button {
-    -fx-background-color: transparent;
-    -fx-graphic: url(resource/icon.png);
-    -fx-padding: 10px;
-    -fx-scale-x: 0.5;
-    -fx-scale-y: 0.5;
 }
 
 #stats_label {

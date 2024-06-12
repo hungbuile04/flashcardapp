@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
         stage.getIcons().add(icon);
 
         stage.setResizable(false);
-        stage.setTitle("EngHust Flash Card App");
+        stage.setTitle("EngHUST");
         stage.setScene(scene);
         stage.show();
         stage.centerOnScreen();

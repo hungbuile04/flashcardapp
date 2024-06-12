@@ -1,5 +1,6 @@
 package project.flashcardapp.Controller.Display;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -7,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Deck;
@@ -94,9 +96,25 @@ public class MainWindowController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/statistics_window.fxml"));
         Parent statisticSceneRoot = loader.load();
         Scene statisticScene = new Scene(statisticSceneRoot);
+
+        Image icon = new Image("logoApp_transparent_final.png");
+
         Stage stage = new Stage();
+        stage.getIcons().add(icon);
         stage.setTitle("Statistic");
         stage.setScene(statisticScene);
+        stage.show();
+    }
+
+//    Open stage Settings - Tuan
+    @FXML
+    public void switchtoSettings (ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/settings.fxml"));
+        Parent settingsSceneRoot = loader.load();
+        Scene settingsScene = new Scene(settingsSceneRoot);
+        Stage stage = new Stage();
+        stage.setTitle("Settings");
+        stage.setScene(settingsScene);
         stage.show();
     }
 }
