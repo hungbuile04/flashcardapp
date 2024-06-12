@@ -121,25 +121,25 @@
   },
   {
     "deckName": "Deck11",
-    "labelDescription": "",
+    "labelDescription": "B1 Level",
     "cards": {
       "cards": [
-        {
-          "question": "bread",
-          "answer": "bánh mì",
-          "selector": {
-            "deadlineAt": "Jun 12, 2024, 1:11:20 AM",
-            "answerType": "CORRECT",
-            "cycle": 2
-          }
-        },
         {
           "question": "confidential",
           "answer": "Bí mật",
           "selector": {
-            "deadlineAt": "Jun 12, 2024, 1:11:19 AM",
+            "deadlineAt": "Jun 13, 2024, 9:32:50 AM",
+            "answerType": "FAILURE",
+            "cycle": 3
+          }
+        },
+        {
+          "question": "bread",
+          "answer": "bánh mì",
+          "selector": {
+            "deadlineAt": "Jun 15, 2024, 9:32:44 AM",
             "answerType": "CORRECT",
-            "cycle": 2
+            "cycle": 3
           }
         }
       ]
@@ -153,6 +153,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Wednesday",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 0
+        },
+        {
           "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 2,
@@ -163,7 +169,13 @@
         {
           "date": "June",
           "newCards": 0,
-          "learnedCards": 2,
+          "learnedCards": 0,
+          "dueCards": 2
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 4,
           "dueCards": 0
         },
         {
