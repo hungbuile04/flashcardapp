@@ -12,7 +12,9 @@ import javafx.util.StringConverter;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class StatisticsController {
     private Deck deck;
@@ -69,7 +71,6 @@ public class StatisticsController {
         CategoryAxis xAxis = new CategoryAxis(); xAxis.setLabel("Time");
         NumberAxis yAxis = new NumberAxis(); yAxis.setLabel("Count");
         //StatisticBarChart = new BarChart<>(xAxis, yAxis);
-        StatisticBarChart.setTitle("Statistic");
         updateChart();
         if (StatisticBarChart.getData().size() == 0) {
             System.out.println("Dữ liệu cho BarChart là rỗng.");
