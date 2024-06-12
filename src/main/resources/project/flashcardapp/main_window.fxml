@@ -2,10 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 
 <AnchorPane prefHeight="408.0" prefWidth="590.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.MainWindowController">
     <children>
@@ -25,7 +27,18 @@
         <Button fx:id="addCardButton" layoutX="327.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New Card" />
         <Button fx:id="fav_button" layoutX="187.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#statistic" prefHeight="38.0" prefWidth="89.0" text="Statistics" />
         <Label fx:id="text_label" layoutY="14.0" prefHeight="28.0" prefWidth="601.0" text="EngHUST" />
-        <MenuButton fx:id="setting_button" layoutX="-34.0" layoutY="-29.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="43.0" />
       <Label fx:id="cardStudied" layoutY="381.0" prefHeight="20.0" prefWidth="601.0" text="20 cards studied" />
+      <Button fx:id="settingsButton" layoutX="543.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoSettings">
+         <graphic>
+            <ImageView fitHeight="107.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@stylesheet/resource/icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fx:id="strokeImg" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="nameMain" layoutX="54.0" layoutY="33.0" text="Your name" />
     </children>
 </AnchorPane>
