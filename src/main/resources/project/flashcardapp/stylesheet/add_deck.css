@@ -18,6 +18,11 @@
     -fx-background-radius: 10px;
 }
 
+.button:pressed {
+    -fx-scale-x: 0.9;
+    -fx-scale-x: 0.9;
+}
+
 .text-field:focused {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
 }
