@@ -141,22 +141,6 @@ public class ReviewModeController implements Initializable {
     }
 
     @FXML
-    void showNextCard(MouseEvent event) {
-        if (currentIndex < deck.getCards().getSize() - 1) {
-            currentIndex++;
-            updateCard();
-        }
-    }
-
-    @FXML
-    void showPreviousCard(MouseEvent event) {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCard();
-        }
-    }
-
-    @FXML
     private void flipCard() {
         if (isFlipped) {
             flipBackward.play();

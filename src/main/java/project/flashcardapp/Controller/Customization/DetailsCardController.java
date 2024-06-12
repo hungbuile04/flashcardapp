@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Card;
+import project.flashcardapp.Model.Selector;
 
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -19,6 +20,7 @@ public class DetailsCardController implements Initializable {
     public TextField frontTextField;
     public TextField backTextField;
     public TextField dueDateTextField;
+    public TextField categoryTextField;
     Card current;
     private AddCardController addCardController;
 
@@ -62,10 +64,44 @@ public class DetailsCardController implements Initializable {
         current=AddCardController.selectedCard;
         frontTextField.setText(current.getQuestion());
         backTextField.setText(current.getAnswer());
+        categoryTextField.setText(toString(current.getSelector().getAnswerType()));
         dueDateTextField.setText(toString(current.getSelector().getDeadlineAt()));
     }
     private String toString(Date deadlineAt) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         return sdf.format(deadlineAt);
+    }
+    private String toString(Selector.AnswerType answerType) {
+        switch (answerType) {
+            case MEDIUM -> {
+                return "Medium";
+            }
+            case CORRECT -> {
+                return "Easy";
+            }
+            case FAILURE -> {
+                return "Hard";
+            }
+        }
+        return "";
+    }
+
+    public void deleteCard(MouseEvent mouseEvent) {
+        // Kiểm tra xem có card nào được chọn hay không
+        if (current != null) {
+            // Tạo và cấu hình Alert
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirm delete");
+            alert.setHeaderText("Are you sure to delete this card?");
+            alert.setContentText("This action couldn't be undone!");
+            // Hiển thị Alert và chờ phản hồi người dùng
+            Optional<ButtonType> response = alert.showAndWait();
+            // Kiểm tra xem người dùng có nhấn OK không
+            if (response.isPresent() && response.get() == ButtonType.OK) {
+                addCardController.getDeck().getCards().remove(current);
+                addCardController.getCardTable().getItems().remove(current); // Xóa card khỏi danh sách
+                ((Stage) frontTextField.getScene().getWindow()).close();
+            }
+        }
     }
 }

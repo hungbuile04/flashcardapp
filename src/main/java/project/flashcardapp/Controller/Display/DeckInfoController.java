@@ -28,6 +28,7 @@ public class DeckInfoController implements Initializable {
     public Button testModeBtn;
     public static Deck deck;
     public Label deckName;
+    public Label noteLabel;
 
     public Deck getDeck() {
         return deck;
@@ -42,10 +43,12 @@ public class DeckInfoController implements Initializable {
         deck = DeckData.deck;
         deck.getCards().getAll();
         updateDeckInfo();
+        deck.store();
     }
     //Hiện thông tin số thẻ đã hoàn thành, chưa hoàn thành, mới
     private void updateDeckInfo() {
         deckName.setText(deck.getDeckName());
+        noteLabel.setText(deck.getLabelDescription());
         learnedLabel.setText(toString(deck.getLearnedCards()));
         dueLabel.setText(toString(deck.getDueCards()));
         newLabel.setText(toString(deck.getNewCards()));

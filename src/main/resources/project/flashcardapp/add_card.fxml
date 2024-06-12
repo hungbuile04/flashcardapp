@@ -19,14 +19,13 @@
       </TableView>
       <TextArea fx:id="frontField" layoutX="376.0" layoutY="102.0" prefHeight="91.0" prefWidth="195.0" />
       <TextArea fx:id="backField" layoutX="376.0" layoutY="216.0" prefHeight="98.0" prefWidth="195.0" />
-      <Button fx:id="deleteBtn" layoutX="404.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#deleteCard" prefHeight="25.0" prefWidth="60.0" text="Delete" />
-      <Button fx:id="addBtn" layoutX="486.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" prefHeight="25.0" prefWidth="60.0" text="Add" />
+      <Button fx:id="addBtn" layoutX="444.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#saveNewCard" prefHeight="25.0" prefWidth="60.0" text="Add" />
       <Button fx:id="detailBtn" layoutX="155.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#detailCard" text="Details" />
       <ComboBox fx:id="chooseDeck" layoutX="46.0" layoutY="76.0" prefHeight="25.0" prefWidth="166.0" />
       <Label fx:id="frontLabel" layoutX="376.0" layoutY="80.0" prefHeight="9.0" prefWidth="85.0" text="Front" />
       <Button fx:id="createNewDeck" layoutX="228.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#createNewDeck" prefHeight="26.0" prefWidth="109.0" text="Create new deck" />
       <Label fx:id="addNewCard" layoutY="21.0" prefHeight="17.0" prefWidth="600.0" text="Add New Card" />
       <Label fx:id="backLabel" layoutX="376.0" layoutY="197.0" prefHeight="9.0" prefWidth="85.0" text="Back" />
-      <Button fx:id="turnBack" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow"/>
+      <Button fx:id="turnBack" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#backToMainWindow" />
    </children>
 </AnchorPane>

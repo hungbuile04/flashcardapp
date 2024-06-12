@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import project.flashcardapp.Controller.Display.DeckInfoController;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.ResultDeck;
+import project.flashcardapp.Model.Selector;
 
 import java.io.IOException;
 import java.net.URL;
@@ -128,10 +129,14 @@ public class  TestModeController implements Initializable {
             submitflag[currentIndex] = true;
         }
         String as = answerField.getText();
-        if (as.equals(deck.getCards().getCard(currentIndex).getAnswer())) {
+        String lowerCase = as.toLowerCase();
+        String lowerCaseAnswer = deck.getCards().getCard(currentIndex).getAnswer().toLowerCase();
+
+        if ( lowerCase.equals(lowerCaseAnswer)) {
             result.set(currentIndex, new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"correct"));
         }else{
             result.set(currentIndex, new ResultDeck(deck.getCards().getCard(currentIndex).getQuestion(),deck.getCards().getCard(currentIndex).getAnswer(), as,"incorrect"));
+            deck.getCards().getCard(currentIndex).getSelector().update(Selector.AnswerType.FAILURE,deck.getEasyCard(), deck.getMediumCard(), deck.getHardCard());
         }
     }
 
