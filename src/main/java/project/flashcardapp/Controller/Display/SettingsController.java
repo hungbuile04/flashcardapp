@@ -7,9 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
@@ -20,10 +23,61 @@ import java.io.IOException;
 
 public class SettingsController {
     @FXML
-    private AnchorPane scenePane;
+    private Label age;
+
+    @FXML
+    private Label ageLabel;
+
+    @FXML
+    private Button backButton;
+
+    @FXML
+    private Label email;
+
+    @FXML
+    private Label emailLabel;
+
+    @FXML
+    private Circle frameImage;
+
+    @FXML
+    private Pane inforPane;
+
+    @FXML
+    private Label nameTitle;
+
+    @FXML
+    private Label phoneLabel;
 
     @FXML
     private Circle profileImage;
+
+    @FXML
+    private AnchorPane scenePane;
+
+    @FXML
+    private Label schoolLabel;
+
+    @FXML
+    private Label settings;
+
+    @FXML
+    private Label settingsTitle;
+
+    @FXML
+    private Button settingsUser;
+
+    @FXML
+    private Button uploadImage;
+
+    @FXML
+    private Label userinformation;
+
+    @FXML
+    private Label username;
+
+    @FXML
+    private Label usernameLabel;
 
     @FXML
     public void backtoMainButton(ActionEvent event) throws IOException {
@@ -66,5 +120,15 @@ public class SettingsController {
         stage.setTitle("User Information");
         stage.setScene(settingsScene);
         stage.show();
+    }
+
+    // Method to receive and display user data
+    public void setUserData(String age, String email, String phone, String username, String school) {
+        nameTitle.setText(username);
+        ageLabel.setText(age);
+        emailLabel.setText(email);
+        phoneLabel.setText(phone);
+        usernameLabel.setText(username);
+        schoolLabel.setText(school);
     }
 }

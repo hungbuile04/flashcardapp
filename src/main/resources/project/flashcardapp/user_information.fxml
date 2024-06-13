@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="290.0" prefWidth="416.0" stylesheets="@stylesheet/user_information.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.UserInformation">
+<AnchorPane fx:id="userPane" prefHeight="290.0" prefWidth="416.0" stylesheets="@stylesheet/user_information.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.UserInformation">
    <children>
       <Label fx:id="userTitle" alignment="CENTER" layoutY="15.0" prefHeight="27.0" prefWidth="416.0" text="User Information" />
       <Label fx:id="Username" layoutX="68.0" layoutY="73.0" text="Username:" />
@@ -18,10 +18,10 @@
       <TextField fx:id="ageField" layoutX="107.0" layoutY="154.0" prefHeight="18.0" prefWidth="31.0" />
       <TextField fx:id="emailField" layoutX="217.0" layoutY="199.0" />
       <TextField fx:id="phoneField" layoutX="217.0" layoutY="154.0" />
-      <Button fx:id="confirmButton" layoutX="174.0" layoutY="249.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Confirm" />
+      <Button fx:id="confirmButton" layoutX="174.0" layoutY="249.0" mnemonicParsing="false" onAction="#confirmButton" prefHeight="26.0" prefWidth="68.0" text="Confirm" />
       <Label fx:id="Yourschool" layoutX="67.0" layoutY="112.0" text="Your school:" />
       <TextField fx:id="schoolField" layoutX="217.0" layoutY="108.0" />
-      <Button fx:id="backtoSettings" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#backtosettings" prefHeight="18.0" prefWidth="28.0">
+      <Button fx:id="backtoSettings" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#backtosettingsButton" prefHeight="18.0" prefWidth="28.0">
          <graphic>
             <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
