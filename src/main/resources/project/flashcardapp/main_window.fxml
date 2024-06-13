@@ -4,8 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 
@@ -28,17 +26,10 @@
         <Button fx:id="fav_button" layoutX="187.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#statistic" prefHeight="38.0" prefWidth="89.0" text="Statistics" />
         <Label fx:id="text_label" layoutY="14.0" prefHeight="28.0" prefWidth="601.0" text="EngHUST" />
       <Label fx:id="cardStudied" layoutY="381.0" prefHeight="20.0" prefWidth="601.0" text="20 cards studied" />
-      <Button fx:id="settingsButton" layoutX="543.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoSettings">
-         <graphic>
-            <ImageView fitHeight="107.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@stylesheet/resource/icon.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Circle fx:id="strokeImg" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="settingsButton" layoutX="543.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoSettings" />
+      <Circle fx:id="strokeImg" fill="DODGERBLUE" layoutX="28.0" layoutY="28.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="nameMain" layoutX="54.0" layoutY="33.0" text="Your name" />
+      <Label fx:id="nameMain" layoutX="54.0" layoutY="19.0" text="Your name" />
+      <Button fx:id="settingButton" layoutX="525.0" layoutY="-12.0" mnemonicParsing="false" onAction="#switchtoSettings" />
     </children>
 </AnchorPane>
