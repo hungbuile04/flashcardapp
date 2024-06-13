@@ -25,6 +25,9 @@ public class SettingsController {
     @FXML
     private Circle profileImage;
 
+//    public MainWindowController mainWindowController;
+//    public void setMainWindowController(){};
+
     @FXML
     public void backtoMainButton(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

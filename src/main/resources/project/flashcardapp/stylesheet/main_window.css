@@ -112,3 +112,18 @@
     -fx-stroke: null;
 }
 
+#settingButton {
+    -fx-graphic: url(resource/icon.png);
+    -fx-background-color: transparent;
+    -fx-scale-y: 0.5;
+    -fx-scale-x: 0.5;
+}
+
+#settingButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.7, 0.7, 0)
+}
+
+#settingButton:pressed {
+    -fx-scale-x: 0.4;
+    -fx-scale-y: 0.4;
+}
