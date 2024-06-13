@@ -20,7 +20,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="schoolTitle" alignment="CENTER" layoutX="-1.0" layoutY="191.0" prefHeight="18.0" prefWidth="321.0" text="Your school" />
+      <Label fx:id="schoolLabel" alignment="CENTER" layoutX="-1.0" layoutY="191.0" prefHeight="18.0" prefWidth="321.0" text="Your school" />
       <Button fx:id="uploadImage" layoutX="184.0" layoutY="138.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="18.0" prefWidth="26.0">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
@@ -46,11 +46,11 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label layoutX="99.0" layoutY="33.0" text="Tu Minh Tuan" />
-            <Label layoutX="59.0" layoutY="69.0" text="20" />
-            <Label layoutX="68.0" layoutY="109.0" text="demo@gmail.com" />
+            <Label fx:id="usernameLabel" layoutX="99.0" layoutY="33.0" text="Tu Minh Tuan" />
+            <Label fx:id="ageLabel" layoutX="59.0" layoutY="69.0" text="20" />
+            <Label fx:id="emailLabel" layoutX="68.0" layoutY="109.0" text="demo@gmail.com" />
             <Label layoutX="139.0" layoutY="69.0" text="Phone:" />
-            <Label layoutX="184.0" layoutY="69.0" text="0123456789" />
+            <Label fx:id="phoneLabel" layoutX="184.0" layoutY="69.0" text="0123456789" />
          </children>
       </Pane>
       <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="18.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
