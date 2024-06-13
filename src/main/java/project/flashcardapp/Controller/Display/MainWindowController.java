@@ -11,14 +11,23 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import project.flashcardapp.Model.Card;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
+import project.flashcardapp.Model.Selector;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class MainWindowController implements Initializable {
+    public Label cardStudied;
     private Deck deck;
     @FXML
     private Button addCardButton;
@@ -62,6 +71,35 @@ public class MainWindowController implements Initializable {
             });
             return row;
         });
+
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // Adjust the pattern to match your date format
+        DeckData.studiedCardsToday=0;
+        for (Deck d : DeckData.decks) {
+            for (Card card : d.getCards().getAll()) {
+                Selector selector = card.getSelector();
+                try {
+                    Date deadlineDate = selector.getDeadlineAt();
+                    LocalDate deadline = Instant.ofEpochMilli(deadlineDate.getTime())
+                            .atZone(ZoneId.systemDefault())
+                            .toLocalDate();
+                    int daysToSubtract = 0;
+                    if(selector.getAnswerType()== Selector.AnswerType.CORRECT){
+                        daysToSubtract=d.getEasyCard();
+                    }else if(selector.getAnswerType()==Selector.AnswerType.MEDIUM){
+                        daysToSubtract=d.getMediumCard();
+                    }else if(selector.getAnswerType()==Selector.AnswerType.FAILURE){
+                        daysToSubtract=d.getHardCard();
+                    }
+                    if (today.equals(deadline.minusDays(daysToSubtract))) {
+                        DeckData.studiedCardsToday++;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace(); // Handle parsing exception
+                }
+            }
+        }
+        cardStudied.setText(DeckData.studiedCardsToday + " card(s)");
     }
     //mở cửa sổ chọn chế độ học
     private void showDetailScene(Deck deck) {

@@ -145,10 +145,8 @@ public class ReviewModeController implements Initializable {
     private void flipCard() {
         if (isFlipped) {
             flipBackward.play();
-            System.out.println("flipped");
         } else {
             flipForward.play();
-            System.out.println("unflipped");
         }
         isFlipped = !isFlipped;
     }
@@ -193,7 +191,7 @@ public class ReviewModeController implements Initializable {
     }
 
     public void backToDeckInfoWindow(MouseEvent mouseEvent) throws Exception {
-        //deck.store();
+        currentIndex=0;
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirm Cancel");
         alert.setHeaderText("Do you want to stop reviewing?");
@@ -213,6 +211,7 @@ public class ReviewModeController implements Initializable {
     }
 
     void goToResult() throws IOException {
+        currentIndex=0;
         Stage stage = (Stage) answerLabel.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/result_review_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
