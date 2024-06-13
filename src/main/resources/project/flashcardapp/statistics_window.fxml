@@ -14,7 +14,7 @@
       <ComboBox fx:id="WhichDeck" layoutX="409.0" layoutY="64.0" prefWidth="150.0" promptText="Choose Deck" />
       <BarChart fx:id="StatisticBarChart" animated="false" layoutX="69.0" layoutY="109.0" prefHeight="336.0" prefWidth="578.0">
         <xAxis>
-          <CategoryAxis nodeOrientation="RIGHT_TO_LEFT" side="BOTTOM">
+          <CategoryAxis side="BOTTOM">
                <tickLabelFont>
                   <Font name="DVN-Poppins Regular" size="12.0" />
                </tickLabelFont></CategoryAxis>
