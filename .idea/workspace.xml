@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2ab0f7-8bcc-4bb8-90b8-342a80583ece" name="Changes" comment="hung10/6.3">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_06_2024_1_18_CH__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_06_06_2024_1_19_CH__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/UserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/flashcardapp/Controller/Display/UserInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/settings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/user_information.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/stylesheet/user_information.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/user_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/project/flashcardapp/user_information.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TuanBranch&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/builehuy/Downloads/TechByBLH/git learn/flashcardapp&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -171,6 +168,8 @@
       <workItem from="1718159996758" duration="2245000" />
       <workItem from="1718203706431" duration="452000" />
       <workItem from="1718256387602" duration="4602000" />
+      <workItem from="1718261361158" duration="369000" />
+      <workItem from="1718263127905" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
