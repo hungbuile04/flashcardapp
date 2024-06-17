@@ -31,5 +31,6 @@
       <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="nameMain" layoutX="54.0" layoutY="19.0" text="Your name" />
       <Button fx:id="settingButton" layoutX="525.0" layoutY="-12.0" mnemonicParsing="false" onAction="#switchtoSettings" />
+      <Button fx:id="noteButton" layoutX="540.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#note" text="Note"/>
     </children>
 </AnchorPane>

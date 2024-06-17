@@ -16,12 +16,12 @@ import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 import project.flashcardapp.Model.Selector;
 
+import java.io.*;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -156,4 +156,15 @@ public class MainWindowController implements Initializable {
         stage.setScene(settingsScene);
         stage.show();
     }
+
+    public void note(MouseEvent mouseEvent) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/note.fxml"));
+         Parent noteRoot = loader.load();
+         Scene noteScene = new Scene(noteRoot);
+         Stage stage = new Stage();
+         stage.setTitle("Note");
+         stage.setScene(noteScene);
+         stage.show();
+    }
+
 }
