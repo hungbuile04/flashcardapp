@@ -1,1 +1,1 @@
-Xin chào các bạn
+Hello world

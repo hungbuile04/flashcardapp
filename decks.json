@@ -33,6 +33,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 0,
+          "dueCards": 2
+        },
+        {
           "date": "Monday",
           "newCards": 0,
           "learnedCards": 0,
@@ -58,12 +64,6 @@
         },
         {
           "date": "Wednesday",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 2,
           "dueCards": 0
@@ -139,6 +139,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 0
+        },
+        {
           "date": "Monday",
           "newCards": 0,
           "learnedCards": 5,
@@ -166,12 +172,6 @@
           "date": "Wednesday",
           "newCards": 0,
           "learnedCards": 5,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 4,
           "dueCards": 0
         }
       ],
@@ -256,13 +256,19 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 7,
-    "dueCards": 0,
+    "learnedCards": 5,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
     "StatOfDeck": {
       "statisticsInWeek": [
+        {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 2
+        },
         {
           "date": "Monday",
           "newCards": 0,
@@ -292,20 +298,14 @@
           "newCards": 0,
           "learnedCards": 7,
           "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
         }
       ],
       "statisticsInMonth": [
         {
           "date": "June",
           "newCards": 0,
-          "learnedCards": 7,
-          "dueCards": 0
+          "learnedCards": 5,
+          "dueCards": 2
         }
       ]
     }
@@ -344,6 +344,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 0,
+          "dueCards": 2
+        },
+        {
           "date": "Monday",
           "newCards": 0,
           "learnedCards": 0,
@@ -369,12 +375,6 @@
         },
         {
           "date": "Wednesday",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 2,
           "dueCards": 0
