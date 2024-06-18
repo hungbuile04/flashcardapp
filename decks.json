@@ -43,8 +43,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 4,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 4,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -248,8 +248,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 4,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 4,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -370,8 +370,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -522,8 +522,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -628,30 +628,30 @@
     "cards": {
       "cards": [
         {
-          "question": "study",
-          "answer": "học",
+          "question": "programme",
+          "answer": "chương trình",
           "selector": {
-            "deadlineAt": "Jun 15, 2024, 12:03:52 PM",
+            "deadlineAt": "Jun 20, 2024, 3:17:56 PM",
             "answerType": "MEDIUM",
-            "cycle": 1
+            "cycle": 2
           }
         },
         {
           "question": "computer",
           "answer": "máy tính",
           "selector": {
-            "deadlineAt": "Jun 15, 2024, 12:03:38 PM",
+            "deadlineAt": "Jun 20, 2024, 3:17:53 PM",
             "answerType": "MEDIUM",
-            "cycle": 1
+            "cycle": 2
           }
         },
         {
-          "question": "programme",
-          "answer": "chương trình",
+          "question": "study",
+          "answer": "học",
           "selector": {
-            "deadlineAt": "Jun 16, 2024, 12:03:45 PM",
+            "deadlineAt": "Jun 21, 2024, 3:17:49 PM",
             "answerType": "CORRECT",
-            "cycle": 1
+            "cycle": 2
           }
         }
       ]
@@ -665,6 +665,12 @@
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 3,
+          "dueCards": 0
+        },
+        {
           "date": "Thursday",
           "newCards": 0,
           "learnedCards": 3,
@@ -672,6 +678,36 @@
         }
       ],
       "statisticsInMonth": [
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 0,
+          "dueCards": 3
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 3,
+          "dueCards": 0
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 3,
+          "dueCards": 0
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 3,
+          "dueCards": 0
+        },
+        {
+          "date": "June",
+          "newCards": 0,
+          "learnedCards": 3,
+          "dueCards": 0
+        },
         {
           "date": "June",
           "newCards": 3,
