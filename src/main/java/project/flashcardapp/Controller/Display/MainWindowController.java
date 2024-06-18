@@ -10,23 +10,30 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import project.flashcardapp.Model.Card;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
+import project.flashcardapp.Model.Selector;
 
-import java.io.IOException;
+import java.io.*;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class MainWindowController implements Initializable {
+    public Label cardStudied;
     private Deck deck;
     @FXML
     private Button addCardButton;
 
     @FXML
-    private MenuButton setting_button;
+    private Button settingButton;
 
 
     @FXML
@@ -44,23 +51,14 @@ public class MainWindowController implements Initializable {
     @FXML
     private TableColumn<Deck, Integer> newCards;
 
-    @FXML
-    private Circle imageMain;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String uploadedImageUrl = SettingsController.getUploadedImageUrl();
-        if (uploadedImageUrl != null) {
-            Image image = new Image(uploadedImageUrl);
-            imageMain.setFill(new ImagePattern(image));
-        }
-
         deckName.setCellValueFactory(new PropertyValueFactory<>("deckName"));
         dueCards.setCellValueFactory(new PropertyValueFactory<>("dueCards"));
         learnedCards.setCellValueFactory(new PropertyValueFactory<>("learnedCards"));
         newCards.setCellValueFactory(new PropertyValueFactory<>("newCards"));
         tableDeckView.setItems(DeckData.getInstance().getDecks());
-
+        for (Deck d : DeckData.decks) d.store();
         //ấn đúp vào 1 hàng thì chuyển sang cửa sổ tương ứng
         tableDeckView.setRowFactory(tv -> {
             TableRow<Deck> row = new TableRow<>();
@@ -73,16 +71,36 @@ public class MainWindowController implements Initializable {
             });
             return row;
         });
-    }
 
-    // Method to set the profile image URL
-    public void setProfileImage(String imageUrl) {
-        if (imageUrl != null) {
-            Image image = new Image(imageUrl);
-            imageMain.setFill(new ImagePattern(image));
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // Adjust the pattern to match your date format
+        DeckData.studiedCardsToday=0;
+        for (Deck d : DeckData.decks) {
+            for (Card card : d.getCards().getAll()) {
+                Selector selector = card.getSelector();
+                try {
+                    Date deadlineDate = selector.getDeadlineAt();
+                    LocalDate deadline = Instant.ofEpochMilli(deadlineDate.getTime())
+                            .atZone(ZoneId.systemDefault())
+                            .toLocalDate();
+                    int daysToSubtract = 0;
+                    if(selector.getAnswerType()== Selector.AnswerType.CORRECT){
+                        daysToSubtract=d.getEasyCard();
+                    }else if(selector.getAnswerType()==Selector.AnswerType.MEDIUM){
+                        daysToSubtract=d.getMediumCard();
+                    }else if(selector.getAnswerType()==Selector.AnswerType.FAILURE){
+                        daysToSubtract=d.getHardCard();
+                    }
+                    if (today.equals(deadline.minusDays(daysToSubtract))) {
+                        DeckData.studiedCardsToday++;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace(); // Handle parsing exception
+                }
+            }
         }
+        cardStudied.setText(DeckData.studiedCardsToday + " card(s)");
     }
-
     //mở cửa sổ chọn chế độ học
     private void showDetailScene(Deck deck) {
         try {
@@ -130,16 +148,23 @@ public class MainWindowController implements Initializable {
 //    Open stage Settings - Tuan
     @FXML
     public void switchtoSettings (ActionEvent event) throws IOException {
-        Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        currentStage.close();
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/settings.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
+        Parent settingsSceneRoot = loader.load();
+        Scene settingsScene = new Scene(settingsSceneRoot);
         Stage stage = new Stage();
         stage.setTitle("Settings");
-
-        stage.setScene(scene);
+        stage.setScene(settingsScene);
         stage.show();
     }
+
+    public void note(MouseEvent mouseEvent) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/note.fxml"));
+         Parent noteRoot = loader.load();
+         Scene noteScene = new Scene(noteRoot);
+         Stage stage = new Stage();
+         stage.setTitle("Note");
+         stage.setScene(noteScene);
+         stage.show();
+    }
+
 }

@@ -15,6 +15,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -48,6 +49,9 @@ public class SettingsController {
 
     @FXML
     private Circle profileImage;
+
+//    public MainWindowController mainWindowController;
+//    public void setMainWindowController(){};
 
     @FXML
     private AnchorPane scenePane;
@@ -94,7 +98,7 @@ public class SettingsController {
     }
 
     @FXML
-    public void backtoMainButton(ActionEvent event) throws IOException {
+    public void backtoMainButton(MouseEvent event) throws IOException {
         Stage curentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         curentStage.close();
 
@@ -108,7 +112,7 @@ public class SettingsController {
         stage.getIcons().add(icon);
 
         MainWindowController mainWindowController = loader.getController();
-        mainWindowController.setProfileImage(SettingsController.getUploadedImageUrl());
+//        mainWindowController.setProfileImage(SettingsController.getUploadedImageUrl());
 
         stage.setScene(scene);
         stage.show();

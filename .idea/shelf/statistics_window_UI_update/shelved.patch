@@ -1,0 +1,152 @@
+Index: decks.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[\r\n  {\r\n    \"deckName\": \"test\",\r\n    \"labelDescription\": \"\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"3\",\r\n          \"answer\": \"2\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 12, 2024, 10:28:49 AM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 1\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"study\",\r\n          \"answer\": \"học\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 12, 2024, 10:28:51 AM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 2\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 2,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1,\r\n    \"StatOfDeck\": {\r\n      \"statisticsInWeek\": [\r\n        {\r\n          \"date\": \"Tuesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        }\r\n      ],\r\n      \"statisticsInMonth\": [\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  {\r\n    \"deckName\": \"Deck3\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"sleep\",\r\n          \"answer\": \"ngủ\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 9:36:14 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 8\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 1,\r\n    \"dueCards\": 0,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1,\r\n    \"StatOfDeck\": {\r\n      \"statisticsInWeek\": [\r\n        {\r\n          \"date\": \"Tuesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 1,\r\n          \"dueCards\": 0\r\n        }\r\n      ],\r\n      \"statisticsInMonth\": [\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 1,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"May\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 5,\r\n          \"dueCards\": 1\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 0,\r\n          \"dueCards\": 1\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 0,\r\n          \"dueCards\": 1\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  {\r\n    \"deckName\": \"Deck11\",\r\n    \"labelDescription\": \"B1 Level\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"confidential\",\r\n          \"answer\": \"Bí mật\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 9:32:50 AM\",\r\n            \"answerType\": \"FAILURE\",\r\n            \"cycle\": 3\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"bread\",\r\n          \"answer\": \"bánh mì\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 15, 2024, 9:32:44 AM\",\r\n            \"answerType\": \"CORRECT\",\r\n            \"cycle\": 3\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 0,\r\n    \"dueCards\": 2,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1,\r\n    \"StatOfDeck\": {\r\n      \"statisticsInWeek\": [\r\n        {\r\n          \"date\": \"Wednesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"Tuesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        }\r\n      ],\r\n      \"statisticsInMonth\": [\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 0,\r\n          \"dueCards\": 2\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 4,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 2,\r\n          \"dueCards\": 0\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  {\r\n    \"deckName\": \"Deck2\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"a\",\r\n          \"answer\": \"b\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 7:57:16 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 10\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"sleep\",\r\n          \"answer\": \"ngủ\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 10, 2024, 7:57:17 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 11\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"eat\",\r\n          \"answer\": \"ăn\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 11, 2024, 7:57:17 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 24\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 1,\r\n    \"dueCards\": 2,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1,\r\n    \"StatOfDeck\": {\r\n      \"statisticsInWeek\": [\r\n        {\r\n          \"date\": \"Tuesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 1,\r\n          \"dueCards\": 2\r\n        },\r\n        {\r\n          \"date\": \"Tuesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 3,\r\n          \"dueCards\": 0\r\n        }\r\n      ],\r\n      \"statisticsInMonth\": [\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 1,\r\n          \"dueCards\": 2\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 4,\r\n          \"dueCards\": 2\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  {\r\n    \"deckName\": \"Deck1a\",\r\n    \"labelDescription\": \"Nâng cao\",\r\n    \"cards\": {\r\n      \"cards\": [\r\n        {\r\n          \"question\": \"hello\",\r\n          \"answer\": \"pằng pằng\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 8:56:39 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 8\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"study\",\r\n          \"answer\": \"học\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 8:56:40 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 9\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"11+5\",\r\n          \"answer\": \"16\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 8:56:39 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 9\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"bye\",\r\n          \"answer\": \"tạm biệt\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 8:56:40 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 10\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"12356789\",\r\n          \"answer\": \"23456891\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 8:56:40 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 10\r\n          }\r\n        },\r\n        {\r\n          \"question\": \"1\",\r\n          \"answer\": \"2\",\r\n          \"selector\": {\r\n            \"deadlineAt\": \"Jun 13, 2024, 8:56:39 PM\",\r\n            \"answerType\": \"MEDIUM\",\r\n            \"cycle\": 10\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"newCards\": 0,\r\n    \"learnedCards\": 1,\r\n    \"dueCards\": 5,\r\n    \"easyCard\": 3,\r\n    \"mediumCard\": 2,\r\n    \"hardCard\": 1,\r\n    \"StatOfDeck\": {\r\n      \"statisticsInWeek\": [\r\n        {\r\n          \"date\": \"Tuesday\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        }\r\n      ],\r\n      \"statisticsInMonth\": [\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        },\r\n        {\r\n          \"date\": \"June\",\r\n          \"newCards\": 0,\r\n          \"learnedCards\": 6,\r\n          \"dueCards\": 0\r\n        }\r\n      ]\r\n    }\r\n  }\r\n]
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/decks.json b/decks.json
+--- a/decks.json	(revision 8b620779612b1f8e73ad5f20f8cd2b329f57c837)
++++ b/decks.json	(date 1718181569933)
+@@ -1,25 +1,25 @@
+ [
+   {
+-    "deckName": "test",
+-    "labelDescription": "",
++    "deckName": "Vocabulary Review",
++    "labelDescription": "B1 Level",
+     "cards": {
+       "cards": [
+         {
+           "question": "3",
+           "answer": "2",
+           "selector": {
+-            "deadlineAt": "Jun 12, 2024, 10:28:49 AM",
+-            "answerType": "MEDIUM",
+-            "cycle": 1
++            "deadlineAt": "Jun 13, 2024, 3:39:10 PM",
++            "answerType": "FAILURE",
++            "cycle": 3
+           }
+         },
+         {
+           "question": "study",
+           "answer": "học",
+           "selector": {
+-            "deadlineAt": "Jun 12, 2024, 10:28:51 AM",
+-            "answerType": "MEDIUM",
+-            "cycle": 2
++            "deadlineAt": "Jun 15, 2024, 11:51:54 AM",
++            "answerType": "CORRECT",
++            "cycle": 3
+           }
+         }
+       ]
+@@ -33,6 +33,12 @@
+     "StatOfDeck": {
+       "statisticsInWeek": [
+         {
++          "date": "Wednesday",
++          "newCards": 0,
++          "learnedCards": 2,
++          "dueCards": 0
++        },
++        {
+           "date": "Tuesday",
+           "newCards": 0,
+           "learnedCards": 2,
+@@ -47,6 +53,54 @@
+           "dueCards": 0
+         },
+         {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 4,
++          "dueCards": 0
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 4,
++          "dueCards": 0
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 2,
++          "dueCards": 2
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 2,
++          "dueCards": 2
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 4,
++          "dueCards": 0
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 4,
++          "dueCards": 0
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 4,
++          "dueCards": 0
++        },
++        {
++          "date": "June",
++          "newCards": 0,
++          "learnedCards": 4,
++          "dueCards": 0
++        },
++        {
+           "date": "June",
+           "newCards": 0,
+           "learnedCards": 2,
+@@ -134,6 +188,15 @@
+           }
+         },
+         {
++          "question": "extraordinary",
++          "answer": "bất thường",
++          "selector": {
++            "deadlineAt": "Jun 12, 2024, 10:03:29 AM",
++            "answerType": "MEDIUM",
++            "cycle": 0
++          }
++        },
++        {
+           "question": "bread",
+           "answer": "bánh mì",
+           "selector": {
+@@ -144,9 +207,9 @@
+         }
+       ]
+     },
+-    "newCards": 0,
+-    "learnedCards": 0,
+-    "dueCards": 2,
++    "newCards": 1,
++    "learnedCards": 2,
++    "dueCards": 0,
+     "easyCard": 3,
+     "mediumCard": 2,
+     "hardCard": 1,
+@@ -349,8 +412,8 @@
+       ]
+     },
+     "newCards": 0,
+-    "learnedCards": 1,
+-    "dueCards": 5,
++    "learnedCards": 6,
++    "dueCards": 0,
+     "easyCard": 3,
+     "mediumCard": 2,
+     "hardCard": 1,

@@ -1,5 +1,5 @@
 .label {
-    -fx-font-family: "Poppins";
+    -fx-font-family: "DVN-Poppins";
 }
 
 #settingsTitle {
@@ -16,7 +16,7 @@
 #frameImage {
     -fx-fill: null;
     -fx-stroke-width: 2px;
-    -fx-stroke: #06D001;
+    -fx-stroke: #77DEB9;
 }
 
 #uploadImage {
@@ -38,12 +38,11 @@
 }
 
 #nameTitle {
-    -fx-font-family: Poppins;
-    -fx-font-weight: bold;
+    -fx-font-family: "DVN-Poppins ExtBd";
 }
 
 #schoolTitle {
-    -fx-font-family: "Poppins";
+    -fx-font-family: "DVN-Poppins";
 }
 
 #inforPane {
@@ -53,7 +52,7 @@
 }
 
 #userinformation {
-    -fx-font-weight: bold;
+    -fx-font-family: "DVN-Poppins ExtBd";
 }
 
 #settingsUser {
@@ -61,7 +60,7 @@
 }
 
 #settings {
-    -fx-font-weight: bold;
+    -fx-font-family: "DVN-Poppins ExtBd";
 }
 
 #settingsUser:hover {
@@ -91,6 +90,8 @@
     -fx-font-weight: bold;
     -fx-underline: true;
 }
+
+
 
 
 

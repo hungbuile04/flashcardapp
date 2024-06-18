@@ -1,0 +1,44 @@
+.label {
+    -fx-font-family: DVN-Poppins;
+    -fx-font-size: 20px;
+    -fx-text-fill: #44BC91;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.text-area{
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-color: white;
+    -fx-font-family: "DVN-Poppins";
+}
+
+.text-area:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 7, 0.1, 0.1, 0);
+}
+
+.button{
+    -fx-background-color: #44BC91;
+    -fx-background-radius: 10px;
+    -fx-font-family: "DVN-Poppins ExtBd";
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #77DEB9;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+.button:hover {
+    -fx-background-color: #77DEB9;
+}
+
+#noteLabel {
+    -fx-font-family: "DVN-Poppins ExtBd";
+}

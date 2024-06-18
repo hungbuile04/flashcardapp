@@ -1,77 +1,71 @@
 [
   {
-    "deckName": "Deck3",
-    "labelDescription": "A1 Level",
+    "deckName": "Deck11",
+    "labelDescription": "B1 Level",
     "cards": {
       "cards": [
         {
-          "question": "sleep",
-          "answer": "ngủ",
+          "question": "bread",
+          "answer": "bánh mì",
           "selector": {
-            "deadlineAt": "Jun 13, 2024, 2:29:15 PM",
-            "answerType": "FAILURE",
-            "cycle": 10
+            "deadlineAt": "Jun 17, 2024, 9:51:09 AM",
+            "answerType": "MEDIUM",
+            "cycle": 4
           }
         },
         {
-          "question": "sas",
-          "answer": "ss",
+          "question": "confidential",
+          "answer": "Bí mật",
           "selector": {
-            "deadlineAt": "Jun 13, 2024, 2:29:17 PM",
-            "answerType": "FAILURE",
-            "cycle": 11
-          }
-        },
-        {
-          "question": "eat",
-          "answer": "ăn",
-          "selector": {
-            "deadlineAt": "Jun 13, 2024, 2:29:16 PM",
-            "answerType": "FAILURE",
-            "cycle": 11
-          }
-        },
-        {
-          "question": "go",
-          "answer": "di",
-          "selector": {
-            "deadlineAt": "Jun 13, 2024, 2:29:17 PM",
-            "answerType": "FAILURE",
-            "cycle": 12
+            "deadlineAt": "Jun 17, 2024, 9:51:06 AM",
+            "answerType": "MEDIUM",
+            "cycle": 4
           }
         }
       ]
     },
     "newCards": 0,
     "learnedCards": 0,
-    "dueCards": 4,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
     "StatOfDeck": {
       "statisticsInWeek": [
         {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 0,
+          "dueCards": 2
+        },
+        {
+          "date": "Monday",
+          "newCards": 0,
+          "learnedCards": 0,
+          "dueCards": 2
+        },
+        {
+          "date": "Sunday",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 0
+        },
+        {
+          "date": "Saturday",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 0
+        },
+        {
+          "date": "Thursday",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 0
+        },
+        {
           "date": "Wednesday",
           "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 4,
+          "learnedCards": 2,
           "dueCards": 0
         }
       ],
@@ -79,98 +73,8 @@
         {
           "date": "June",
           "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 8,
-          "dueCards": 0
+          "learnedCards": 0,
+          "dueCards": 2
         }
       ]
     }
@@ -180,61 +84,94 @@
     "cards": {
       "cards": [
         {
+          "question": "hi",
+          "answer": "chào",
+          "selector": {
+            "deadlineAt": "Jun 18, 2024, 6:23:16 PM",
+            "answerType": "FAILURE",
+            "cycle": 9
+          }
+        },
+        {
           "question": "hello",
           "answer": "chào",
           "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:33:54 PM",
+            "deadlineAt": "Jun 19, 2024, 6:23:11 PM",
             "answerType": "MEDIUM",
-            "cycle": 4
-          }
-        },
-        {
-          "question": "123567891",
-          "answer": "2345689122",
-          "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:33:56 PM",
-            "answerType": "MEDIUM",
-            "cycle": 5
-          }
-        },
-        {
-          "question": "bye",
-          "answer": "tạm biệt",
-          "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:33:56 PM",
-            "answerType": "MEDIUM",
-            "cycle": 5
+            "cycle": 12
           }
         },
         {
           "question": "study",
           "answer": "học",
           "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:33:55 PM",
-            "answerType": "MEDIUM",
-            "cycle": 5
+            "deadlineAt": "Jun 20, 2024, 6:23:12 PM",
+            "answerType": "CORRECT",
+            "cycle": 13
+          }
+        },
+        {
+          "question": "123567891",
+          "answer": "2345689122",
+          "selector": {
+            "deadlineAt": "Jun 20, 2024, 6:23:12 PM",
+            "answerType": "CORRECT",
+            "cycle": 13
+          }
+        },
+        {
+          "question": "bye",
+          "answer": "tạm biệt",
+          "selector": {
+            "deadlineAt": "Jun 20, 2024, 6:23:12 PM",
+            "answerType": "CORRECT",
+            "cycle": 13
           }
         }
       ]
     },
     "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 4,
+    "learnedCards": 4,
+    "dueCards": 1,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
     "StatOfDeck": {
       "statisticsInWeek": [
         {
-          "date": "Wednesday",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
           "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 4,
+          "dueCards": 1
+        },
+        {
+          "date": "Monday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 0
+        },
+        {
+          "date": "Sunday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 0
+        },
+        {
+          "date": "Saturday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 0
+        },
+        {
+          "date": "Thursday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 0
+        },
+        {
+          "date": "Wednesday",
+          "newCards": 0,
+          "learnedCards": 5,
           "dueCards": 0
         }
       ],
@@ -243,73 +180,132 @@
           "date": "June",
           "newCards": 0,
           "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 4,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 3,
           "dueCards": 1
+        }
+      ]
+    }
+  },
+  {
+    "deckName": "Deck3",
+    "labelDescription": "A1 Level",
+    "cards": {
+      "cards": [
+        {
+          "question": "one",
+          "answer": "1",
+          "selector": {
+            "deadlineAt": "Jun 19, 2024, 6:23:47 PM",
+            "answerType": "MEDIUM",
+            "cycle": 12
+          }
         },
+        {
+          "question": "go",
+          "answer": "di",
+          "selector": {
+            "deadlineAt": "Jun 18, 2024, 10:56:35 PM",
+            "answerType": "MEDIUM",
+            "cycle": 21
+          }
+        },
+        {
+          "question": "eat",
+          "answer": "ăn",
+          "selector": {
+            "deadlineAt": "Jun 19, 2024, 6:23:52 PM",
+            "answerType": "MEDIUM",
+            "cycle": 22
+          }
+        },
+        {
+          "question": "2",
+          "answer": "two",
+          "selector": {
+            "deadlineAt": "Jun 20, 2024, 6:23:51 PM",
+            "answerType": "CORRECT",
+            "cycle": 13
+          }
+        },
+        {
+          "question": "input",
+          "answer": "output",
+          "selector": {
+            "deadlineAt": "Jun 20, 2024, 6:23:50 PM",
+            "answerType": "CORRECT",
+            "cycle": 13
+          }
+        },
+        {
+          "question": "sleep",
+          "answer": "ngủ",
+          "selector": {
+            "deadlineAt": "Jun 18, 2024, 9:50:39 AM",
+            "answerType": "CORRECT",
+            "cycle": 20
+          }
+        },
+        {
+          "question": "sas",
+          "answer": "ss",
+          "selector": {
+            "deadlineAt": "Jun 18, 2024, 9:50:33 AM",
+            "answerType": "CORRECT",
+            "cycle": 20
+          }
+        }
+      ]
+    },
+    "newCards": 0,
+    "learnedCards": 5,
+    "dueCards": 2,
+    "easyCard": 3,
+    "mediumCard": 2,
+    "hardCard": 1,
+    "StatOfDeck": {
+      "statisticsInWeek": [
+        {
+          "date": "Tuesday",
+          "newCards": 0,
+          "learnedCards": 5,
+          "dueCards": 2
+        },
+        {
+          "date": "Monday",
+          "newCards": 0,
+          "learnedCards": 7,
+          "dueCards": 0
+        },
+        {
+          "date": "Sunday",
+          "newCards": 0,
+          "learnedCards": 7,
+          "dueCards": 0
+        },
+        {
+          "date": "Saturday",
+          "newCards": 0,
+          "learnedCards": 7,
+          "dueCards": 0
+        },
+        {
+          "date": "Thursday",
+          "newCards": 0,
+          "learnedCards": 7,
+          "dueCards": 0
+        },
+        {
+          "date": "Wednesday",
+          "newCards": 0,
+          "learnedCards": 7,
+          "dueCards": 0
+        }
+      ],
+      "statisticsInMonth": [
         {
           "date": "June",
           "newCards": 0,
-          "learnedCards": 3,
-          "dueCards": 1
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 0,
-          "dueCards": 4
+          "learnedCards": 5,
+          "dueCards": 2
         }
       ]
     }
@@ -323,18 +319,18 @@
           "question": "sleep",
           "answer": "ngủ",
           "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:38:59 PM",
+            "deadlineAt": "Jun 15, 2024, 8:07:55 PM",
             "answerType": "MEDIUM",
-            "cycle": 6
+            "cycle": 10
           }
         },
         {
           "question": "eat",
           "answer": "ăn",
           "selector": {
-            "deadlineAt": "Jun 15, 2024, 9:39:01 PM",
-            "answerType": "CORRECT",
-            "cycle": 7
+            "deadlineAt": "Jun 15, 2024, 8:07:53 PM",
+            "answerType": "MEDIUM",
+            "cycle": 10
           }
         }
       ]
@@ -347,237 +343,51 @@
     "hardCard": 1,
     "StatOfDeck": {
       "statisticsInWeek": [
-        {
-          "date": "Wednesday",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
         {
           "date": "Tuesday",
           "newCards": 0,
           "learnedCards": 0,
           "dueCards": 2
-        }
-      ],
-      "statisticsInMonth": [
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
         },
         {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 1,
-          "dueCards": 1
-        },
-        {
-          "date": "June",
+          "date": "Monday",
           "newCards": 0,
           "learnedCards": 0,
-          "dueCards": 4
-        }
-      ]
-    }
-  },
-  {
-    "deckName": "Deck11",
-    "labelDescription": "",
-    "cards": {
-      "cards": [
-        {
-          "question": "confidential",
-          "answer": "Bí mật",
-          "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:59:24 PM",
-            "answerType": "CORRECT",
-            "cycle": 1
-          }
+          "dueCards": 2
         },
         {
-          "question": "bread",
-          "answer": "bánh mì",
-          "selector": {
-            "deadlineAt": "Jun 14, 2024, 9:59:23 PM",
-            "answerType": "CORRECT",
-            "cycle": 1
-          }
-        }
-      ]
-    },
-    "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 2,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1,
-    "StatOfDeck": {
-      "statisticsInWeek": [
+          "date": "Sunday",
+          "newCards": 0,
+          "learnedCards": 0,
+          "dueCards": 2
+        },
+        {
+          "date": "Saturday",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 0
+        },
+        {
+          "date": "Thursday",
+          "newCards": 0,
+          "learnedCards": 2,
+          "dueCards": 0
+        },
         {
           "date": "Wednesday",
           "newCards": 0,
           "learnedCards": 2,
           "dueCards": 0
-        },
-        {
-          "date": "Tuesday",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
         }
       ],
       "statisticsInMonth": [
         {
           "date": "June",
           "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 0,
-          "learnedCards": 2,
-          "dueCards": 0
-        },
-        {
-          "date": "June",
-          "newCards": 2,
           "learnedCards": 0,
-          "dueCards": 0
+          "dueCards": 2
         }
       ]
-    }
-  },
-  {
-    "deckName": "toeic",
-    "labelDescription": "",
-    "cards": {
-      "cards": []
-    },
-    "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 0,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1,
-    "StatOfDeck": {
-      "statisticsInWeek": [],
-      "statisticsInMonth": []
-    }
-  },
-  {
-    "deckName": "toeic",
-    "labelDescription": "",
-    "cards": {
-      "cards": []
-    },
-    "newCards": 0,
-    "learnedCards": 0,
-    "dueCards": 0,
-    "easyCard": 3,
-    "mediumCard": 2,
-    "hardCard": 1,
-    "StatOfDeck": {
-      "statisticsInWeek": [],
-      "statisticsInMonth": []
     }
   }
 ]

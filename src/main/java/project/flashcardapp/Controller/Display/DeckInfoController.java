@@ -11,6 +11,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import project.flashcardapp.Controller.LearningMode.ReviewModeController;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
 
@@ -61,6 +62,17 @@ public class DeckInfoController implements Initializable {
     //Chọn chế độ ôn tap
     @FXML
     void selectReview(MouseEvent event) throws IOException {
+        if(deck.getCards().getSize()==0){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Alert");
+            alert.setHeaderText("This deck is empty!");
+            alert.getButtonTypes().setAll(ButtonType.OK);
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                alert.close();
+            }
+            return;
+        }
         Stage stage = (Stage) reviewModeBtn.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/review_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());//hàm load cần gọi trước để xác định đc controller
@@ -72,6 +84,17 @@ public class DeckInfoController implements Initializable {
     //Chọn chế đo kiem tra
     @FXML
     void selectTest(MouseEvent event) throws IOException {
+        if(deck.getCards().getSize()==0){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Alert");
+            alert.setHeaderText("This deck is empty!");
+            alert.getButtonTypes().setAll(ButtonType.OK);
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                alert.close();
+            }
+            return;
+        }
         Stage stage = (Stage) testModeBtn.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/project/flashcardapp/test_mode.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -118,7 +141,7 @@ public class DeckInfoController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);
         stage.setScene(scene);
-        stage.setTitle("Hello!");
+        stage.setTitle("EngHUST Flash Card App");
         stage.show();
     }
 }

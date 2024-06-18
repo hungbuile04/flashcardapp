@@ -1,6 +1,5 @@
 .label {
-    -fx-font-family: "Poppins";
-    -fx-font-weight: bold;
+    -fx-font-family: "DVN-Poppins";
 }
 
 #userTitle {
@@ -10,8 +9,8 @@
 }
 
 #confirmButton {
+    -fx-font-family: "DVN-Poppins ExtBd";
     -fx-text-fill: #fff;
-    -fx-font-weight: bold;
     -fx-background-radius: 16px;
     -fx-background-color: #44bc91;
     -fx-text-alignment: center;
