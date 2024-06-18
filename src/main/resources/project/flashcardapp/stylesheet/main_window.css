@@ -102,13 +102,8 @@
     -fx-text-fill: white;
 }
 
-#strokeImg {
-    -fx-fill: null;
-    -fx-stroke: #44BC91;
-}
-
 #imageMain {
-    -fx-fill: null;
-    -fx-stroke: null;
+    -fx-fill: transparent;
+    -fx-stroke: #44BC91;
 }
 

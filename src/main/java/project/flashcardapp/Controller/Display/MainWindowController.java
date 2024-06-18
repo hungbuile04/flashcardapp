@@ -10,6 +10,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Deck;
 import project.flashcardapp.Model.DeckData;
@@ -42,13 +44,23 @@ public class MainWindowController implements Initializable {
     @FXML
     private TableColumn<Deck, Integer> newCards;
 
+    @FXML
+    private Circle imageMain;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        String uploadedImageUrl = SettingsController.getUploadedImageUrl();
+        if (uploadedImageUrl != null) {
+            Image image = new Image(uploadedImageUrl);
+            imageMain.setFill(new ImagePattern(image));
+        }
+
         deckName.setCellValueFactory(new PropertyValueFactory<>("deckName"));
         dueCards.setCellValueFactory(new PropertyValueFactory<>("dueCards"));
         learnedCards.setCellValueFactory(new PropertyValueFactory<>("learnedCards"));
         newCards.setCellValueFactory(new PropertyValueFactory<>("newCards"));
         tableDeckView.setItems(DeckData.getInstance().getDecks());
+
         //ấn đúp vào 1 hàng thì chuyển sang cửa sổ tương ứng
         tableDeckView.setRowFactory(tv -> {
             TableRow<Deck> row = new TableRow<>();
@@ -62,6 +74,15 @@ public class MainWindowController implements Initializable {
             return row;
         });
     }
+
+    // Method to set the profile image URL
+    public void setProfileImage(String imageUrl) {
+        if (imageUrl != null) {
+            Image image = new Image(imageUrl);
+            imageMain.setFill(new ImagePattern(image));
+        }
+    }
+
     //mở cửa sổ chọn chế độ học
     private void showDetailScene(Deck deck) {
         try {
@@ -109,12 +130,16 @@ public class MainWindowController implements Initializable {
 //    Open stage Settings - Tuan
     @FXML
     public void switchtoSettings (ActionEvent event) throws IOException {
+        Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        currentStage.close();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/settings.fxml"));
-        Parent settingsSceneRoot = loader.load();
-        Scene settingsScene = new Scene(settingsSceneRoot);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle("Settings");
-        stage.setScene(settingsScene);
+
+        stage.setScene(scene);
         stage.show();
     }
 }

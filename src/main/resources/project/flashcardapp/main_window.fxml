@@ -37,7 +37,6 @@
             </ImageView>
          </graphic>
       </Button>
-      <Circle fx:id="strokeImg" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="nameMain" layoutX="54.0" layoutY="33.0" text="Your name" />
     </children>

@@ -10,11 +10,11 @@
 <AnchorPane fx:id="userPane" prefHeight="290.0" prefWidth="416.0" stylesheets="@stylesheet/user_information.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.UserInformation">
    <children>
       <Label fx:id="userTitle" alignment="CENTER" layoutY="15.0" prefHeight="27.0" prefWidth="416.0" text="User Information" />
-      <Label fx:id="Username" layoutX="68.0" layoutY="73.0" text="Username:" />
+      <Label fx:id="Username" layoutX="68.0" layoutY="72.0" text="Username:" />
       <Label fx:id="Age" layoutX="67.0" layoutY="158.0" text="Age:" />
       <Label fx:id="Email" layoutX="67.0" layoutY="203.0" text="Email:" />
       <Label fx:id="Phone" layoutX="164.0" layoutY="158.0" text="Phone:" />
-      <TextField fx:id="nameField" layoutX="216.0" layoutY="69.0" />
+      <TextField fx:id="nameField" layoutX="216.0" layoutY="68.0" />
       <TextField fx:id="ageField" layoutX="107.0" layoutY="154.0" prefHeight="18.0" prefWidth="31.0" />
       <TextField fx:id="emailField" layoutX="217.0" layoutY="199.0" />
       <TextField fx:id="phoneField" layoutX="217.0" layoutY="154.0" />

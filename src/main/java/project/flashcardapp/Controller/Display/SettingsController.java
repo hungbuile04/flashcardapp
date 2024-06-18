@@ -3,12 +3,9 @@ package project.flashcardapp.Controller.Display;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -79,19 +76,7 @@ public class SettingsController {
     @FXML
     private Label usernameLabel;
 
-    @FXML
-    public void backtoMainButton(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Cài đặt");
-        alert.setHeaderText("Bạn đã thay đổi phần cài đặt");
-        alert.setContentText("Bạn có muốn lưu lại thay đổi không?");
-        if (alert.showAndWait().get() == ButtonType.OK) {
-            stage = (Stage) scenePane.getScene().getWindow();
-            stage.close();
-        }
-    }
+    private static String uploadedImageUrl;
 
     @FXML
     public void uploadImage(ActionEvent event) throws IOException {
@@ -104,7 +89,29 @@ public class SettingsController {
         if (file != null) {
             Image image = new Image(file.toURI().toString(), 300, 300, false, true);
             profileImage.setFill(new ImagePattern(image));
+            uploadedImageUrl = file.toURI().toString();
         }
+    }
+
+    @FXML
+    public void backtoMainButton(ActionEvent event) throws IOException {
+        Stage curentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        curentStage.close();
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("EngHUST");
+
+        Image icon = new Image("logoApp_transparent_final.png");
+        stage.getIcons().add(icon);
+
+        MainWindowController mainWindowController = loader.getController();
+        mainWindowController.setProfileImage(SettingsController.getUploadedImageUrl());
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -117,7 +124,11 @@ public class SettingsController {
         Parent settingsSceneRoot = loader.load();
         Scene settingsScene = new Scene(settingsSceneRoot);
         Stage stage = new Stage();
-        stage.setTitle("User Information");
+        Image icon = new Image("logoApp_transparent_final.png");
+        stage.getIcons().add(icon);
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setTitle("EngHUST");
         stage.setScene(settingsScene);
         stage.show();
     }
@@ -130,5 +141,10 @@ public class SettingsController {
         phoneLabel.setText(phone);
         usernameLabel.setText(username);
         schoolLabel.setText(school);
+    }
+
+//    Thêm phương thức trả về
+    public static String getUploadedImageUrl() {
+        return uploadedImageUrl;
     }
 }

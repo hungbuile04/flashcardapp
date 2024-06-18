@@ -31,3 +31,46 @@
     -fx-background-color: transparent;
 }
 
+#nameField {
+    -fx-border-color: #44bc91;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+
+#nameField {
+    -fx-border-color: #44bc91;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+
+#schoolField {
+    -fx-border-color: #44bc91;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+
+#ageField {
+    -fx-border-color: #44bc91;
+    -fx-background-color: transparent;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+
+#phoneField {
+    -fx-border-color: #44bc91;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+
+#emailField {
+    -fx-border-color: #44bc91;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 10,0,0,1 );
+}
+
+

@@ -43,8 +43,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 4,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 4,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -218,8 +218,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 4,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 4,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -340,8 +340,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -492,8 +492,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 2,
-    "dueCards": 0,
+    "learnedCards": 0,
+    "dueCards": 2,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,

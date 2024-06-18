@@ -73,6 +73,26 @@
     -fx-scale-y: 0.95;
 }
 
+#username {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+#age {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+#phone {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+#email {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+
 
 
 
