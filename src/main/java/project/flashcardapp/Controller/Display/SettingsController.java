@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
@@ -83,20 +84,6 @@ public class SettingsController {
     private Label usernameLabel;
 
     @FXML
-    public void backtoMainButton(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Cài đặt");
-        alert.setHeaderText("Bạn đã thay đổi phần cài đặt");
-        alert.setContentText("Bạn có muốn lưu lại thay đổi không?");
-        if (alert.showAndWait().get() == ButtonType.OK) {
-            stage = (Stage) scenePane.getScene().getWindow();
-            stage.close();
-        }
-    }
-
-    @FXML
     public void uploadImage(ActionEvent event) throws IOException {
         FileChooser fileChooser = new FileChooser();
 
@@ -133,5 +120,18 @@ public class SettingsController {
         phoneLabel.setText(phone);
         usernameLabel.setText(username);
         schoolLabel.setText(school);
+    }
+
+    public void backToMainWindow(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Cài đặt");
+        alert.setHeaderText("Bạn đã thay đổi phần cài đặt");
+        alert.setContentText("Bạn có muốn lưu lại thay đổi không?");
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            stage = (Stage) scenePane.getScene().getWindow();
+            stage.close();
+        }
     }
 }

@@ -12,7 +12,6 @@
 <AnchorPane fx:id="scenePane" prefHeight="520.0" prefWidth="320.0" stylesheets="@stylesheet/settings.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.SettingsController">
    <children>
       <Label fx:id="settingsTitle" alignment="CENTER" layoutY="12.0" prefHeight="28.0" prefWidth="320.0" text="Settings" />
-      <Button fx:id="backButton" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#backtoMainButton" />
       <Circle fx:id="frameImage" fill="DODGERBLUE" layoutX="160.0" layoutY="110.0" radius="47.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="profileImage" fill="DODGERBLUE" layoutX="160.0" layoutY="110.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="nameTitle" alignment="CENTER" layoutX="1.0" layoutY="166.0" prefHeight="18.0" prefWidth="320.0" text="Your name">
@@ -53,7 +52,7 @@
             <Label fx:id="phoneLabel" layoutX="184.0" layoutY="69.0" text="0123456789" />
          </children>
       </Pane>
-      <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="18.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backBtn" fitHeight="21.0" fitWidth="25.0" layoutX="18.0" layoutY="15.0" onMouseClicked="#backToMainWindow" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@stylesheet/resource/arrowBack1.png" />
          </image>
