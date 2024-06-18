@@ -1,7 +1,7 @@
 package project.flashcardapp.Model;
 
 public class StatisticInTime {
-    public String date;
+    public String date="null";
     public int newCards=0;
     public int learnedCards=0;
     public int dueCards=0;

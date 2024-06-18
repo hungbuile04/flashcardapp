@@ -20,7 +20,7 @@
                </tickLabelFont></CategoryAxis>
         </xAxis>
         <yAxis>
-          <NumberAxis minorTickCount="0" prefWidth="28.0" side="LEFT" upperBound="90.0">
+          <NumberAxis autoRanging="false" minorTickCount="0" minorTickLength="0.0" prefWidth="28.0" side="LEFT" tickLength="5.0" tickUnit="1.0" upperBound="20.0">
                <tickLabelFont>
                   <Font name="DVN-Poppins Regular" size="12.0" />
                </tickLabelFont></NumberAxis>

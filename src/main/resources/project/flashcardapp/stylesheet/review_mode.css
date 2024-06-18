@@ -78,11 +78,14 @@
 
 #editCard {
     -fx-font-size: 13px;
+    -fx-background-color: transparent;
     -fx-underline: true;
+    -fx-text-fill: black;
 }
 
 #editCard:hover {
-    -fx-text-fill: #737373;
+    -fx-background-color: #DEDEDE;
+    -fx-effect: null;
 }
 
 #editCard:pressed{

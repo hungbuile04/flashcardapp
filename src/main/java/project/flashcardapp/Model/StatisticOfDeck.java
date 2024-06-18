@@ -8,28 +8,63 @@ public class StatisticOfDeck {
     public ArrayList<StatisticInTime> statisticsInWeek = new ArrayList<>();
     public ArrayList<StatisticInTime> statisticsInMonth = new ArrayList<>();
 
-    //Lưu Stats theo tuần
+    // Lưu Stats theo tuần
     public void storeStatistic_Week(Deck deck) {
         StatisticInTime statistic = new StatisticInTime();
         statistic.getStatistic(deck, "week");
-        if (statisticsInWeek.isEmpty()) statisticsInWeek.add(statistic);
-        if (!Objects.equals(statistic.date, statisticsInWeek.get(0).date)) statisticsInWeek.add(0, statistic);
-        else statisticsInWeek.set(0, statistic);
+
+        if (statisticsInWeek.isEmpty()) {
+            statisticsInWeek.add(statistic);
+        } else if (!Objects.equals(statistic.date, statisticsInWeek.get(0).date)) {
+            statisticsInWeek.add(0, statistic);
+        } else {
+            statisticsInWeek.set(0, statistic);
+        }
+
+        // Loại bỏ các mục trùng lặp theo ngày
+        removeDuplicateStatistics(statisticsInWeek);
     }
 
-    //Lưu Stats theo tháng
+    // Lưu Stats theo tháng
     public void storeStatistic_Month(Deck deck) {
         StatisticInTime statistic = new StatisticInTime();
         StatisticInTime substatistic = new StatisticInTime();
         statistic.getStatistic(deck, "month");
         substatistic.getStatistic(deck, "week");
-        if (statisticsInMonth.isEmpty()) statisticsInMonth.add(0, statistic);
-        if (statistic.date != statisticsInMonth.get(0).date){
+
+        if (statisticsInMonth.isEmpty()) {
             statisticsInMonth.add(0, statistic);
-            statisticsInMonth.set(1, StatisticInTime.plusStatistic(statisticsInMonth.get(1), statisticsInWeek.get(1)));
+        } else if (!Objects.equals(statistic.date, statisticsInMonth.get(0).date)) {
+            statisticsInMonth.add(0, statistic);
+        } else {
+            statisticsInMonth.set(0, statistic);
         }
-        if (statistic.date == statisticsInMonth.get(0).date && substatistic.date != statisticsInWeek.get(0).date) {
-            statisticsInMonth.set(0, StatisticInTime.plusStatistic(statisticsInMonth.get(0), statisticsInWeek.get(1)));
+
+        if (!Objects.equals(substatistic.date, statisticsInWeek.get(0).date)) {
+            StatisticInTime updatedStatistic = StatisticInTime.plusStatistic(statisticsInMonth.get(0), statisticsInWeek.get(1));
+            statisticsInMonth.set(0, updatedStatistic);
         }
+
+        // Loại bỏ các mục trùng lặp theo ngày
+        removeDuplicateStatistics(statisticsInMonth);
+    }
+
+    // Loại bỏ các mục trùng lặp trong danh sách
+    private void removeDuplicateStatistics(ArrayList<StatisticInTime> statistics) {
+        ArrayList<StatisticInTime> uniqueStatistics = new ArrayList<>();
+        for (StatisticInTime statistic : statistics) {
+            boolean isDuplicate = false;
+            for (StatisticInTime uniqueStatistic : uniqueStatistics) {
+                if (Objects.equals(statistic.date, uniqueStatistic.date)) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate) {
+                uniqueStatistics.add(statistic);
+            }
+        }
+        statistics.clear();
+        statistics.addAll(uniqueStatistics);
     }
 }

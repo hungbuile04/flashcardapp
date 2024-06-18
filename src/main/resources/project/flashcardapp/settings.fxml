@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" prefHeight="520.0" prefWidth="320.0" stylesheets="@stylesheet/settings.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.SettingsController">
+   <children>
+      <Label fx:id="settingsTitle" alignment="CENTER" layoutY="12.0" prefHeight="28.0" prefWidth="320.0" text="Settings" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#backtoMainButton" />
+      <Circle fx:id="frameImage" fill="DODGERBLUE" layoutX="160.0" layoutY="110.0" radius="47.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="profileImage" fill="DODGERBLUE" layoutX="160.0" layoutY="110.0" radius="44.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="nameTitle" alignment="CENTER" layoutX="1.0" layoutY="166.0" prefHeight="18.0" prefWidth="320.0" text="Your name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="schoolLabel" alignment="CENTER" layoutX="-1.0" layoutY="191.0" prefHeight="18.0" prefWidth="321.0" text="Your school" />
+      <Button fx:id="uploadImage" layoutX="184.0" layoutY="138.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="18.0" prefWidth="26.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@stylesheet/resource/upload2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane fx:id="inforPane" layoutX="16.0" layoutY="223.0" prefHeight="280.0" prefWidth="290.0">
+         <children>
+            <Label fx:id="userinformation" layoutX="9.0" layoutY="5.0" text="User Information:" />
+            <Label fx:id="settings" layoutX="9.0" layoutY="140.0" text="Settings:" />
+            <Label fx:id="username" layoutX="28.0" layoutY="33.0" text="Username:" />
+            <Label fx:id="age" layoutX="27.0" layoutY="69.0" text="Age:" />
+            <Label fx:id="email" layoutX="27.0" layoutY="109.0" text="Email:" />
+            <Button fx:id="settingsUser" layoutX="249.0" layoutY="9.0" mnemonicParsing="false" onAction="#switchtoSettingsUser">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@stylesheet/resource/icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="usernameLabel" layoutX="99.0" layoutY="33.0" text="Tu Minh Tuan" />
+            <Label fx:id="ageLabel" layoutX="59.0" layoutY="69.0" text="20" />
+            <Label fx:id="emailLabel" layoutX="68.0" layoutY="109.0" text="demo@gmail.com" />
+            <Label layoutX="139.0" layoutY="69.0" text="Phone:" />
+            <Label fx:id="phoneLabel" layoutX="184.0" layoutY="69.0" text="0123456789" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="18.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@stylesheet/resource/arrowBack1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

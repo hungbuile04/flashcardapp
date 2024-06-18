@@ -83,7 +83,7 @@ public class  TestModeController implements Initializable {
         flag[currentIndex] = true;
         questionLabel.setVisible(true);
         // Cập nhật giá trị của ProgressBar
-        double progress = (double) (currentIndex) / deck.getCards().getSize();
+        double progress = (double) (currentIndex + 1) / deck.getCards().getSize();
         progressBar.setProgress(progress);
     }
 

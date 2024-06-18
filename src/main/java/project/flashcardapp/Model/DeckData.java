@@ -25,6 +25,7 @@ public class DeckData {
        public static DeckData getInstance() {return instance;}
        public static ObservableList<Deck> decks = FXCollections.observableArrayList();;
        public static Deck deck;
+       public static int studiedCardsToday=0;
        public static void setDecks(ObservableList<Deck> decks) {
               DeckData.decks = decks;
        }

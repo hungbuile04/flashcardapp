@@ -66,6 +66,8 @@ public class DetailsCardController implements Initializable {
         backTextField.setText(current.getAnswer());
         categoryTextField.setText(toString(current.getSelector().getAnswerType()));
         dueDateTextField.setText(toString(current.getSelector().getDeadlineAt()));
+        categoryTextField.setEditable(false);
+        dueDateTextField.setEditable(false);
     }
     private String toString(Date deadlineAt) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");

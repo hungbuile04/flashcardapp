@@ -114,15 +114,15 @@ public class AddCardController implements Initializable {
             alert.setTitle("Error");
             alert.setHeaderText(null);
             if (nameDeck.isEmpty()) {
-                alert.setContentText("Category's name can't be blank!");
+                alert.setContentText("Deck's name can't be blank!");
                 alert.showAndWait();
                 event.consume(); // Ngăn dialog đóng
             } else if (nameDeck.length() > 20) {
-                alert.setContentText("Category's name has to be up to 20 characters");
+                alert.setContentText("Deck's name has to be up to 20 characters");
                 alert.showAndWait();
                 event.consume(); // Ngăn dialog đóng
             } else if (nameDeck.length() < 2) {
-                alert.setContentText("Category's name has to have at least 2 characters");
+                alert.setContentText("Deck's name has to have at least 2 characters");
                 alert.showAndWait();
                 event.consume(); // Ngăn dialog đóng
             }
@@ -138,6 +138,17 @@ public class AddCardController implements Initializable {
     }
 
     public void saveNewCard(MouseEvent mouseEvent) {
+        if(chooseDeck.getSelectionModel().getSelectedItem() == null){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Alert");
+            alert.setHeaderText("Please select a deck!");
+            alert.getButtonTypes().setAll(ButtonType.OK);
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                alert.close();
+            }
+            return;
+        }
         String frontContent = frontField.getText().trim();
         String backContent = backField.getText().trim();
         // Kiểm tra để đảm bảo nội dung không trống
