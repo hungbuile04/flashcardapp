@@ -138,6 +138,17 @@ public class AddCardController implements Initializable {
     }
 
     public void saveNewCard(MouseEvent mouseEvent) {
+        if(chooseDeck.getSelectionModel().getSelectedItem() == null){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Alert");
+            alert.setHeaderText("Please select a deck!");
+            alert.getButtonTypes().setAll(ButtonType.OK);
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                alert.close();
+            }
+            return;
+        }
         String frontContent = frontField.getText().trim();
         String backContent = backField.getText().trim();
         // Kiểm tra để đảm bảo nội dung không trống

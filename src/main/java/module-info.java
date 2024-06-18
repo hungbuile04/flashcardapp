@@ -5,6 +5,7 @@ module project.flashcardapp {
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
     requires com.google.gson;
+    requires java.desktop;
 
     exports project.flashcardapp.Controller.Display;
     opens project.flashcardapp.Model to javafx.fxml, javafx.base, com.google.gson;

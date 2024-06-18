@@ -20,7 +20,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <Label fx:id="stats_label" layoutX="1.0" layoutY="363.0" prefHeight="20.0" prefWidth="601.0" text="Today Stats" />
+        <Label fx:id="stats_label" layoutX="1.0" layoutY="363.0" prefHeight="20.0" prefWidth="601.0" text="Today Studied:" />
         <Label fx:id="deck_list" layoutX="-1.0" layoutY="111.0" prefHeight="23.0" prefWidth="601.0" text="Deck List" />
         <Button fx:id="addCardButton" layoutX="327.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New" />
         <Button fx:id="fav_button" layoutX="187.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#statistic" prefHeight="38.0" prefWidth="89.0" text="Statistics" />
@@ -31,5 +31,6 @@
       <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="nameMain" layoutX="54.0" layoutY="19.0" text="Your name" />
       <Button fx:id="settingButton" layoutX="525.0" layoutY="-12.0" mnemonicParsing="false" onAction="#switchtoSettings" />
+      <Button fx:id="noteButton" layoutX="540.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#note" text="Note"/>
     </children>
 </AnchorPane>
