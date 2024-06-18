@@ -3,11 +3,15 @@ package project.flashcardapp.Controller.Display;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
@@ -15,7 +19,6 @@ import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -50,9 +53,6 @@ public class SettingsController {
     @FXML
     private Circle profileImage;
 
-//    public MainWindowController mainWindowController;
-//    public void setMainWindowController(){};
-
     @FXML
     private AnchorPane scenePane;
 
@@ -80,7 +80,8 @@ public class SettingsController {
     @FXML
     private Label usernameLabel;
 
-    private static String uploadedImageUrl;
+    private static String uploadedImage; // Lưu trữ hình ảnh đã tải lên
+    private String userName; // Lưu trữ tên người dùng
 
     @FXML
     public void uploadImage(ActionEvent event) throws IOException {
@@ -93,29 +94,8 @@ public class SettingsController {
         if (file != null) {
             Image image = new Image(file.toURI().toString(), 300, 300, false, true);
             profileImage.setFill(new ImagePattern(image));
-            uploadedImageUrl = file.toURI().toString();
+            uploadedImage = file.toURI().toString(); // Lưu trữ hình ảnh
         }
-    }
-
-    @FXML
-    public void backtoMainButton(MouseEvent event) throws IOException {
-        Stage curentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        curentStage.close();
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setTitle("EngHUST");
-
-        Image icon = new Image("logoApp_transparent_final.png");
-        stage.getIcons().add(icon);
-
-        MainWindowController mainWindowController = loader.getController();
-//        mainWindowController.setProfileImage(SettingsController.getUploadedImageUrl());
-
-        stage.setScene(scene);
-        stage.show();
     }
 
     @FXML
@@ -128,11 +108,7 @@ public class SettingsController {
         Parent settingsSceneRoot = loader.load();
         Scene settingsScene = new Scene(settingsSceneRoot);
         Stage stage = new Stage();
-        Image icon = new Image("logoApp_transparent_final.png");
-        stage.getIcons().add(icon);
-        stage.setResizable(false);
-        stage.centerOnScreen();
-        stage.setTitle("EngHUST");
+        stage.setTitle("User Information");
         stage.setScene(settingsScene);
         stage.show();
     }
@@ -145,10 +121,34 @@ public class SettingsController {
         phoneLabel.setText(phone);
         usernameLabel.setText(username);
         schoolLabel.setText(school);
+        userName = username; // Lưu trữ tên người dùng
     }
 
-//    Thêm phương thức trả về
-    public static String getUploadedImageUrl() {
-        return uploadedImageUrl;
+    public void backToMainWindow(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Cài đặt");
+        alert.setHeaderText("Bạn đã thay đổi phần cài đặt");
+        alert.setContentText("Bạn có muốn lưu lại thay đổi không?");
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            stage = (Stage) scenePane.getScene().getWindow();
+            stage.close();
+
+            // Chuyển thông tin đến MainWindowController
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/main_window.fxml"));
+            try {
+                Parent mainRoot = loader.load();
+                MainWindowController mainWindowController = loader.getController();
+                mainWindowController.updateUserProfile(userName, uploadedImage);
+
+                Stage mainStage = new Stage();
+                mainStage.setTitle("Main Window");
+                mainStage.setScene(new Scene(mainRoot));
+                mainStage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

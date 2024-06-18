@@ -10,6 +10,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import project.flashcardapp.Model.Card;
 import project.flashcardapp.Model.Deck;
@@ -50,6 +53,15 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private TableColumn<Deck, Integer> newCards;
+
+    @FXML
+    private Label nameMain;
+
+    @FXML
+    private Circle imageMain;
+
+    @FXML
+    private AnchorPane scenePane;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -146,8 +158,25 @@ public class MainWindowController implements Initializable {
     }
 
 //    Open stage Settings - Tuan
+
+    // Phương thức cập nhật ảnh và tên người dùng
+    public void updateUserProfile(String username, String imageURL) {
+        if (username != null) {
+            nameMain.setText(username);
+        }
+        if (imageURL != null) {
+            Image image = new Image(imageURL);
+            imageMain.setFill(new ImagePattern(image));
+        }
+        if (imageURL == null) {
+            System.out.println("NULL URL");
+        }
+    }
     @FXML
     public void switchtoSettings (ActionEvent event) throws IOException {
+        Stage currentStage = (Stage) scenePane.getScene().getWindow();
+        currentStage.close();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/project/flashcardapp/settings.fxml"));
         Parent settingsSceneRoot = loader.load();
         Scene settingsScene = new Scene(settingsSceneRoot);
@@ -165,6 +194,13 @@ public class MainWindowController implements Initializable {
          stage.setTitle("Note");
          stage.setScene(noteScene);
          stage.show();
+    }
+
+    public void setProfileImage(String imageUrl) {
+        if (imageUrl != null) {
+            Image image = new Image(imageUrl);
+            imageMain.setFill(new ImagePattern(image));
+        }
     }
 
 }
