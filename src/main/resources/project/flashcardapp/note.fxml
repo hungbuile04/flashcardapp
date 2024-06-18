@@ -5,10 +5,10 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane stylesheets="@stylesheet/note.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.NoteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="437.0" stylesheets="@stylesheet/note.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.NoteController">
    <children>
-      <TextArea fx:id="noteField" layoutX="30.0" layoutY="79.0" prefHeight="353.0" prefWidth="377.0" />
-      <Button layoutX="196.0" layoutY="451.0" mnemonicParsing="false" onMouseClicked="#saveNote" text="Save" />
+      <TextArea fx:id="noteField" layoutX="30.0" layoutY="79.0" prefHeight="353.0" prefWidth="377.0" promptText="Write something...." />
+      <Button layoutX="191.0" layoutY="452.0" mnemonicParsing="false" onMouseClicked="#saveNote" prefHeight="25.0" prefWidth="56.0" text="Save" />
       <Label fx:id="noteLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="21.0" prefHeight="52.0" prefWidth="85.0" text="NOTE" />
    </children>
 </AnchorPane>

@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 
-<AnchorPane prefHeight="408.0" prefWidth="590.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.MainWindowController">
+<AnchorPane maxWidth="600.0" minWidth="600.0" prefHeight="441.0" prefWidth="600.0" stylesheets="@stylesheet/main_window.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.flashcardapp.Controller.Display.MainWindowController">
     <children>
-        <TableView fx:id="tableDeckView" editable="true" layoutX="10.0" layoutY="152.0" prefHeight="199.0" prefWidth="580.0">
+        <TableView fx:id="tableDeckView" editable="true" layoutX="10.0" layoutY="183.0" prefHeight="199.0" prefWidth="580.0">
             <columns>
                 <TableColumn fx:id="deckName" prefWidth="238.0" text="Name" />
                 <TableColumn fx:id="newCards" prefWidth="98.0" text="New" />
@@ -20,17 +20,17 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <Label fx:id="stats_label" layoutX="1.0" layoutY="363.0" prefHeight="20.0" prefWidth="601.0" text="Today Studied:" />
-        <Label fx:id="deck_list" layoutX="-1.0" layoutY="111.0" prefHeight="23.0" prefWidth="601.0" text="Deck List" />
-        <Button fx:id="addCardButton" layoutX="327.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New" />
-        <Button fx:id="fav_button" layoutX="187.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#statistic" prefHeight="38.0" prefWidth="89.0" text="Statistics" />
-        <Label fx:id="text_label" layoutY="14.0" prefHeight="28.0" prefWidth="601.0" text="EngHUST" />
-      <Label fx:id="cardStudied" layoutY="381.0" prefHeight="20.0" prefWidth="601.0" text="20 cards studied" />
+        <Label fx:id="stats_label" layoutX="1.0" layoutY="391.0" prefHeight="20.0" prefWidth="601.0" text="Today Studied:" />
+        <Label fx:id="deck_list" layoutX="-1.0" layoutY="142.0" prefHeight="23.0" prefWidth="601.0" text="Deck List" />
+        <Button fx:id="addCardButton" layoutX="327.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#addCard" prefHeight="38.0" prefWidth="96.0" text="+ New" />
+        <Button fx:id="fav_button" layoutX="187.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#statistic" prefHeight="38.0" prefWidth="89.0" text="Statistics" />
+        <Label fx:id="text_label" layoutY="43.0" prefHeight="28.0" prefWidth="601.0" text="EngHUST" />
+      <Label fx:id="cardStudied" layoutY="409.0" prefHeight="20.0" prefWidth="601.0" text="20 cards studied" />
       <Button fx:id="settingsButton" layoutX="543.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchtoSettings" />
       <Circle fx:id="strokeImg" fill="DODGERBLUE" layoutX="28.0" layoutY="28.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="imageMain" fill="DODGERBLUE" layoutX="28.0" layoutY="42.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
       <Label fx:id="nameMain" layoutX="54.0" layoutY="19.0" text="Your name" />
-      <Button fx:id="settingButton" layoutX="525.0" layoutY="-12.0" mnemonicParsing="false" onAction="#switchtoSettings" />
-      <Button fx:id="noteButton" layoutX="540.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#note" text="Note"/>
+      <Button fx:id="settingButton" layoutX="533.0" layoutY="-12.0" mnemonicParsing="false" onAction="#switchtoSettings" />
+      <Button fx:id="noteButton" layoutX="474.0" layoutY="-28.0" mnemonicParsing="false" onMouseClicked="#note" />
     </children>
 </AnchorPane>

@@ -131,8 +131,8 @@
       ]
     },
     "newCards": 0,
-    "learnedCards": 5,
-    "dueCards": 0,
+    "learnedCards": 4,
+    "dueCards": 1,
     "easyCard": 3,
     "mediumCard": 2,
     "hardCard": 1,
@@ -141,8 +141,8 @@
         {
           "date": "Tuesday",
           "newCards": 0,
-          "learnedCards": 5,
-          "dueCards": 0
+          "learnedCards": 4,
+          "dueCards": 1
         },
         {
           "date": "Monday",
@@ -179,8 +179,8 @@
         {
           "date": "June",
           "newCards": 0,
-          "learnedCards": 5,
-          "dueCards": 0
+          "learnedCards": 4,
+          "dueCards": 1
         }
       ]
     }

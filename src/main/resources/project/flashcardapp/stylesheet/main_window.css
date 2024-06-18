@@ -119,11 +119,18 @@
     -fx-scale-x: 0.5;
 }
 
-#settingButton:hover {
+#settingButton:hover, #noteButton:hover {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.7, 0.7, 0)
 }
 
-#settingButton:pressed {
+#settingButton:pressed, #noteButton:pressed {
     -fx-scale-x: 0.4;
     -fx-scale-y: 0.4;
+}
+
+#noteButton {
+    -fx-graphic: url(resource/edit.png);
+    -fx-background-color: transparent;
+    -fx-scale-x: 0.3;
+    -fx-scale-y: 0.3;
 }
