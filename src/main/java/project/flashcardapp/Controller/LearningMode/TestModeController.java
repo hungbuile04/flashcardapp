@@ -117,9 +117,6 @@ public class  TestModeController implements Initializable {
             updateCard();
             answerField.setText(result.get(currentIndex).getYouranswer());
         }
-//        if (currentIndex < deck.getCards().getSize() -1) {
-//            nextCard.setText("Next Card");
-//        }
     }
 
     @FXML

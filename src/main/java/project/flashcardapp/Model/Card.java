@@ -5,14 +5,7 @@ package project.flashcardapp.Model;
  */
 
 public class Card {
-    /**
-     * Question field
-     */
     private String question;
-
-    /**
-     * Answer field
-     */
     private String answer;
 
     public Card(String question, String answer) {
@@ -20,56 +13,26 @@ public class Card {
         this.answer = answer;
     }
 
-    /**
-     * Selector field necessary for sorting
-     */
     private Selector selector = new Selector();
 
-    /**
-     * question getter
-     *
-     * @return question
-     */
     public String getQuestion() {
         return question;
     }
 
-    /**
-     * question setter
-     *
-     * @param question
-     * @return car object
-     */
     public Card setQuestion(String question) {
         this.question = question;
         return this;
     }
 
-    /**
-     * answer getter
-     *
-     * @return answer
-     */
     public String getAnswer() {
         return answer;
     }
 
-    /**
-     * answer setter
-     *
-     * @param answer
-     * @return car object
-     */
     public Card setAnswer(String answer) {
         this.answer = answer;
         return this;
     }
 
-    /**
-     * selection getter
-     *
-     * @return selector
-     */
     public Selector getSelector() {
         return selector;
     }

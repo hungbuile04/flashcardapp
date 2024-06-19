@@ -11,14 +11,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
-/**
- * CategoryList model for keeping all Categories
- *
- * @author Bartlomiej Gladys
- * @Date 01/11/2018
- * @version 1.0
- */
-
 public class DeckData {
 
        public static DeckData instance = new DeckData();
@@ -32,19 +24,6 @@ public class DeckData {
 
 
        public ObservableList<Deck> getDecks() {return decks;}
-
-//       Card card1 = new Card("hello","chào");
-//       Card card2 = new Card("bye", "tạm biệt");
-//       Card card3 = new Card("study","học");
-//       CardList cl1 = new CardList(card1,card2,card3);
-//
-//       Card card4 = new Card("sleep","ngủ");
-//       Card card5 = new Card("eat", "ăn");
-//       CardList cl2 = new CardList(card4,card5);
-//
-//       Deck deck1 = new Deck("Deck1",cl1);
-//       Deck deck2 = new Deck("Deck2",cl2);
-
 
        //nạp dữ liệu khi bật chương trình
        public void loadDeck() {

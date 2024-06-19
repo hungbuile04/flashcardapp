@@ -8,11 +8,6 @@ import java.util.List;
  */
 
 public class CardList {
-    /**
-     * Sort cards and return them
-     *
-     * @return sorted list of cards
-     */
     List<Card> cards = new ArrayList<>();
 
     public CardList(Card...cards){

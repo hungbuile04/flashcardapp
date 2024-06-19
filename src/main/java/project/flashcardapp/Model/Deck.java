@@ -4,24 +4,9 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Category model for keeping name and cards
- *
- * @author Bartlomiej Gladys
- * @Date 01/11/2018
- * @version 1.0
- */
-
 public class Deck {
-    /**
-     * Category's name
-     */
     private String deckName;
     private String labelDescription;
-
-    /**
-     * Category's cards
-     */
     private CardList cards = new CardList();
     private int newCards=0;
     private int learnedCards=0;
@@ -52,22 +37,11 @@ public class Deck {
         this.deckName = deckName;
         this.labelDescription = labelDesciption;
     }
-    /**
-     * Category's name getter
-     *
-     * @return category's name
-     */
+
     public String getDeckName() {
         return deckName;
     }
 
-    /**
-     * Category's name setter
-     *
-     * @param name passed by user
-     * @return name if passed correctly
-     * @throws //NameFormatException if incorrect data
-     */
     public Deck setDeckName(String name) throws Exception {
         if (name == null) {
             Exception e = new Exception("Category's name can't be blank") {
