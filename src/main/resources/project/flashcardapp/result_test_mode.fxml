@@ -16,8 +16,8 @@
             <TableColumn fx:id="yourresultCol" prefWidth="91.20001220703125" text="Result" />
         </columns>
       </TableView>
-      <Button fx:id="backtoDeckButton" layoutX="442.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#backToDeck" prefHeight="30.0" prefWidth="114.0" text="Back to Deck" />
-      <Label fx:id="congratulationLabel" layoutX="435.0" layoutY="114.0" text="Congratulation!" />
+      <Button fx:id="backtoDeckButton" layoutX="444.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#backToDeck" prefHeight="30.0" prefWidth="114.0" text="Back to Deck" />
+      <Label fx:id="congratulationLabel" layoutX="450.0" layoutY="111.0" text="Congratulation!" />
       <Label fx:id="resultLabel" layoutX="467.0" layoutY="146.0" text="You result:" />
       <Label fx:id="correctAnswer" layoutX="475.0" layoutY="178.0" text="0" />
       <Label fx:id="totalQuestion" layoutX="506.0" layoutY="178.0" text="15" />

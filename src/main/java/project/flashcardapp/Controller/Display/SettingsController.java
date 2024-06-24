@@ -128,9 +128,9 @@ public class SettingsController {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Cài đặt");
-        alert.setHeaderText("Bạn đã thay đổi phần cài đặt");
-        alert.setContentText("Bạn có muốn lưu lại thay đổi không?");
+        alert.setTitle("Settings");
+        alert.setHeaderText("You have changed the settings!");
+        alert.setContentText("Do you want to save changes?");
         if (alert.showAndWait().get() == ButtonType.OK) {
             stage = (Stage) scenePane.getScene().getWindow();
             stage.close();
