@@ -8,13 +8,15 @@
 
 ## Hướng Dẫn Tải và Cài Đặt
 
-### Bước 1: Tải Xuống Tệp ZIP
+### Cách 1:
+
+#### Bước 1: Tải Xuống Tệp ZIP
 
 1. Truy cập vào trang [Releases](https://github.com/hungbuile04/flashcardapp/releases) của repository hoặc ấn vào mục release ở trang chủ của dự án.
 2. Tìm bản phát hành mới nhất (ví dụ: `v1.0`).
 3. Nhấp vào liên kết tải xuống tệp ZIP (ví dụ: `flash-cardApp-1.0-SNAPSHOT.zip`) để tải về máy tính của bạn.
 
-### Bước 2: Giải Nén Tệp ZIP và khởi chạy
+#### Bước 2: Giải Nén Tệp ZIP và khởi chạy
 
 1. Mở thư mục chứa tệp ZIP vừa tải xuống.
 2. Giải nén tệp ZIP:
@@ -25,5 +27,13 @@
      unzip flash-cardApp-1.0-SNAPSHOT.zip
      ```
 3. Ấn đúp vào tệp .jar để chạy ứng dụng.
+
+### Cách 2:
+- Nhấn vào nút Code -> Download zip.
+
+## Báo cáo dự án:
+- Link drive: https://drive.google.com/file/d/1m-ZabAHCtnoBl4uqFNyqQKpkK_sppuhu/view?usp=sharing
+
+
 
 
