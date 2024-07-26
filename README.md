@@ -8,7 +8,7 @@
 
 ## Hướng Dẫn Tải và Cài Đặt
 
-### Cách 1:
+### Cách 1(Hiện chỉ chạy được trên MacOS:<):
 
 #### Bước 1: Tải Xuống Tệp ZIP
 
